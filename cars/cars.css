@@ -233,22 +233,7 @@
     .mySwiper2 {
         height: 150px !important;
     }
-
-    .swiper-helper {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: start;
-        gap: 55px !important;
-        height: 100% !important;
-        margin-top: 30px !important;
-    }
-
-    .swiper-slide-image {
-        min-height: 50px !important;
-        max-height: 50px !important;
-        width: 100px !important;
-    }
-
+    
     .swiper-button-next {
         height: 30px !important;
         width: 30px !important;
@@ -265,5 +250,9 @@
 
     .swiper-button-prev::after {
         font-size: 15px !important;
+    }
+
+    .mySwiper {
+        display: none !important;
     }
 }
