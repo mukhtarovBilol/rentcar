@@ -86,6 +86,14 @@
 
 /* nav */
 
+.card {
+    max-width: 850px;
+    width: 100%;
+    padding: 50px;
+    border: 1px solid #777;
+    border-radius: 15px;
+}
+
 .card__desc {
     display: flex;
     justify-content: space-between;
@@ -125,48 +133,116 @@
     width: 100%;
 }
 
-.swiper {
-    width: 100%;
-    height: 300px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .swiper-slide {
+.swiper-slide {
     background-size: cover;
     background-position: center;
-  }
+}
 
-  .mySwiper2 {
+.mySwiper2 {
     max-width: 700px;
     width: 100%;
     height: 500px;
-  }
+    margin-top: 30px;
+}
 
-  .mySwiper {
+.mySwiper {
     height: 20%;
     box-sizing: border-box;
     padding: 10px 0;
-  }
+}
 
-  .mySwiper .swiper-slide {
+.swiper-wrapper {
+    height: 80px !important;
+}
+
+.mySwiper .swiper-slide {
     width: 25%;
     height: 100%;
     opacity: 0.4;
-  }
+}
 
-  .mySwiper .swiper-slide-thumb-active {
+.mySwiper .swiper-slide-thumb-active {
     opacity: 1;
-  }
+}
 
-  .swiper-slide-image2 {
+.swiper-slide-image2 {
     width: 100%;
     height: 450px;
     object-fit: cover;
-  }
+    border-radius: 10px;
+}
 
-  .swiper-slide-image {
-    width: 100%;
-    height: 150px;
+.swiper-slide-image {
+    width: 100% !important;
+    height: 100%;
+    min-height: 100px;
     object-fit: cover;
-  }
+}
+
+.swiper-button-next {
+    background: rgba(0, 0, 0, 0.5);
+    width: 50px !important;
+    height: 50px !important;
+}
+
+.swiper-button-prev {
+    background: rgba(0, 0, 0, 0.5);
+    width: 50px !important;
+    height: 50px !important;
+}
+
+.card__info-title {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    font-size: clamp(17px, 3vw, 22px);
+}
+
+.card__info-more {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 25px;
+}
+
+.card__info-txt {
+    color: #777;
+}
+
+.card__info-txt span {
+    font-weight: 700;
+}
+
+.card__info-txt:nth-child(1) span {
+    color: rgb(241, 241, 52);
+}
+
+.card__info-txt:nth-child(2) span {
+    color: rgb(241, 241, 52);
+}
+
+.card__info-desc {
+    display: grid;
+    gap: 10px;
+}
+
+@media (max-width: 480px) {
+    .swiper-slide-image2 {
+        height: 150px;
+    }
+
+    .mySwiper2 {
+        height: 150px !important;
+    }
+
+    .swiper-helper {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 60px !important;
+        height: 100% !important;
+    }
+
+    .swiper-slide-image {
+        height: 100%;
+        width: 100px !important;
+    }
+}
