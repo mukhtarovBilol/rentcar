@@ -1,0 +1,165 @@
+@import '../style/common.css';
+
+.nav {
+    padding: 10px 0;
+}
+
+.nav__contact {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding: 0 0 20px 0;
+}
+
+.nav__contact-logoImage {
+    max-width: 180px;
+    width: 100%;
+}
+
+.nav__contact-socials {
+    padding: 20px 15px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    /* background: dodgerblue; */
+}
+
+.nav__contact-social {
+    width: 160px;
+    background: #fff;
+    padding: 10px;
+    text-align: center;
+    color: #000;
+    filter: drop-shadow(0 0 5px #000);
+}
+
+.nav__contact-common {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.nav__contact-numbers {
+    display: flex;
+    flex-direction: column;
+    font-weight: 700;
+    row-gap: 5px;
+}
+
+.nav__contact-number {
+    color: #000;
+}
+
+.nav__list {
+    border-top: 2px solid #ccc;
+    border-bottom: 2px solid #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 20px 0;
+    font-size: clamp(16px, 3vw, 18px);
+}
+
+.nav__link {
+    color: #000;
+}
+
+@media (max-width: 390px) {
+    .nav__contact-social {
+        width: 100%;
+    }
+    .nav__contact-numbers {
+        margin: 0 auto;
+    }
+    .nav__contact-logo {
+        margin: 0 auto;
+    }
+    .nav__list {
+        justify-content: center;
+    }
+}
+
+/* nav */
+
+.card__desc {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.card__title {
+    text-transform: uppercase;
+    font-size: clamp(17px, 3vw, 20px);
+    margin-bottom: 5px;
+}
+
+.card__txt {
+    color: #777;
+    font-size: 15px;
+    margin-bottom: 5px;
+}
+
+.card__txt2 {
+    color: #777;
+    font-size: 15px;
+}
+
+.card__number {
+    color: #000;
+    font-size: clamp(18px, 3vw, 25px);
+}
+
+.card__title span {
+    color: #777;
+}
+
+.swiper {
+    max-width: 600px;
+    width: 100%;
+}
+
+.swiper {
+    width: 100%;
+    height: 300px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .swiper-slide {
+    background-size: cover;
+    background-position: center;
+  }
+
+  .mySwiper2 {
+    height: 80%;
+    width: 100%;
+  }
+
+  .mySwiper {
+    height: 20%;
+    box-sizing: border-box;
+    padding: 10px 0;
+  }
+
+  .mySwiper .swiper-slide {
+    width: 25%;
+    height: 100%;
+    opacity: 0.4;
+  }
+
+  .mySwiper .swiper-slide-thumb-active {
+    opacity: 1;
+  }
+
+  .swiper-slide img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+  }
