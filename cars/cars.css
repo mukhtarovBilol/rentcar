@@ -237,12 +237,33 @@
     .swiper-helper {
         display: flex;
         flex-wrap: wrap;
-        gap: 60px !important;
+        justify-content: start;
+        gap: 55px !important;
         height: 100% !important;
+        margin-top: 30px !important;
     }
 
     .swiper-slide-image {
-        height: 100%;
+        min-height: 50px !important;
+        max-height: 50px !important;
         width: 100px !important;
+    }
+
+    .swiper-button-next {
+        height: 30px !important;
+        width: 30px !important;
+    }
+
+    .swiper-button-prev {
+        height: 30px !important;
+        width: 30px !important;
+    }
+
+    .swiper-button-next::after {
+        font-size: 15px !important;
+    }
+
+    .swiper-button-prev::after {
+        font-size: 15px !important;
     }
 }
