@@ -86,6 +86,14 @@
 
 /* nav */
 
+.cards .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    /* flex-wrap: wrap; */
+    gap: 20px;
+}
+
 .card {
     max-width: 850px;
     width: 100%;
@@ -254,5 +262,292 @@
 
     .mySwiper {
         display: none !important;
+    }
+}
+
+.price {
+    border: 1px solid #777;
+    padding: 10px;
+    display: grid;
+    gap: 20px;
+    max-width: 550px;
+    width: 100%;
+    border-radius: 10px;
+}
+
+.price__info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.bxs-check-circle {
+    color: green;
+    font-size: 25px;
+}
+
+.required__title {
+    margin-bottom: 10px;
+}
+
+.required__title2 {
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.required__info {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.required__info span {
+    font-weight: 700;
+}
+
+.video {
+    margin-top: 50px;
+}
+
+.video iframe {
+    width: 100%;
+}
+
+.header__info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background: #ccc;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.header__info-select, 
+.header__info-selectAirport,
+.header__info-selectValue3,
+.header__info-selectValue4,
+.header__info-selectValue5,
+.header__info-selectValue6 {
+    max-width: 300px;
+    width: 100%;
+    padding: 10px;
+}
+
+.header__info-selectAirport,
+.header__info-selectValue3,
+.header__info-selectValue4,
+.header__info-selectValue5,
+.header__info-selectValue6 {
+    display: none;
+}
+
+.header__info-selectAirport.active,
+.header__info-selectValue3.active,
+.header__info-selectValue4.active,
+.header__info-selectValue5.active,
+.header__info-selectValue6.active {
+    display: flex;
+}
+
+.header__info-date {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.header__info-dateHelper {
+    gap: 20px;
+    display: flex;
+}
+
+.select__helped {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.header__info-date-select {
+    padding: 10px;
+    width: 70px;
+    font-size: 14px;
+}
+
+.span {
+    color: #777;
+    margin-top: 25px;
+    text-align: left;
+}
+
+.header__info-input,
+.header__info-input2 {
+    max-width: 200px;
+    width: 100%;
+    padding: 10px 5px;
+    font-size: clamp(13px, 3vw, 15px);
+}
+
+.header__image {
+    max-width: 900px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.header__info-link {
+    display: inline-block;
+    background: rgb(255, 12, 12);
+    text-align: center;
+    color: #fff;
+    padding: 10px;
+    margin-top: 10px;
+    width: 100%;
+    border-radius: 10px;
+}
+
+.header__info-name,
+.header__info-number {
+    padding: 10px;
+}
+
+.header__info-contact {
+    margin-bottom: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+@media (max-width: 1250px) {
+    .header__info {
+        width: 100%;
+        display: grid;
+        place-items: center;
+    }
+
+    .header__info-date {
+        max-width: 550px;
+        width: 100%;
+    }
+
+    .header__image {
+        margin: 0 auto;
+    }
+
+    .header__info-select, 
+    .header__info-selectAirport,
+    .header__info-selectValue3,
+    .header__info-selectValue4,
+    .header__info-selectValue5,
+    .header__info-selectValue6 {
+        max-width: 550px;
+        width: 100%;
+    }
+
+    .header__info-input,
+    .header__info-input2 {
+        max-width: 380px;
+        width: 100%;
+        flex-shrink: 0;
+    }
+}
+
+@media (max-width: 576px) {
+    .header__info-dateHelper {
+        flex-wrap: wrap;
+    }
+}
+
+.more__things {
+    background: #ccc;
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: 25px;
+    margin-bottom: 20px;
+}
+
+.more__info {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 10px 0;
+}
+
+.more__info:nth-child(2) {
+    border-bottom: 1px solid #777;
+}
+
+@media (max-width: 1290px) {
+    .cards .container {
+        flex-wrap: wrap;
+    }
+}
+
+
+
+.footer {
+    padding: 50px 0;
+    background: #565555;
+}
+
+.footer__helper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    border-bottom: 2px solid #ccc;
+    padding: 0 0 50px 0;
+}
+
+.footer__logo {
+    max-width: 150px;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.footer__txt {
+    color: #fff;
+}
+
+.footer__list1,
+.footer__list2 {
+    display: grid;
+    gap: 20px;
+}
+
+.footer__link {
+    color: #fff;
+}
+
+.footer__adress {
+    color: #fff;
+    margin-bottom: 15px;
+}
+
+.footer__txt2 {
+    margin-bottom: 15px;
+    color: #fff;
+}
+
+.footer__txt3 {
+    color: #fff;
+}
+
+.footer__txt2 span,
+.footer__txt3 span {
+    font-weight: 700;
+}
+
+.footer__copyright {
+    color: #ccc;
+    margin-top: 25px;
+}
+
+@media (max-width: 670px) {
+    .footer__list2 {
+        border-bottom: 1px solid #ccc;
+        padding:30px 0;
+        border-top: 1px solid #ccc;
     }
 }

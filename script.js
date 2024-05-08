@@ -5,6 +5,8 @@ const headerSelectValue3 = document.querySelector(".header__info-selectValue3");
 const headerSelectValue4 = document.querySelector(".header__info-selectValue4");
 const headerSelectValue5 = document.querySelector(".header__info-selectValue5");
 const headerSelectValue6 = document.querySelector(".header__info-selectValue6");
+const icon = document.querySelectorAll(".question__card-icon");
+const answer = document.querySelectorAll(".question__answer");
 
 headerSelect.addEventListener("change", function () {
     if (this.value == "value2") {
@@ -47,6 +49,18 @@ let todayDay = String(date.getDay()).padStart(2, '0');
 let datePattern = todayDay + '.' + month + '.' + year
 const headerInput = document.querySelector(".header__info-input").value = datePattern
 const headerInput2 = document.querySelector(".header__info-input2")
+
+
+for (let i = 0; i < icon.length; i++) {
+    icon[i].addEventListener("click", function () {
+        answer[i].classList.toggle("active")
+        if (icon[i].textContent == '+') {
+            icon[i].textContent = '-'
+        }else {
+            icon[i].textContent = '+'
+        }
+    })
+}
 
 
 // var params = {
