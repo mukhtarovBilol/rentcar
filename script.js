@@ -8,7 +8,9 @@ const headerSelectValue6 = document.querySelector(".header__info-selectValue6");
 const icon = document.querySelectorAll(".question__card-icon");
 const answer = document.querySelectorAll(".question__answer");
 const carsItem = document.querySelectorAll(".cars__item");
-const tabsContentItem = document.querySelectorAll(".tabsContentItem")
+const tabsContentItem = document.querySelectorAll(".tabsContentItem");
+const navBurger = document.querySelector(".nav__burger");
+const navList = document.querySelector(".nav__list")
 
 headerSelect.addEventListener("change", function () {
     if (this.value == "value2") {
@@ -42,6 +44,11 @@ headerSelect.addEventListener("change", function () {
         headerSelectValue4.classList.remove("active")
         headerSelectValue5.classList.remove("active")
     }
+})
+
+navBurger.addEventListener("click", function () {
+    navList.classList.toggle("active")
+    navBurger.classList.toggle("active")
 })
 
 let date = new Date()

@@ -89,6 +89,7 @@
     background: #fff;
     opacity: 0;
     visibility: hidden;
+    z-index: 99;
 }
 
 .nav__item-avto {
@@ -108,6 +109,9 @@
     color: #fff;
 }
 
+.nav__burger {
+    display: none;
+}
 
 @media (max-width: 390px) {
     .nav__contact-social {
@@ -121,6 +125,87 @@
     }
     .nav__list {
         justify-content: center;
+    }
+}
+
+
+@media (max-width: 636px) {
+    .nav__burger {
+      width: 50px;
+      height: 50px;
+      position: relative;
+      display: grid;
+      place-items: center;
+      z-index: 1000;
+      position: fixed;
+      top: 0;
+      background: #fff;
+      filter: drop-shadow(0 0 5px #000);
+      border-radius: 10px;
+      padding: 10px;
+    }
+    .nav__burger-line {
+      position: relative;
+      width: 100%;
+      height: 2px;
+      background: #000;
+      transition: 0.4s;
+    }
+    .nav__burger-line::before,
+    .nav__burger-line::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: #000;
+      transition: 0.4s;
+    }
+  
+    .nav__burger-line::before {
+      top: -10px;
+    }
+    .nav__burger-line::after {
+      top: 10px;
+    }
+
+    .nav__burger.active .nav__burger-line {
+      background: transparent;
+    }
+
+    .nav__burger.active {
+        background: #fff;
+        z-index: 9999;
+    }
+  
+    .nav__burger.active .nav__burger-line::before {
+      transform: rotate(-45deg);
+      top: 0;
+    }
+    .nav__burger.active .nav__burger-line::after {
+      transform: rotate(45deg);
+      top: 0;
+    }
+  
+    .nav__list {
+      position: fixed;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100dvh;
+      display: grid;
+      place-items: center;
+      background: rgba(0, 0, 0, 0.9);
+      transition: 0.4s;
+      z-index: 1;
+    }
+
+    .nav__link {
+        color: #fff;
+    }
+  
+    .nav__list.active {
+      left: 0;
     }
 }
 
@@ -429,6 +514,13 @@
         width: 100%;
     }
 } */
+
+@media (max-width: 414px) {
+    .cars__item {
+        max-width: 100px;
+        width: 100%;
+    }
+}
 
 /* question */
 
