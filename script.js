@@ -7,6 +7,8 @@ const headerSelectValue5 = document.querySelector(".header__info-selectValue5");
 const headerSelectValue6 = document.querySelector(".header__info-selectValue6");
 const icon = document.querySelectorAll(".question__card-icon");
 const answer = document.querySelectorAll(".question__answer");
+const carsItem = document.querySelectorAll(".cars__item");
+const tabsContentItem = document.querySelectorAll(".tabsContentItem")
 
 headerSelect.addEventListener("change", function () {
     if (this.value == "value2") {
@@ -62,6 +64,16 @@ for (let i = 0; i < icon.length; i++) {
     })
 }
 
+for (let i = 0; i < carsItem.length; i++) {
+    carsItem[i].addEventListener("click", function () {
+        for (let k = 0; k < carsItem.length; k++) {
+            carsItem[k].classList.remove("active")
+            tabsContentItem[k].classList.remove("active")
+        }
+        carsItem[i].classList.add("active")
+        tabsContentItem[i].classList.add("active")
+    })
+}
 
 // var params = {
 //     name: document.querySelector("#name").value,
