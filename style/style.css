@@ -25,7 +25,7 @@
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
-    /* background: dodgerblue; */
+    background: #ED1A3B;
 }
 
 .nav__contact-social {
@@ -35,6 +35,11 @@
     text-align: center;
     color: #000;
     filter: drop-shadow(0 0 5px #000);
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
 }
 
 .nav__contact-common {
@@ -111,6 +116,11 @@
 
 .nav__burger {
     display: none;
+}
+
+.bx {
+    color: #ED1A3B;
+    font-size: 26px;
 }
 
 @media (max-width: 390px) {
@@ -219,7 +229,7 @@
 .header .container {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: end;
     flex-wrap: wrap;
     gap: 5px;
 }
@@ -228,6 +238,8 @@
     display: flex;
     flex-direction: column;
     gap: 10px;
+    max-width: 570px;
+    width: 100%;
 }
 
 .header__info-select, 
@@ -236,9 +248,9 @@
 .header__info-selectValue4,
 .header__info-selectValue5,
 .header__info-selectValue6 {
-    max-width: 300px;
+    max-width: 686px;
     width: 100%;
-    padding: 10px;
+    padding: 16px;
 }
 
 .header__info-selectAirport,
@@ -264,8 +276,10 @@
 }
 
 .header__info-dateHelper {
-    gap: 20px;
+    gap: 42px;
     display: flex;
+    max-width: 686px;
+    width: 100%;
 }
 
 .select__helped {
@@ -275,9 +289,9 @@
 }
 
 .header__info-date-select {
-    padding: 10px;
-    width: 70px;
-    font-size: 14px;
+    padding: 16px 31px;
+    width: 131px;
+    /* font-size: 14px; */
 }
 
 .span {
@@ -288,14 +302,14 @@
 
 .header__info-input,
 .header__info-input2 {
-    max-width: 200px;
+    max-width: 364px;
     width: 100%;
-    padding: 10px 5px;
+    padding: 16px 20px;
     font-size: clamp(13px, 3vw, 15px);
 }
 
 .header__image {
-    max-width: 900px;
+    max-width: 780px;
     width: 100%;
     object-fit: cover;
 }
@@ -306,8 +320,8 @@
     color: #fff;
     padding: 10px;
     margin-top: 10px;
-    max-width: 350px;
     width: 100%;
+    border-radius: 10px;
 }
 
 .header__info-name,
@@ -374,6 +388,7 @@
     gap: 30px;
     border: 2px solid #ccc;
     padding: 10px;
+    margin-bottom: 15px;
 }
 
 .cars__list {
@@ -409,6 +424,7 @@
 
 .cars__link {
     color: #777;
+    text-transform: uppercase;
 }
 
 .cars__item:hover {
@@ -427,6 +443,7 @@
 .cars__cards {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 5px;
 }
 
 .cars__card {
@@ -434,6 +451,7 @@
     flex-direction: column;
     border: 1px solid #ccc;
     padding: 10px;
+    border-radius: 10px;
 }
 
 .cars__card svg {
@@ -624,7 +642,7 @@
 }
 
 .review__image {
-    max-width: 250px;
+    max-width: 285px;
     width: 100%;
 }
 
@@ -632,7 +650,17 @@
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
-    justify-content: center;
+    justify-content: space-between;
+}
+
+.review__link {
+    background: #ED1A3B;
+    padding: 19px 100px;
+    text-align: center;
+    margin-top: 15px;
+    border-radius: 7px;
+    display: inline-block;
+    color: #fff;
 }
 
 .about {
@@ -715,10 +743,10 @@
 }
 
 .contact__title {
-    color: #565555;
     text-align: center;
     margin-bottom: 10px;
-    font-size: clamp(18px, 3vw, 35px);
+    font-size: clamp(18px, 3vw, 45px);
+    text-decoration: underline #ED1A3B;
 }
 
 .contact__txt {
@@ -868,6 +896,8 @@ iframe {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 15px;
+    flex-wrap: wrap;
 }
 
 .footer__instagram {
