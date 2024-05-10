@@ -99,7 +99,7 @@
 
 .nav__item-avto {
     width: 100%;
-    border: 1px solid #000;
+    border: 1px solid #ED1A3B;
 }
 
 .nav__link-avto {
@@ -110,8 +110,7 @@
 }
 
 .nav__link-avto:hover {
-    background: #000;
-    color: #fff;
+    color: #ED1A3B;
 }
 
 .nav__burger {
@@ -454,10 +453,14 @@
     border-radius: 10px;
 }
 
+.cars__card:hover .cars__card-route {
+    background: #ED1A3B;
+    color: #fff !important;
+} 
+
 .cars__card svg {
     width: 20px;
     height: 20px;
-    fill: rgb(4, 82, 4);
 }
 
 .cars__card-title {
@@ -478,8 +481,11 @@
 .cars__card-icon {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     gap: 9px;
+    flex-wrap: wrap;
+    padding: 0 0 5px 0;
+    border-bottom: 2px solid #959595;
 }
 
 .cars__card-route {
@@ -489,13 +495,19 @@
     padding: 8px;
     border-radius: 10px;
     transition: 0.5s;
-    color: rgb(255, 12, 12);
+    color: rgb(255, 12, 12) !important;
     border: 1px solid #777;
 }
 
 .cars__card-route:hover {
     background: rgb(255, 12, 12);
-    color: #fff;
+    color: #fff !important;
+}
+
+.cars__card-helper {
+    display: flex;
+    align-items: center;
+    gap: 5px;
 }
 
 .cars__card-price {
@@ -503,6 +515,10 @@
     justify-content: space-between;
     padding: 10px;
     align-items: center;
+}
+
+.cars__card a {
+    color: #000;
 }
 
 .cars__card-standartSpan {
@@ -588,6 +604,7 @@
     color: #ED1A3B;
     background: transparent;
     font-size: 25px;
+    cursor: pointer;
 }
 
 .question__answer {
