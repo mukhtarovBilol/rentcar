@@ -46,10 +46,10 @@ headerSelect.addEventListener("change", function () {
     }
 })
 
-navBurger.addEventListener("click", function () {
-    navList.classList.toggle("active")
-    navBurger.classList.toggle("active")
-})
+// navBurger.addEventListener("click", function () {
+//     navList.classList.toggle("active")
+//     navBurger.classList.toggle("active")
+// })
 
 let date = new Date()
 let year = date.getFullYear();
@@ -81,29 +81,3 @@ for (let i = 0; i < carsItem.length; i++) {
         tabsContentItem[i].classList.add("active")
     })
 }
-
-// var params = {
-//     name: document.querySelector("#name").value,
-//     message: document.querySelector("#message").value,
-//     date: document.querySelector("#date").value
-// };
-
-// function sendMail(){
-//         if (document.querySelector(".header__info-name").value !== '' && document.querySelector(".header__info-number").value !=='') {     
-//         (function(){
-//             emailjs.init("gaVbQy_bCrOGZXTtf")   
-//         })();
-
-//         var serviceID = "service_1xyqmdu";
-//         var templateID = "template_tgol57n";
-    
-//         emailjs.send(serviceID, templateID, params)
-//         .then( res => {
-//             alert("Доставлено, скоро с вами свяжутся")
-//             // document.querySelector("#name").value = ''
-//             // document.querySelector("#message").value = ''
-//             // document
-//         })
-//         .catch();
-//     }
-// }

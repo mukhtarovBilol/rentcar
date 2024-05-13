@@ -6,55 +6,80 @@
     <title>Toyota Corolla 2019</title>
     <link rel="stylesheet" href="cars.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="modal/css/style.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
     
-    <nav class="nav">
-        <div class="container">
-            <div class="nav__contact">
-                <a href="../index.html" class="nav__contact-logo">
-                    <img src="../image/nav/logo.png" alt="" class="nav__contact-logoImage">
-                </a>
-                <div class="nav__contact-common">
-                    <div class="nav__contact-socials">
-                        <a href="" class="nav__contact-social"> <i class='bx bxl-whatsapp'></i> Whatsapp</a>
-                        <a href="" class="nav__contact-social"> <i class='bx bxs-envelope'></i> Email</a>
-                        <a href="" class="nav__contact-social"> <i class='bx bxl-facebook-circle' ></i> Facebook</a>
-                        <a href="" class="nav__contact-social"> <i class='bx bxl-instagram' ></i> Instagram</a>
-                        <a href="" class="nav__contact-social"> <i class='bx bxs-location-plus'></i> Adress</a>
-                    </div>
-                    <div class="nav__contact-numbers">
-                        <a href="tel:+994556501811" class="nav__contact-number">+994 55 650 18 11</a>
-                        <a href="tel:+994505501811" class="nav__contact-number">+994 50 550 18 11</a>
-                    </div>
+  <nav class="nav">
+    <div class="container">
+        <div class="nav__contact">
+            <a href="" class="nav__contact-logo">
+                <img src="../image/nav/logo.png" alt="" class="nav__contact-logoImage">
+            </a>
+            <!-- <div class="nav__contact-common"> -->
+                <div class="nav__contact-socials">
+                    <a href="" class="nav__contact-social"><i class='bx bxl-telegram'></i> Telegram</a>
+                    <a href="https://api.whatsapp.com/send/?phone=994505501811&text&type=phone_number&app_absent=0" class="nav__contact-social"> <img src="image/nav/whatsapp.png" alt=""> Whatsapp</a>
+                    <a href="" class="nav__contact-social"> <i class='bx bxl-facebook-circle' ></i> Facebook</a>
+                    <a href="" class="nav__contact-social"> <img src="../image/nav/instagram.png" alt=""> Instagram</a>
+                    <a href="mailto:bookinggetrentacar@gmail.com" class="nav__contact-social"> <img src="image/nav/email.png" alt=""> Email</a>
+                    <a href="" class="nav__contact-social"> <img src="../image/nav/adress.png" alt=""> Адресс</a>
                 </div>
-            </div>
-            <ul class="nav__list">
-                <li class="nav__item">
-                    <a href="" class="nav__link">Автомобили</a>
-                </li>
-                <li class="nav__item">
-                    <a href="" class="nav__link">Услуги и Сервиса</a>
-                </li>
-                <li class="nav__item">
-                    <a href="" class="nav__link">Заказ аренды</a>
-                </li>
-                <li class="nav__item">
-                    <a href="" class="nav__link">Условия аренды</a>
-                </li>
-                <li class="nav__item">
-                    <a href="" class="nav__link">О компании</a>
-                </li>
-                <li class="nav__item">
-                    <a href="" class="nav__link">Вопросы и ответы</a>
-                </li>
-                <li class="nav__item">
-                    <a href="" class="nav__link">Контакты</a>
-                </li>
-            </ul>
+                <div class="nav__contact-numbers">
+                    <a href="tel:+994556501811" class="nav__contact-number">+994 55 650 18 11</a>
+                    <a href="tel:+994505501811" class="nav__contact-number">+994 50 550 18 11</a>
+                </div>
+            <!-- </div> -->
         </div>
-    </nav>
+        <div class="nav__burger">
+            <span class="nav__burger-line"></span>
+        </div>
+        <ul class="nav__list">
+            <li class="nav__item">
+                <a href="#!" class="nav__link">Автопарк <i class='bx bx-chevron-down'></i></a>
+                <ul class="nav__list-avto">
+                    <li class="nav__item-avto">
+                        <a href="" class="nav__link-avto">СТАНДАРТ </a>
+                    </li>
+                    <li class="nav__item-avto">
+                        <a href="" class="nav__link-avto">ПРЕМИУМ</a>
+                    </li>
+                    <li class="nav__item-avto">
+                        <a href="" class="nav__link-avto">БИЗНЕС </a>
+                    </li>
+                    <li class="nav__item-avto">
+                        <a href="" class="nav__link-avto">МИНИВЕН</a>
+                    </li>
+                    <li class="nav__item-avto">
+                        <a href="" class="nav__link-avto">КРОССОВЕР</a>
+                    </li>
+                    <li class="nav__item-avto">
+                        <a href="" class="nav__link-avto">ВНЕДОРОЖНИК</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="nav__item">
+                <a href="" class="nav__link">Услуги </a>
+            </li>
+            <li class="nav__item">
+                <a href="" class="nav__link">Аренды</a>
+            </li>
+            <li class="nav__item">
+                <a href="" class="nav__link">Условия </a>
+            </li>
+            <li class="nav__item">
+                <a href="" class="nav__link">О нас</a>
+            </li>
+            <li class="nav__item">
+                <a href="" class="nav__link">Отзывы</a>
+            </li>
+            <li class="nav__item">
+                <a href="" class="nav__link">Контакты</a>
+            </li>
+        </ul>
+    </div>
+</nav>
 
     <main>
         <section class="cards">
@@ -189,14 +214,14 @@
                   </div>
                   <div class="header__info">
                     <select name="select" class="header__info-select">
-                        <option value="value1" class="option" disabled selected>Выберите место получения</option>
+                        <option value="value1" class="option" disabled >Выберите место получения</option>
                         <option value="value2" class="option">Аэрапорт</option>
                         <option value="value3" class="option">Ж/Д Вокзал</option>
                         <option value="value4" class="option">Авто Вокзал</option>
                         <option value="value5" class="option">Пункт проката</option>
                         <option value="value6" class="option">Станция метро</option>
                     </select>
-                    <select name="airport" id="" class="header__info-selectAirport">
+                    <select name="airport" id="" class="header__info-selectAirport active">
                         <option value="airport">Домодедово (DME)</option>
                         <option value="airport">Внуково (VKO)</option>
                         <option value="airport">Шереметьево (SVO)</option>
@@ -346,12 +371,14 @@
                     <p>Доп.водитель, за 1 сутки</p>
                   </div>
                 </div>
+                <a href="https://api.whatsapp.com/send?phone=994556501811" target="_blank" class="header__info-helps">Получить консультацию</a>
                 <a href="#!" onclick="sendMail()" class="header__info-link">Оформить</a>
                 </div>
             </div>
         </section>
         <section class="video">
           <div class="container">
+            <h3 class="video__title">ТЕСТ ДРАЙВ</h3>
             <iframe width="853" height="480" src="https://www.youtube.com/embed/IVAUdpRsLNk" title="Toyota Corolla 2019 тест-драйв с Кириллом Бревдо" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
           </div>
         </section>
@@ -359,42 +386,69 @@
 
     <footer class="footer">
       <div class="container">
-          <div class="footer__helper">
-              <div class="footer__desc">
-                  <img src="image/nav/logo.png" alt="" class="footer__logo">
-                  <p class="footer__txt">Мечтайте.Доверьте нам.Управляйте</p>
+          <div class="footer__contact">
+              <div class="footer__contact-first">
+                  <p >Адрес:</p>
+                  <span class="footer__contact-txt">1141, Baku, Azerbaijan, Shafayat Mextiyev SStr., 559B</span>
               </div>
-              <ul class="footer__list1">
-                  <li class="footer__item">
-                      <a href="" class="footer__link">О нас</a>
-                  </li>
-                  <li class="footer__item">
-                      <a href="" class="footer__link">B2B</a>
-                  </li>
-                  <li class="footer__item">
-                      <a href="" class="footer__link">Вопросы - ответы!</a>
-                  </li>
-              </ul>
-              <ul class="footer__list2">
-                  <li class="footer__item">
-                      <a href="" class="footer__link">Контакты</a>
-                  </li>
-                  <li class="footer__item">
-                      <a href="tel:994556501811" class="footer__link">+994 55 650 18 11</a>
-                  </li>
-                  <li class="footer__item">
-                      <a href="mailtobookinggetrentacar@gmail.com class=" class="footer__link">bookinggetrentacar@gmail.com</a>
-                  </li>
-              </ul>
-              <div class="footer__desc2">
-                  <p class="footer__adress">Адресс</p>
-                  <p class="footer__txt2"><span>Гдавный офис: </span> Азербайджан, Баку, пр.8 <br> Ноября 30</p>
-                  <p class="footer__txt3"><span>Филиал:</span> Международный Аэрапорт им. <br> Гейдера Алиева ( терминал 1 )</p>
+              <div class="footer__contact-second">
+                  <p>НОМЕР ТЕЛЕФОНА: </p>
+                  <div class="footer__numbers">
+                      <a href="tel:+994505501811" class="footer__link">+994 50 550 18 11</a>
+                      <a href="tel:+994556501811" class="footer__link">+994 55 650 18 11</a>
+                  </div>
               </div>
           </div>
-          <p class="footer__copyright">© 2023 Copyright HERTZ Azerbaijan</p>
+          <div class="footer__socials">
+              <div class="footer__email">
+                  <p>Email:</p>
+                  <a href="mailto:bookinggetrentacar@gmail.com " class="footer__link">bookinggetrentacar@gmail.com</a>
+              </div>
+              <div class="footer__facebook">
+                  <p>FACEBOOK:</p>
+                  <a href="https://www.facebook.com/people/Getrentacaraz/100093672717716/" class="footer__link">@Getrentacaraz </a>
+              </div>
+              <div class="footer__whatsapp">
+                  <p>Whatsapp:</p>
+                  <a href="https://api.whatsapp.com/send/?phone=994505501811&text&type=phone_number&app_absent=0" class="footer__link">Get Rent A Car</a>
+              </div>
+          </div>
+          <div class="footer__socilas2">
+              <div class="footer__instagram">
+                  <p>INSTAGRAM:</p>
+                  <a href="" class="footer__link">@getrentacar</a>
+              </div>
+              <div class="footer__web">
+                  <p>WEB:</p>
+                  <a href="" class="footer__link">www.getrentacar.az</a>
+              </div>
+          </div>
+          <a href=""><img src="../image/nav/logo.png" alt="" class="footer__logo-image"></a>
       </div>
-  </footer>
+    </footer>
+
+    <div class="modal" id="my-modal">
+      <div class="modal__box">
+          <button class="modal__close-btn" id="close-my-modal-btn">
+              <svg width="23" height="25" viewBox="0 0 23 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M2.09082 0.03125L22.9999 22.0294L20.909 24.2292L-8.73579e-05 2.23106L2.09082 0.03125Z"
+                      fill="#333333" />
+                  <path d="M0 22.0295L20.9091 0.0314368L23 2.23125L2.09091 24.2294L0 22.0295Z" fill="#333333" />
+              </svg>
+          </button>
+          <h2>Оформление</h2>
+
+          <form action="#!" class="form">
+              <input type="text" placeholder="Имя" id="name" class="form__input" required>
+              <input type="number" placeholder="Номер телефона" id="message" class="form__number" required>
+              <textarea name="" id="date" placeholder="Сообщение" class="form__textarea"></textarea>
+              <button class="form__btn" onclick="sendMail()">SEND</button>
+          </form>
+          
+      </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="main.js"></script>
