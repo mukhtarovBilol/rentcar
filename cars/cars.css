@@ -85,7 +85,12 @@
     color: #000;
     display: flex;
     align-items: center;
+    transition: 0.5s;
     gap: 5px;
+}
+
+.nav__link:hover {
+    color: #ED1A3B;
 }
 
 .nav__list-avto {
@@ -235,7 +240,7 @@
     max-width: 850px;
     width: 100%;
     padding: 50px 21px 146px 21px;
-    border: 1px solid #777;
+    border: 2px solid #ED1A3B;
     border-radius: 15px;
 }
 
@@ -325,13 +330,13 @@
 }
 
 .swiper-button-next {
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.2);
     width: 50px !important;
     height: 50px !important;
 }
 
 .swiper-button-prev {
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.2);
     width: 50px !important;
     height: 50px !important;
 }
@@ -363,6 +368,15 @@
 
 .card__info-txt:nth-child(2) span {
     color: rgb(255, 12, 12);
+}
+
+.swiper-button-next::after {
+    color: #ED1A3B;
+}
+
+.swiper-button-prev::after {
+    color: #ED1A3B;
+
 }
 
 .card__info-desc {
@@ -403,7 +417,7 @@
 }
 
 .price {
-    border: 1px solid #777;
+    border: 2px solid #ED1A3B;
     padding: 10px;
     display: grid;
     gap: 20px;
@@ -418,6 +432,17 @@
     justify-content: space-between;
     flex-wrap: wrap;
     gap: 15px;
+}
+
+.price__info span {
+    width: 50%;
+    border: 1px solid #ccc;
+}
+
+@media (max-width: 423px) {
+    .price__info span {
+        width: 30%;
+    }
 }
 
 .bxs-check-circle {
@@ -577,7 +602,7 @@
     display: flex;
     flex-direction: column;
     gap: 10px;
-    background: #ccc;
+    border: 2px solid #ED1A3B;
     padding: 20px;
     border-radius: 10px;
     margin-top: 20px;
@@ -733,7 +758,7 @@
 }
 
 .more__things {
-    background: #ccc;
+    border: 2px solid #ED1A3B;
     padding: 10px;
     border-radius: 10px;
     margin-top: 25px;
@@ -870,6 +895,6 @@
     align-items: flex-start;
     flex-wrap: wrap;
     gap: 30px;
-    border-bottom: 2px solid #ccc;
-    padding: 0 0 50px 0;
+    border-top: 2px solid #ccc;
+    padding: 20px 0 0 0;
 }
