@@ -35,8 +35,6 @@ checkbox2.addEventListener("click", function () {
 for (let i = 0; i < checkbox.length; i++) {
     checkbox[i].addEventListener("click", function () {
         checkbox[i].classList.toggle("active")
-        // returned.classList.toggle("active")
-        console.log(i);
         if (checkbox[0].classList == 'checkbox active') {
             sit.classList.toggle('active')
         }else {
