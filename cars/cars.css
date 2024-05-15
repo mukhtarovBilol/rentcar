@@ -125,7 +125,7 @@
 }
 
 .bx {
-    color: #ED1A3B;
+    color: #ED1A3B !important;
     font-size: 26px;
 }
 
@@ -239,7 +239,7 @@
 .card {
     max-width: 850px;
     width: 100%;
-    padding: 50px 21px 146px 21px;
+    padding: 50px 21px 21% 21px;
     border: 2px solid #ED1A3B;
     border-radius: 15px;
 }
@@ -767,13 +767,105 @@
 
 .more__info {
     display: flex;
-    align-items: center;
+    align-items: end;
+    justify-content: space-between;
+    flex-wrap: wrap;
     gap: 5px;
     padding: 10px 0;
 }
 
-.more__info:nth-child(2) {
-    border-bottom: 1px solid #777;
+.more__info:nth-child(2) span {
+    width: 25%;
+    border: 1px solid #959595;
+}
+
+.more__info:nth-child(3) span {
+    width: 15%;
+    border: 1px solid #959595;
+}
+
+.more__info:nth-child(4) span {
+    width: 40%;
+    border: 1px solid #959595;
+}
+
+.checkbox,
+.checkbox2 {
+    width: 75px;
+    height: 30px;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.6s;
+}
+
+.button,
+.button2 {
+    background: #d2d2d2;
+    width: 70px;
+    height: 29px;
+    border-radius: 200px;
+    cursor: pointer;
+    position: relative;
+}
+
+.button::before,
+.button2::before {
+    position: absolute;
+    content:  "";
+    background: #fff;
+    width: 25px;
+    height: 25px;
+    border-radius: 200px;
+    margin: 2px;
+    transition: 0.5s;
+}
+
+.checkbox.active  .button {
+    background: #ED1A3B;
+}
+
+.checkbox2.active .button2 {
+    background: #ED1A3B;
+}
+
+.checkbox.active  .button::before {
+    transform: translateX(41px);
+}
+
+.checkbox2.active .button2::before {
+    transform: translateX(41px);
+}
+
+.check,
+.check2 {
+    display: none;
+}
+
+.more__select, .more__select2 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.more__prices {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid #959595;
+    padding: 20px;
+}
+
+.more__prices p {
+    font-weight: 600;
+}
+
+.price__helper {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-weight: 700;
 }
 
 @media (max-width: 1290px) {
@@ -782,8 +874,7 @@
     }
 }
 
-
-
+/*  */
 
 .footer {
     padding: 50px 0;

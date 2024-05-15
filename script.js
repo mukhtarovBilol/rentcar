@@ -1,10 +1,4 @@
-const option = document.querySelectorAll(".option");
-const headerSelect = document.querySelector(".header__info-select");
-const headerSelectAirport = document.querySelector(".header__info-selectAirport");
-const headerSelectValue3 = document.querySelector(".header__info-selectValue3");
-const headerSelectValue4 = document.querySelector(".header__info-selectValue4");
-const headerSelectValue5 = document.querySelector(".header__info-selectValue5");
-const headerSelectValue6 = document.querySelector(".header__info-selectValue6");
+
 const icon = document.querySelectorAll(".question__card-icon");
 const answer = document.querySelectorAll(".question__answer");
 const carsItem = document.querySelectorAll(".cars__item");
@@ -12,52 +6,19 @@ const tabsContentItem = document.querySelectorAll(".tabsContentItem");
 const navBurger = document.querySelector(".nav__burger");
 const navList = document.querySelector(".nav__list")
 
-headerSelect.addEventListener("change", function () {
-    if (this.value == "value2") {
-        headerSelectAirport.classList.toggle("active")
-        headerSelectValue3.classList.remove("active")
-        headerSelectValue4.classList.remove("active")
-        headerSelectValue5.classList.remove("active")
-        headerSelectValue6.classList.remove("active")
-    }else if (this.value == "value3") {
-        headerSelectValue3.classList.toggle("active")
-        headerSelectAirport.classList.remove("active")
-        headerSelectValue4.classList.remove("active")
-        headerSelectValue5.classList.remove("active")
-        headerSelectValue6.classList.remove("active")
-    }else if (this.value == "value4") {
-        headerSelectValue4.classList.add("active")
-        headerSelectValue3.classList.remove("active")
-        headerSelectAirport.classList.remove("active")
-        headerSelectValue5.classList.remove("active")
-        headerSelectValue6.classList.remove("active")
-    }else if (this.value == "value5") {
-        headerSelectValue5.classList.add("active")
-        headerSelectAirport.classList.remove("active")
-        headerSelectValue3.classList.remove("active")
-        headerSelectValue4.classList.remove("active")
-        headerSelectValue6.classList.remove("active")
-    }else if (this.value == "value6") {
-        headerSelectValue6.classList.add("active")
-        headerSelectAirport.classList.remove("active")
-        headerSelectValue3.classList.remove("active")
-        headerSelectValue4.classList.remove("active")
-        headerSelectValue5.classList.remove("active")
-    }
-})
 
 // navBurger.addEventListener("click", function () {
 //     navList.classList.toggle("active")
 //     navBurger.classList.toggle("active")
 // })
 
-let date = new Date()
-let year = date.getFullYear();
-let month = date.getMonth() + 1;
-let todayDay = String(date.getDay()).padStart(2, '0');
-let datePattern = todayDay + '.' + month + '.' + year
-const headerInput = document.querySelector(".header__info-input").value = datePattern
-const headerInput2 = document.querySelector(".header__info-input2")
+// let date = new Date()
+// let year = date.getFullYear();
+// let month = date.getMonth() + 1;
+// let todayDay = String(date.getDay()).padStart(2, '0');
+// let datePattern = todayDay + '.' + month + '.' + year
+// const headerInput = document.querySelector(".header__info-input").value = datePattern
+// const headerInput2 = document.querySelector(".header__info-input2")
 
 
 for (let i = 0; i < icon.length; i++) {
