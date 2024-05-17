@@ -406,15 +406,25 @@
     gap: 30px;
 }
 
-.cars__item {
+.cars__item,
+.cars__itemm {
     border: 1px solid #ccc;
     padding: 10px;
     width: 150px;
     text-align: center;
     transition: 0.5s;
+    cursor: pointer;
+}
+
+.cars__itemm {
+    display: flex;
 }
 
 .cars__item.active {
+    background: #ED1A3B;
+}
+
+.cars__itemm:hover {
     background: #ED1A3B;
 }
 
@@ -429,9 +439,14 @@
     display: block;
 }
 
-.cars__link {
+.cars__link,
+.cars__linkk {
     color: #777;
     text-transform: uppercase;
+}
+
+.cars__linkk {
+    width: 100%;
 }
 
 .cars__item:hover {
@@ -439,6 +454,10 @@
 }
 
 .cars__item:hover  .cars__link {
+    color: #fff;
+}
+
+.cars__itemm:hover .cars__linkk {
     color: #fff;
 }
 

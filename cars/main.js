@@ -26,9 +26,9 @@ const animals = document.querySelector(".animals");
 const drive = document.querySelector(".drive");
 const returned = document.querySelector(".return")
 
-let CommonPrice = Number(morePrice.innerHTML)
+let CommonPrice = Number(morePrice?.innerHTML)
 
-checkbox2.addEventListener("click", function () {
+checkbox2?.addEventListener("click", function () {
     checkbox2.classList.toggle("active")
 })
 
@@ -83,6 +83,16 @@ const headerSelectValue3 = document.querySelector(".header__info-selectValue3");
 const headerSelectValue4 = document.querySelector(".header__info-selectValue4");
 const headerSelectValue5 = document.querySelector(".header__info-selectValue5");
 const headerSelectValue6 = document.querySelector(".header__info-selectValue6");
+const headerInfoCount = document.querySelector(".header__info-count")
+
+
+// count passanger
+var countPassanger = ''
+headerInfoCount?.addEventListener("input", function () {
+    // console.log(headerInfoCount.value);
+    countPassanger = headerInfoCount.value
+})
+// count passanger
 
 // дата получения
 var getcar = ''
@@ -238,25 +248,25 @@ function sendMail(){
             emailjs.init("gaVbQy_bCrOGZXTtf")   
         })();
 
-        if (sit.classList == 'more__info sit active') {
+        if (sit?.classList == 'more__info sit active') {
             var childrenSitting = "Да"
         }else {
             childrenSitting = "Нет"
         }
 
-        if (animals.classList == 'more__info animals active') {
+        if (animals?.classList == 'more__info animals active') {
             var animal = "Да"
         }else {
             animal = "Нет"
         }
 
-        if (drive.classList == 'more__info drive active') {
+        if (drive?.classList == 'more__info drive active') {
             var driven = "Да"
         }else {
             driven = "Нет"
         }
 
-        if (checkbox2.classList == "checkbox2 active") {
+        if (checkbox2?.classList == "checkbox2 active") {
             var returned = "Да"
         } else {
             returned = "Нет"
