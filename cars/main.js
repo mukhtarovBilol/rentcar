@@ -17,55 +17,91 @@ var swiper = new Swiper(".mySwiper", {
 
 // check
 
-const checkbox = document.querySelectorAll(".checkbox");
+const checkbox = document.querySelector(".checkbox");
 const checkbox2 = document.querySelector(".checkbox2")
 const morePrice = document.querySelector(".more__price");
-const moreInfoPrice = document.querySelectorAll(".more__info-price")
+const moreInfoPrice = document.querySelector(".more__info-price")
 const sit = document.querySelector(".sit");
 const animals = document.querySelector(".animals");
 const drive = document.querySelector(".drive");
 const returned = document.querySelector(".return")
+const button = document.querySelector(".button")
+const headerSelectValue7 = document.querySelector(".header__info-selectValue7");
+const getcars = document.querySelectorAll(".getcars");
 
 let CommonPrice = Number(morePrice?.innerHTML)
+let allPrice = Number(morePrice?.innerHTML)
+var s = 0
+// checkbox2?.addEventListener("click", function () {
+//     checkbox2.classList.toggle("active")
+// })
 
-checkbox2?.addEventListener("click", function () {
-    checkbox2.classList.toggle("active")
+var getsCars = "Офис"
+headerSelectValue7.addEventListener("change", function () {
+    getsCars = headerSelectValue7.value
+    if (headerSelectValue7.value == 'otel') {
+        s = 10
+        morePrice.innerHTML = CommonPrice += 10
+        CommonPrice -= 10
+    }else if (headerSelectValue7.value == 'airport2') {
+        morePrice.innerHTML = CommonPrice += 25
+        CommonPrice -= 25
+        s = 25
+    }else {
+        s = 0
+        morePrice.innerHTML = allPrice
+    }
 })
 
-for (let i = 0; i < checkbox.length; i++) {
-    checkbox[i].addEventListener("click", function () {
-        checkbox[i].classList.toggle("active")
-        if (checkbox[0].classList == 'checkbox active') {
-            sit.classList.toggle('active')
-        }else {
-            sit.classList.remove("active")
-        }
+// for (let i = 0; i < moreInfoPrice.length; i++) {
+    checkbox.addEventListener("click", function () {
+        checkbox.classList.toggle("active")
+        // sit.classList.toggle('active')
+        // sit?.classList.remove("active")
+        // if (checkbox[0]?.classList == 'checkbox active') {
+        // }else {
+        // }
 
-        if (checkbox[1].classList == 'checkbox active') {
-            animals.classList.add("active")
-        }else {
-            animals.classList.remove("active")
-        }
+        // if (checkbox[1]?.classList == 'checkbox active') {
+        //     animals.classList.add("active")
+        // }else {
+        //     animals?.classList.remove("active")
+        // }
         
-        if (checkbox[2].classList == 'checkbox active') {
-            drive.classList.add("active")
-        }else {
-            drive.classList.remove("active")
-        }
-
-        if (checkbox[i].classList == 'checkbox active') {
-            let price = Number(moreInfoPrice[i].getAttribute("data-src"))
+        // if (checkbox[2]?.classList == 'checkbox active') {
+        //     drive?.classList.add("active")
+        // }else {
+        //     drive?.classList.remove("active")
+        // }
+        // if (checkbox?.classList == 'checkbox active') {
+        //     let price = Number(moreInfoPrice.getAttribute("data-src"))
+        //     // console.log(moreInfoPrice[i].getAttribute("data-src"));
+        //     CommonPrice = CommonPrice + price
+        //     morePrice.innerHTML = CommonPrice
+        //     // console.log(a);
+        // }else {
+        //     let price = Number(moreInfoPrice.getAttribute("data-src"))
+        //     CommonPrice = CommonPrice - price
+        //     morePrice.innerHTML = CommonPrice
+        // }
+        if (checkbox?.classList == 'checkbox active') {
+            let price = Number(moreInfoPrice.getAttribute("data-src"))
             // console.log(moreInfoPrice[i].getAttribute("data-src"));
-            CommonPrice = CommonPrice + price
-            // console.log(a);
-            morePrice.innerHTML = CommonPrice
-        }else {
-            let price = Number(moreInfoPrice[i].getAttribute("data-src"))
-            CommonPrice = CommonPrice - price
-            morePrice.innerHTML = CommonPrice
+            CommonPrice += s
+            morePrice.innerHTML = CommonPrice += price
+            CommonPrice -= s
+            allPrice = CommonPrice
+        }else{
+            CommonPrice += s
+            let price = Number(moreInfoPrice.getAttribute("data-src"))
+            morePrice.innerHTML = CommonPrice -= price 
+            CommonPrice -= s
+            allPrice = CommonPrice  
         }
     })
-}
+// }
+
+
 
 // check
 
@@ -84,6 +120,7 @@ const headerSelectValue4 = document.querySelector(".header__info-selectValue4");
 const headerSelectValue5 = document.querySelector(".header__info-selectValue5");
 const headerSelectValue6 = document.querySelector(".header__info-selectValue6");
 const headerInfoCount = document.querySelector(".header__info-count")
+
 
 
 // count passanger
@@ -254,28 +291,28 @@ function sendMail(){
             childrenSitting = "Нет"
         }
 
-        if (animals?.classList == 'more__info animals active') {
-            var animal = "Да"
-        }else {
-            animal = "Нет"
-        }
+        // if (animals?.classList == 'more__info animals active') {
+        //     var animal = "Да"
+        // }else {
+        //     animal = "Нет"
+        // }
 
-        if (drive?.classList == 'more__info drive active') {
-            var driven = "Да"
-        }else {
-            driven = "Нет"
-        }
+        // if (drive?.classList == 'more__info drive active') {
+        //     var driven = "Да"
+        // }else {
+        //     driven = "Нет"
+        // }
 
-        if (checkbox2?.classList == "checkbox2 active") {
-            var returned = "Да"
-        } else {
-            returned = "Нет"
-        }
+        // if (checkbox2?.classList == "checkbox2 active") {
+        //     var returned = "Да"
+        // } else {
+        //     returned = "Нет"
+        // }
 
         var params = {
             senderName: document.querySelector("#name").value,
             name: document.querySelector("#name").value + ", Дата и время получение машины: " + getcar + ' ' + time + ':' + minute + ', Дата и время возврата: ' + comeback + ' ' + backtime + ' : ' + backminute + ', Возврат авто в другом месте: ' + returned, 
-            message: document.querySelector("#message").value + ', Нужен ли кресла: ' + childrenSitting + ', Нужен ли гамак для животных: ' + animal + ', Нужен ли Доп.водитель: ' + driven + ', Место получение авто: ' + getPlace + ' ' + getPlaceAdress
+            message: document.querySelector("#message").value + ', Нужен ли кресла: ' + childrenSitting + ', Место получение: ' + getsCars + ', Место получение авто: ' + getPlace + ' ' + getPlaceAdress
         };
 
 

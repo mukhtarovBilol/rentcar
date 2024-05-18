@@ -635,7 +635,8 @@
 .header__info-selectValue4,
 .header__info-selectValue5,
 .header__info-selectValue6,
-.header__info-count {
+.header__info-count,
+.header__info-selectValue7 {
     /* max-width: 300px; */
     width: 100%;
     padding: 10px;
