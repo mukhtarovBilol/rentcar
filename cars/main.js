@@ -27,14 +27,82 @@ const drive = document.querySelector(".drive");
 const returned = document.querySelector(".return")
 const button = document.querySelector(".button")
 const headerSelectValue7 = document.querySelector(".header__info-selectValue7");
+const headerSelectValue8 = document.querySelector(".header__info-selectValue8");
 const getcars = document.querySelectorAll(".getcars");
 
 let CommonPrice = Number(morePrice?.innerHTML)
 let allPrice = Number(morePrice?.innerHTML)
 var s = 0
 // checkbox2?.addEventListener("click", function () {
-//     checkbox2.classList.toggle("active")
+//     checkbox2.classList.toggle("ac8ive")
 // })
+
+
+// date
+
+// Устанавливаем минимальную дату получения на сегодняшний день
+var today = new Date();
+var dd = String(today.getDate()).padStart(2, '0');
+var mm = String(today.getMonth() + 1).padStart(2, '0'); // January is 0!
+var yyyy = today.getFullYear();
+today = yyyy + '-' + mm + '-' + dd;
+document.getElementById("start_date").setAttribute("min", today);
+
+// Добавляем обработчик события при изменении даты получения
+document.getElementById("start_date").addEventListener("change", function() {
+    calculate(); // Вызываем функцию calculate при изменении даты получения
+});
+
+// Добавляем обработчик события при изменении даты возврата
+document.getElementById("end_date").addEventListener("change", function() {
+    calculate(); // Вызываем функцию calculate при изменении даты возврата
+});
+
+function calculate() {
+    var startDate = document.getElementById("start_date").value;
+    var endDate = document.getElementById("end_date").value;
+    
+    // Проверяем, выбраны ли обе даты
+    if (startDate && endDate) {
+        startDate = new Date(startDate);
+        endDate = new Date(endDate);
+        
+        // Проверяем, если дата получения позже даты возврата, меняем их местами
+        if (startDate > endDate) {
+            var temp = startDate;
+            startDate = endDate;
+            endDate = temp;
+            document.getElementById("start_date").value = startDate.toISOString().slice(0, 10);
+            document.getElementById("end_date").value = endDate.toISOString().slice(0, 10);
+        }
+        
+        // Добавляем еще один день к дате получения
+        startDate.setDate(startDate.getDate() + 1);
+        
+        var differenceInTime = endDate.getTime() - startDate.getTime();
+        var differenceInDays = differenceInTime / (1000 * 3600 * 24);
+        var rentalCost = 0;
+
+         if (differenceInDays >= 1 && differenceInDays <= 2) {
+                rentalCost = differenceInDays * 100
+                morePrice.innerHTML = CommonPrice += rentalCost;
+        }else if (differenceInDays >= 3 && differenceInDays <= 5) {
+                rentalCost = differenceInDays * 90
+                morePrice.innerHTML = CommonPrice += rentalCost;
+        }else if (differenceInDays >= 6 && differenceInDays <= 13) {
+                rentalCost = differenceInDays * 80
+                morePrice.innerHTML = CommonPrice += rentalCost;
+        }else if (differenceInDays >= 14 && differenceInDays <= 29) {
+                rentalCost = differenceInDays * 70
+                morePrice.innerHTML = CommonPrice += rentalCost;
+        }else {
+            rentalCost = differenceInDays * 60
+            morePrice.innerHTML = CommonPrice += rentalCost;
+        }
+    }
+}
+
+// date
 
 var getsCars = "Офис"
 headerSelectValue7.addEventListener("change", function () {
@@ -52,6 +120,22 @@ headerSelectValue7.addEventListener("change", function () {
         morePrice.innerHTML = allPrice
     }
 })
+
+// headerSelectValue8.addEventListener("change", function () {
+//     getsCars = headerSelectValue8.value
+//     if (headerSelectValue8.value == 'otel') {
+//         s = 10
+//         morePrice.innerHTML = CommonPrice += 10
+//         CommonPrice -= 10
+//     }else if (headerSelectValue8.value == 'airport2') {
+//         morePrice.innerHTML = CommonPrice += 25
+//         CommonPrice -= 25
+//         s = 25
+//     }else {
+//         s = 0
+//         morePrice.innerHTML = allPrice
+//     }
+// })
 
 // for (let i = 0; i < moreInfoPrice.length; i++) {
     checkbox.addEventListener("click", function () {
@@ -114,11 +198,11 @@ const select2 = document.querySelector(".select2");
 const select3 = document.querySelector(".select3");
 const select4 = document.querySelector(".select4");
 const headerInfoSelect = document.querySelector(".header__info-select");
-const headerInfoSelectAirport = document.querySelector(".header__info-selectAirport")
-const headerSelectValue3 = document.querySelector(".header__info-selectValue3");
-const headerSelectValue4 = document.querySelector(".header__info-selectValue4");
-const headerSelectValue5 = document.querySelector(".header__info-selectValue5");
-const headerSelectValue6 = document.querySelector(".header__info-selectValue6");
+// const headerInfoSelectAirport = document.querySelector(".header__info-selectAirport")
+// const headerSelectValue3 = document.querySelector(".header__info-selectValue3");
+// const headerSelectValue4 = document.querySelector(".header__info-selectValue4");
+// const headerSelectValue5 = document.querySelector(".header__info-selectValue5");
+// const headerSelectValue6 = document.querySelector(".header__info-selectValue6");
 const headerInfoCount = document.querySelector(".header__info-count")
 
 
@@ -137,6 +221,7 @@ headerInfoInput.addEventListener("change", function () {
     // console.log(headerInfoInput.value);
     getcar = headerInfoInput.value
 })
+
 // дата получения
 
 // дата возврата
@@ -145,6 +230,8 @@ headerInfoInput2.addEventListener("change", function () {
     // console.log(headerInfoInput2.value);
     comeback = headerInfoInput2.value
 })
+
+
 // дата возврата
 
 // время получение
@@ -179,73 +266,6 @@ select4.addEventListener("change", function () {
     backminute = select4.value
 })
 // минута 
-
-let getPlace = 'Аэрапорт'
-headerInfoSelect.addEventListener("change", function () {
-    getPlace = headerInfoSelect.value
-})
-// console.log(getPlace);
-
-let getPlaceAdress = ''
-headerInfoSelectAirport.addEventListener("change", function () {
-    // console.log(headerInfoSelectAirport.value);
-    getPlaceAdress = headerInfoSelectAirport.value
-})
-
-headerSelectValue3.addEventListener("change", function () {
-    // console.log(headerSelectValue3.value);
-    getPlaceAdress = headerSelectValue3.value
-})
-
-headerSelectValue4.addEventListener("change", function () {
-    // console.log(headerSelectValue4.value);
-    getPlaceAdress = headerSelectValue4.value
-})
-
-headerSelectValue5.addEventListener("change", function () {
-    // console.log(headerSelectValue5.value);
-    getPlaceAdress = headerSelectValue5.value
-})
-
-headerSelectValue6.addEventListener("change", function () {
-    // console.log(headerSelectValue6.value);
-    getPlaceAdress = headerSelectValue6.value
-})
-
-
-headerInfoSelect.addEventListener("change", function () {
-    if (this.value == "Аэрапорт") {
-        headerInfoSelectAirport.classList.toggle("active")
-        headerSelectValue3.classList.remove("active")
-        headerSelectValue4.classList.remove("active")
-        headerSelectValue5.classList.remove("active")
-        headerSelectValue6.classList.remove("active")
-    }else if (this.value == "Ж/Д Вокзал") {
-        headerSelectValue3.classList.toggle("active")
-        headerInfoSelectAirport.classList.remove("active")
-        headerSelectValue4.classList.remove("active")
-        headerSelectValue5.classList.remove("active")
-        headerSelectValue6.classList.remove("active")
-    }else if (this.value == "Авто Вокзал") {
-        headerSelectValue4.classList.add("active")
-        headerSelectValue3.classList.remove("active")
-        headerInfoSelectAirport.classList.remove("active")
-        headerSelectValue5.classList.remove("active")
-        headerSelectValue6.classList.remove("active")
-    }else if (this.value == "Пункт проката") {
-        headerSelectValue5.classList.add("active")
-        headerInfoSelectAirport.classList.remove("active")
-        headerSelectValue3.classList.remove("active")
-        headerSelectValue4.classList.remove("active")
-        headerSelectValue6.classList.remove("active")
-    }else if (this.value == "Станция метро") {
-        headerSelectValue6.classList.add("active")
-        headerInfoSelectAirport.classList.remove("active")
-        headerSelectValue3.classList.remove("active")
-        headerSelectValue4.classList.remove("active")
-        headerSelectValue5.classList.remove("active")
-    }
-})
 
   // Открыть модальное окно
 // document.getElementById("open-modal-btn").addEventListener("click", function() {
@@ -329,3 +349,23 @@ function sendMail(){
         .catch();
     }
 }
+
+// date
+var date = document.getElementById("date")
+
+var a = new Date().getFullYear() 
+if (new Date().getMonth()+1 < 10) {
+    var b = '0' + (new Date().getMonth()+1)
+}else {
+    b = new Date().getMonth()+1
+}
+if (new Date().getDate() < 10) {
+    var c = '0' + new Date().getDate()
+}else {
+    c = new Date().getDate()
+}
+
+var fullYear = a + '-' + b + '-' + c
+// document.write(a)
+
+date.min = fullYear

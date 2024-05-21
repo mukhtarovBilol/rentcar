@@ -239,7 +239,7 @@
 .card {
     max-width: 850px;
     width: 100%;
-    padding: 50px 21px 24% 21px;
+    padding: 50px 21px 15% 21px;
     border: 2px solid #ED1A3B;
     border-radius: 15px;
 }
@@ -629,33 +629,11 @@
     color: #fff;
 }
 
-.header__info-select, 
-.header__info-selectAirport,
-.header__info-selectValue3,
-.header__info-selectValue4,
-.header__info-selectValue5,
-.header__info-selectValue6,
-.header__info-count,
-.header__info-selectValue7 {
-    /* max-width: 300px; */
+
+.header__info-selectValue7,
+.header__info-selectValue8 {
     width: 100%;
     padding: 10px;
-}
-
-.header__info-selectAirport,
-.header__info-selectValue3,
-.header__info-selectValue4,
-.header__info-selectValue5,
-.header__info-selectValue6 {
-    display: none;
-}
-
-.header__info-selectAirport.active,
-.header__info-selectValue3.active,
-.header__info-selectValue4.active,
-.header__info-selectValue5.active,
-.header__info-selectValue6.active {
-    display: flex;
 }
 
 .header__info-date {
@@ -740,7 +718,7 @@
         margin: 0 auto;
     }
 
-    .header__info-select, 
+    /* .header__info-select, 
     .header__info-selectAirport,
     .header__info-selectValue3,
     .header__info-selectValue4,
@@ -748,7 +726,7 @@
     .header__info-selectValue6 {
         max-width: 550px;
         width: 100%;
-    }
+    } */
 
     .header__info-input,
     .header__info-input2 {
