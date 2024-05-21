@@ -33,6 +33,7 @@ const getcars = document.querySelectorAll(".getcars");
 let CommonPrice = Number(morePrice?.innerHTML)
 let allPrice = Number(morePrice?.innerHTML)
 var s = 0
+var rentalCost = 0;
 // checkbox2?.addEventListener("click", function () {
 //     checkbox2.classList.toggle("ac8ive")
 // })
@@ -80,23 +81,32 @@ function calculate() {
         startDate.setDate(startDate.getDate() + 1);
         
         var differenceInTime = endDate.getTime() - startDate.getTime();
-        var differenceInDays = differenceInTime / (1000 * 3600 * 24);
-        var rentalCost = 0;
+        var differenceInDays = differenceInTime / (1000 * 3600 * 24) + 1;
 
-         if (differenceInDays >= 1 && differenceInDays <= 2) {
-                rentalCost = differenceInDays * 100
-                morePrice.innerHTML = CommonPrice += rentalCost;
-        }else if (differenceInDays >= 3 && differenceInDays <= 5) {
+        if (differenceInDays >= 0 && differenceInDays <= 2) {
+            rentalCost = differenceInDays * 100
+            CommonPrice += s
+            morePrice.innerHTML = CommonPrice += rentalCost
+            CommonPrice -= rentalCost
+        }else if (differenceInDays >= 2 && differenceInDays <= 5) {
                 rentalCost = differenceInDays * 90
-                morePrice.innerHTML = CommonPrice += rentalCost;
-        }else if (differenceInDays >= 6 && differenceInDays <= 13) {
+                console.log(rentalCost);
+                console.log(CommonPrice);
+                morePrice.innerHTML = CommonPrice + rentalCost;
+        }else if (differenceInDays >= 5 && differenceInDays <= 13) {
                 rentalCost = differenceInDays * 80
-                morePrice.innerHTML = CommonPrice += rentalCost;
-        }else if (differenceInDays >= 14 && differenceInDays <= 29) {
-                rentalCost = differenceInDays * 70
-                morePrice.innerHTML = CommonPrice += rentalCost;
-        }else {
+                console.log(rentalCost);
+                console.log(CommonPrice);
+                morePrice.innerHTML = CommonPrice + rentalCost;
+        }else if (differenceInDays >= 13 && differenceInDays <= 29) {
+            rentalCost = differenceInDays * 70
+                console.log(rentalCost);
+                console.log(CommonPrice);
+                morePrice.innerHTML = CommonPrice + rentalCost;
+        }else if (differenceInDays >= 29) {
             rentalCost = differenceInDays * 60
+            console.log(rentalCost);
+            console.log(CommonPrice);
             morePrice.innerHTML = CommonPrice += rentalCost;
         }
     }
@@ -109,15 +119,19 @@ headerSelectValue7.addEventListener("change", function () {
     getsCars = headerSelectValue7.value
     if (headerSelectValue7.value == 'otel') {
         s = 10
+        CommonPrice += rentalCost
         morePrice.innerHTML = CommonPrice += 10
         CommonPrice -= 10
+        CommonPrice -= rentalCost
     }else if (headerSelectValue7.value == 'airport2') {
+        s = 25
+        CommonPrice += rentalCost
         morePrice.innerHTML = CommonPrice += 25
         CommonPrice -= 25
-        s = 25
+        CommonPrice -= rentalCost
     }else {
         s = 0
-        morePrice.innerHTML = allPrice
+        morePrice.innerHTML = allPrice + rentalCost
     }
 })
 
@@ -172,14 +186,18 @@ headerSelectValue7.addEventListener("change", function () {
             let price = Number(moreInfoPrice.getAttribute("data-src"))
             // console.log(moreInfoPrice[i].getAttribute("data-src"));
             CommonPrice += s
+            CommonPrice += rentalCost
             morePrice.innerHTML = CommonPrice += price
             CommonPrice -= s
+            CommonPrice -= rentalCost
             allPrice = CommonPrice
         }else{
             CommonPrice += s
+            CommonPrice += rentalCost
             let price = Number(moreInfoPrice.getAttribute("data-src"))
             morePrice.innerHTML = CommonPrice -= price 
             CommonPrice -= s
+            CommonPrice -= rentalCost
             allPrice = CommonPrice  
         }
     })
