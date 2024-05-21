@@ -41,76 +41,147 @@ var rentalCost = 0;
 
 // date
 
-// Устанавливаем минимальную дату получения на сегодняшний день
-var today = new Date();
-var dd = String(today.getDate()).padStart(2, '0');
-var mm = String(today.getMonth() + 1).padStart(2, '0'); // January is 0!
-var yyyy = today.getFullYear();
-today = yyyy + '-' + mm + '-' + dd;
-document.getElementById("start_date").setAttribute("min", today);
-
-// Добавляем обработчик события при изменении даты получения
-document.getElementById("start_date").addEventListener("change", function() {
-    calculate(); // Вызываем функцию calculate при изменении даты получения
-});
-
-// Добавляем обработчик события при изменении даты возврата
-document.getElementById("end_date").addEventListener("change", function() {
-    calculate(); // Вызываем функцию calculate при изменении даты возврата
-});
-
 function calculate() {
-    var startDate = document.getElementById("start_date").value;
-    var endDate = document.getElementById("end_date").value;
+    var startDate = new Date(document.getElementById("start_date").value);
+    var endDate = new Date(document.getElementById("end_date").value);
     
-    // Проверяем, выбраны ли обе даты
-    if (startDate && endDate) {
-        startDate = new Date(startDate);
-        endDate = new Date(endDate);
-        
-        // Проверяем, если дата получения позже даты возврата, меняем их местами
-        if (startDate > endDate) {
-            var temp = startDate;
-            startDate = endDate;
-            endDate = temp;
-            document.getElementById("start_date").value = startDate.toISOString().slice(0, 10);
-            document.getElementById("end_date").value = endDate.toISOString().slice(0, 10);
-        }
-        
-        // Добавляем еще один день к дате получения
-        startDate.setDate(startDate.getDate() + 1);
-        
-        var differenceInTime = endDate.getTime() - startDate.getTime();
-        var differenceInDays = differenceInTime / (1000 * 3600 * 24) + 1;
+    // Проверяем, если дата возврата не выбрана, прерываем функцию
+    if (!endDate) return;
+    
+    // Проверяем, если дата получения позже даты возврата, выводим сообщение об ошибке
+    if (startDate >= endDate) {
+        alert("Пожалуйста, выберите корректные даты для получения и возврата.");
+        return;
+    }
+    
+    var differenceInTime = endDate.getTime() - startDate.getTime();
+    var differenceInDays = Math.ceil(differenceInTime / (1000 * 3600 * 24)); // округляем вверх, чтобы учитывать день возврата
+    
+    if (differenceInDays < 1) {
+        alert("Минимальный срок аренды составляет 1 день.");
+        return;
+    }
+    
+    var rentalCost = calculateRentalCost(differenceInDays);
+    
+    // document.getElementById("result").innerText = "Стоимость аренды: $" + rentalCost.toFixed(2);
+}
 
-        if (differenceInDays >= 0 && differenceInDays <= 2) {
-            rentalCost = differenceInDays * 100
-            CommonPrice += s
-            morePrice.innerHTML = CommonPrice += rentalCost
-            CommonPrice -= rentalCost
-        }else if (differenceInDays >= 2 && differenceInDays <= 5) {
-                rentalCost = differenceInDays * 90
-                console.log(rentalCost);
-                console.log(CommonPrice);
-                morePrice.innerHTML = CommonPrice + rentalCost;
-        }else if (differenceInDays >= 5 && differenceInDays <= 13) {
-                rentalCost = differenceInDays * 80
-                console.log(rentalCost);
-                console.log(CommonPrice);
-                morePrice.innerHTML = CommonPrice + rentalCost;
-        }else if (differenceInDays >= 13 && differenceInDays <= 29) {
-            rentalCost = differenceInDays * 70
-                console.log(rentalCost);
-                console.log(CommonPrice);
-                morePrice.innerHTML = CommonPrice + rentalCost;
-        }else if (differenceInDays >= 29) {
-            rentalCost = differenceInDays * 60
-            console.log(rentalCost);
-            console.log(CommonPrice);
-            morePrice.innerHTML = CommonPrice += rentalCost;
-        }
+
+function calculateRentalCost(days) {
+    if (days >= 1 && days <= 2) {
+        console.log(days);
+        CommonPrice += s
+        morePrice.innerHTML = CommonPrice += 100 * days;
+        CommonPrice -= s
+    } else if (days >= 3 && days <= 5) {
+        console.log(days);
+        CommonPrice += s
+        morePrice.innerHTML = CommonPrice += 90 * days;
+        CommonPrice -= s
+    } else if (days >= 6 && days <= 13) {
+        console.log(days);
+        CommonPrice += s
+        morePrice.innerHTML = CommonPrice += 80 * days;
+        CommonPrice -= s
+    } else if (days >= 14 && days <= 29) {
+        console.log(days);
+        CommonPrice += s
+        morePrice.innerHTML = CommonPrice += 70 * days;
+        CommonPrice -= s
+    } else {
+        console.log(days);
+        CommonPrice += s
+        morePrice.innerHTML = CommonPrice += 60 * days;
+        CommonPrice -= s
     }
 }
+
+// Устанавливаем сегодняшнюю дату как минимальную для получения
+document.getElementById("start_date").min = new Date().toISOString().split('T')[0];
+
+// При изменении даты получения автоматически обновляем минимальную дату возврата
+document.getElementById("start_date").addEventListener("change", function() {
+    var startDate = new Date(document.getElementById("start_date").value);
+    var nextDay = new Date(startDate);
+    nextDay.setDate(startDate.getDate() + 1);
+    var minReturnDate = nextDay.toISOString().split('T')[0];
+    document.getElementById("end_date").min = minReturnDate;
+});
+
+// При изменении даты возврата автоматически пересчитываем стоимость аренды
+document.getElementById("end_date").addEventListener("change", calculate);
+
+
+
+
+
+
+
+
+
+// // Устанавливаем минимальную дату получения на сегодняшний день
+// var today = new Date();
+// var dd = String(today.getDate()).padStart(2, '0');
+// var mm = String(today.getMonth() + 1).padStart(2, '0'); // January is 0!
+// var yyyy = today.getFullYear();
+// today = yyyy + '-' + mm + '-' + dd;
+// document.getElementById("start_date").setAttribute("min", today);
+
+// // Добавляем обработчик события при изменении даты получения
+// document.getElementById("start_date").addEventListener("change", function() {
+//     calculate(); // Вызываем функцию calculate при изменении даты получения
+// });
+
+// // Добавляем обработчик события при изменении даты возврата
+// document.getElementById("end_date").addEventListener("change", function() {
+//     calculate(); // Вызываем функцию calculate при изменении даты возврата
+// });
+
+// function calculate() {
+//     var startDate = document.getElementById("start_date").value;
+//     var endDate = document.getElementById("end_date").value;
+    
+//     // Проверяем, выбраны ли обе даты
+//     if (startDate && endDate) {
+//         startDate = new Date(startDate);
+//         endDate = new Date(endDate);
+        
+//         // Проверяем, если дата получения позже даты возврата, меняем их местами
+//         if (startDate > endDate) {
+//             var temp = startDate;
+//             startDate = endDate;
+//             endDate = temp;
+//             document.getElementById("start_date").value = startDate.toISOString().slice(0, 10);
+//             document.getElementById("end_date").value = endDate.toISOString().slice(0, 10);
+//         }
+        
+//         // Добавляем еще один день к дате получения
+//         startDate.setDate(startDate.getDate() + 1);
+        
+//         var differenceInTime = endDate.getTime() - startDate.getTime();
+//         var differenceInDays = differenceInTime / (1000 * 3600 * 24) + 1;
+
+//         if (differenceInDays >= 0 && differenceInDays <= 2) {
+//             rentalCost = differenceInDays * 100
+//             CommonPrice += s
+//             morePrice.innerHTML = CommonPrice += rentalCost
+//             CommonPrice -= rentalCost
+//         }else if (differenceInDays >= 2 && differenceInDays <= 5) {
+//                 rentalCost = differenceInDays * 90
+//                 morePrice.innerHTML = CommonPrice + rentalCost;
+//         }else if (differenceInDays >= 5 && differenceInDays <= 13) {
+//                 rentalCost = differenceInDays * 80
+//                 morePrice.innerHTML = CommonPrice + rentalCost;
+//         }else if (differenceInDays >= 13 && differenceInDays <= 29) {
+//             rentalCost = differenceInDays * 70
+//                 morePrice.innerHTML = CommonPrice + rentalCost;
+//         }else if (differenceInDays >= 29) {
+//             rentalCost = differenceInDays * 60
+//             morePrice.innerHTML = CommonPrice += rentalCost;
+//         }
+//     }
+// }
 
 // date
 
@@ -119,19 +190,15 @@ headerSelectValue7.addEventListener("change", function () {
     getsCars = headerSelectValue7.value
     if (headerSelectValue7.value == 'otel') {
         s = 10
-        CommonPrice += rentalCost
-        morePrice.innerHTML = CommonPrice += 10
-        CommonPrice -= 10
-        CommonPrice -= rentalCost
+        morePrice.innerHTML = CommonPrice += s 
+        CommonPrice -= s
     }else if (headerSelectValue7.value == 'airport2') {
         s = 25
-        CommonPrice += rentalCost
-        morePrice.innerHTML = CommonPrice += 25
-        CommonPrice -= 25
-        CommonPrice -= rentalCost
+        morePrice.innerHTML = CommonPrice += s
+        CommonPrice -= s
     }else {
         s = 0
-        morePrice.innerHTML = allPrice + rentalCost
+        morePrice.innerHTML = CommonPrice -= s
     }
 })
 
