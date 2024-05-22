@@ -29,10 +29,12 @@ const button = document.querySelector(".button")
 const headerSelectValue7 = document.querySelector(".header__info-selectValue7");
 const headerSelectValue8 = document.querySelector(".header__info-selectValue8");
 const getcars = document.querySelectorAll(".getcars");
+const getcars2 = document.querySelectorAll(".getcars2");
 
 let CommonPrice = Number(morePrice?.innerHTML)
 let allPrice = Number(morePrice?.innerHTML)
-var s = 0
+var s = 0 //это место получение офис и т.д(1)
+var s2 = 0 // это место получение офис и т.д(2)
 
 // date
 
@@ -126,38 +128,58 @@ headerSelectValue7.addEventListener("change", function () {
     if (headerSelectValue7.value == 'otel') {
         s = 10
         CommonPrice += prices
-        morePrice.innerHTML = CommonPrice += s 
+        CommonPrice += s2
+        morePrice.innerHTML = CommonPrice += s
         CommonPrice -= s
+        CommonPrice -= s2
         CommonPrice -= prices
     }else if (headerSelectValue7.value == 'airport2') {
         s = 25
         CommonPrice += prices
+        CommonPrice += s2
         morePrice.innerHTML = CommonPrice += s
         CommonPrice -= s
+        CommonPrice -= s2
         CommonPrice -= prices
     }else {
         s = 0
         CommonPrice += prices
+        CommonPrice += s2
         morePrice.innerHTML = CommonPrice -= s
         CommonPrice -= prices
+        CommonPrice -= s2
     }
 })
 
-// headerSelectValue8.addEventListener("change", function () {
-//     getsCars = headerSelectValue8.value
-//     if (headerSelectValue8.value == 'otel') {
-//         s = 10
-//         morePrice.innerHTML = CommonPrice += 10
-//         CommonPrice -= 10
-//     }else if (headerSelectValue8.value == 'airport2') {
-//         morePrice.innerHTML = CommonPrice += 25
-//         CommonPrice -= 25
-//         s = 25
-//     }else {
-//         s = 0
-//         morePrice.innerHTML = allPrice
-//     }
-// })
+
+var backCars = 'Офис'
+headerSelectValue8.addEventListener("change", function () {
+    backCars = headerSelectValue8.value
+    if (headerSelectValue8.value == 'otel') {
+        s2 = 10
+        CommonPrice += prices
+        CommonPrice += s
+        morePrice.innerHTML = CommonPrice += 10
+        CommonPrice -= 10
+        CommonPrice -= s
+        CommonPrice -= prices
+    }else if (headerSelectValue8.value == 'airaport2') {
+        s2 = 25
+        CommonPrice += prices
+        CommonPrice += s
+        morePrice.innerHTML = CommonPrice += 25
+        CommonPrice -= 25 
+        CommonPrice -= s
+        CommonPrice -= prices
+    }else {
+        s2 = 0
+        CommonPrice += prices
+        CommonPrice += s
+        morePrice.innerHTML = CommonPrice -= s2
+        CommonPrice -= prices
+        CommonPrice -= s
+    }
+})
 
 checkbox.addEventListener("click", function () {
     checkbox.classList.toggle("active")
@@ -166,16 +188,20 @@ checkbox.addEventListener("click", function () {
         // console.log(moreInfoPrice[i].getAttribute("data-src"));
         CommonPrice += s
         CommonPrice += prices
+        CommonPrice += s2
         morePrice.innerHTML = CommonPrice += price
         CommonPrice -= s
+        CommonPrice -= s2
         CommonPrice -= prices
         allPrice = CommonPrice
     }else{
         CommonPrice += s
+        CommonPrice += s2
         CommonPrice += prices
         let price = Number(moreInfoPrice.getAttribute("data-src"))
         morePrice.innerHTML = CommonPrice -= price 
         CommonPrice -= s
+        CommonPrice -= s2
         CommonPrice -= prices
         allPrice = CommonPrice  
     }
