@@ -33,7 +33,6 @@ const getcars = document.querySelectorAll(".getcars");
 let CommonPrice = Number(morePrice?.innerHTML)
 let allPrice = Number(morePrice?.innerHTML)
 var s = 0
-var rentalCost = 0;
 // checkbox2?.addEventListener("click", function () {
 //     checkbox2.classList.toggle("ac8ive")
 // })
@@ -63,39 +62,49 @@ function calculate() {
     }
     
     var rentalCost = calculateRentalCost(differenceInDays);
-    
-    // document.getElementById("result").innerText = "Стоимость аренды: $" + rentalCost.toFixed(2);
 }
 
 
+var prices = 0;
 function calculateRentalCost(days) {
     if (days >= 1 && days <= 2) {
         console.log(days);
+        prices = 100 * days
         CommonPrice += s
-        morePrice.innerHTML = CommonPrice += 100 * days;
+        morePrice.innerHTML = CommonPrice += prices;
         CommonPrice -= s
+        CommonPrice -= prices
     } else if (days >= 3 && days <= 5) {
         console.log(days);
         CommonPrice += s
-        morePrice.innerHTML = CommonPrice += 90 * days;
+        prices = 90 * days
+        morePrice.innerHTML = CommonPrice += prices;
         CommonPrice -= s
+        prices = 0
     } else if (days >= 6 && days <= 13) {
         console.log(days);
         CommonPrice += s
-        morePrice.innerHTML = CommonPrice += 80 * days;
+        prices = 80 * days 
+        morePrice.innerHTML = CommonPrice += prices;
         CommonPrice -= s
+        prices = 0
     } else if (days >= 14 && days <= 29) {
         console.log(days);
         CommonPrice += s
-        morePrice.innerHTML = CommonPrice += 70 * days;
+        prices = 70 * days
+        morePrice.innerHTML = CommonPrice += prices;
+        prices = 0
         CommonPrice -= s
     } else {
         console.log(days);
         CommonPrice += s
-        morePrice.innerHTML = CommonPrice += 60 * days;
+        prices = 60 * days
+        morePrice.innerHTML = CommonPrice += prices;
+        prices = 0
         CommonPrice -= s
     }
 }
+
 
 // Устанавливаем сегодняшнюю дату как минимальную для получения
 document.getElementById("start_date").min = new Date().toISOString().split('T')[0];
@@ -111,13 +120,6 @@ document.getElementById("start_date").addEventListener("change", function() {
 
 // При изменении даты возврата автоматически пересчитываем стоимость аренды
 document.getElementById("end_date").addEventListener("change", calculate);
-
-
-
-
-
-
-
 
 
 // // Устанавливаем минимальную дату получения на сегодняшний день
@@ -190,15 +192,21 @@ headerSelectValue7.addEventListener("change", function () {
     getsCars = headerSelectValue7.value
     if (headerSelectValue7.value == 'otel') {
         s = 10
+        CommonPrice += prices
         morePrice.innerHTML = CommonPrice += s 
         CommonPrice -= s
+        CommonPrice -= prices
     }else if (headerSelectValue7.value == 'airport2') {
         s = 25
+        CommonPrice += prices
         morePrice.innerHTML = CommonPrice += s
         CommonPrice -= s
+        CommonPrice -= prices
     }else {
         s = 0
+        CommonPrice += prices
         morePrice.innerHTML = CommonPrice -= s
+        CommonPrice -= prices
     }
 })
 
@@ -253,18 +261,18 @@ headerSelectValue7.addEventListener("change", function () {
             let price = Number(moreInfoPrice.getAttribute("data-src"))
             // console.log(moreInfoPrice[i].getAttribute("data-src"));
             CommonPrice += s
-            CommonPrice += rentalCost
+            CommonPrice += prices
             morePrice.innerHTML = CommonPrice += price
             CommonPrice -= s
-            CommonPrice -= rentalCost
+            CommonPrice -= prices
             allPrice = CommonPrice
         }else{
             CommonPrice += s
-            CommonPrice += rentalCost
+            CommonPrice += prices
             let price = Number(moreInfoPrice.getAttribute("data-src"))
             morePrice.innerHTML = CommonPrice -= price 
             CommonPrice -= s
-            CommonPrice -= rentalCost
+            CommonPrice -= prices
             allPrice = CommonPrice  
         }
     })
