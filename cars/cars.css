@@ -239,7 +239,7 @@
 .card {
     max-width: 850px;
     width: 100%;
-    padding: 50px 21px 15% 21px;
+    padding: 50px 21px 19% 21px;
     border: 2px solid #ED1A3B;
     border-radius: 15px;
 }
@@ -627,10 +627,6 @@
 .header__info-helps:hover {
     background: #1BCC2C;
     color: #fff;
-}
-
-.header__info-get {
-    
 }
 
 .header__info-selectValue7,
