@@ -169,27 +169,42 @@
                       <div class="price__info">
                         <p class="price__txt">1-2 суток</p>
                         <span></span>
-                        <p class="price__subtitle">2350 р</p>
+                        <div class="price__all-helper">
+                            <p class="price__subtitle number1">100 </p>
+                            azn
+                        </div>
                       </div>
                       <div class="price__info">
                         <p class="price__txt">3-5 суток</p>
                         <span></span>
-                        <p class="price__subtitle">2270 р</p>
+                        <div class="price__all-helper">
+                            <p class="price__subtitle number2">90</p>
+                            azn
+                        </div>
                       </div>
                       <div class="price__info">
                         <p class="price__txt">6-13 суток</p>
                         <span></span>
-                        <p class="price__subtitle">2200 р</p>
+                        <div class="price__all-helper">
+                            <p class="price__subtitle number3">80 </p>
+                            azn
+                        </div>
                       </div>
                       <div class="price__info">
                         <p class="price__txt">14-29 суток</p>
                         <span></span>
-                        <p class="price__subtitle">2130 р</p>
+                        <div class="price__all-helper">
+                            <p class="price__subtitle number4">70 </p>
+                            AZN
+                        </div>
                       </div>
                       <div class="price__info">
                         <p class="price__txt">от 30 суток</p>
                         <span></span>
-                        <p class="price__subtitle">2070 р</p>
+                        <div class="price__all-helper">
+                            <p class="price__subtitle number5">60 </p>
+                            azn
+                        </div>
                       </div>
                       <div class="required">
                         <h3 class="required__title">Требования к арендатору:</h3>
@@ -199,7 +214,7 @@
                         </div>
                         <div class="required__info">
                           <i class='bx bxs-check-circle'></i>
-                          <p><span>для остальных классов</span>возраст от 20 лет и стаж вождение не менее 1 года </p>
+                          <p><span>для остальных классов </span>возраст от 20 лет и стаж вождение не менее 1 года </p>
                         </div>
                         <h3 class="required__title2">Документы для аренды:</h3>
                         <div class="required__info">
@@ -218,9 +233,9 @@
                     </div>
                     <div class="header__info">
                       <div class="header__info-date">
-                          <span class="span">Дата и время выдачи</span>
+                          <label for="start_date" class="span">Дата и время выдачи</label>
                           <div class="header__info-dateHelper">
-                              <input type="date" id="date" class="header__info-input">
+                            <input type="date" class="header__info-input" id="start_date">
                               <div class="select__helped">
                                   <select class="header__info-date-select">
                                       <option value="0" class="header__info-option">00</option>
@@ -258,9 +273,9 @@
                           </div>
                       </div>
                       <div class="header__info-date">
-                          <span class="span">Дата и время возврата</span>
+                          <label for="end_date" class="span">Дата и время возврата</label>
                           <div class="header__info-dateHelper">
-                              <input type="date" id="datee" class="header__info-input2">
+                                <input type="date" id="end_date" class="header__info-input2">
                               <div class="select__helped">
                                   <select class="header__info-date-select select3">
                                       <option value="0">00</option>
@@ -297,81 +312,19 @@
                               </div>
                           </div>
                       </div>
-                      <select name="select" class="header__info-select">
-                          <option value="value1" class="option" disabled selected>Выберите место получения</option>    
-                          <option value="Аэрапорт" class="option">Аэрапорт</option>
-                          <option value="Ж/Д Вокзал" class="option">Ж/Д Вокзал</option>
-                          <option value="Авто Вокзал" class="option">Авто Вокзал</option>
-                          <option value="Пункт проката" class="option">Пункт проката</option>
-                          <option value="Станция метро" class="option">Станция метро</option>
-                      </select>
-                      <select name="airport" id="" class="header__info-selectAirport">
-                          <option value="">Место получение</option>
-                          <option value="Домодедово (DME)">Домодедово (DME)</option>
-                          <option value="Внуково (VKO)">Внуково (VKO)</option>
-                          <option value="Шереметьево (SVO)">Шереметьево (SVO)</option>
-                          <option value="Жуковский (ZIA)">Жуковский (ZIA)</option>
-                      </select>
-                      <select name="value3" class="header__info-selectValue3">
-                          <option value="">Добавьте свои</option>
-                          <option value="">Добавьте свои</option>
-                          <option value="">Добавьте свои</option>
-                          <option value="">Добавьте свои</option>
-                          <option value="">Добавьте свои</option>
-                          <option value="">Добавьте свои</option>
-                          <option value="">Добавьте свои</option>
-                          <option value="">Добавьте свои</option>
-                          <option value="">Добавьте свои</option>
-                      </select>
-                      <select name="value4" class="header__info-selectValue4">
-                          <option value="">Авто Вокзал</option>
-                          <option value="">Авто Вокзал</option>
-                          <option value="">Авто Вокзал</option>
-                          <option value="">Авто Вокзал</option>
-                          <option value="">Авто Вокзал</option>
-                          <option value="">Авто Вокзал</option>
-                          <option value="">Авто Вокзал</option>
-                          <option value="">Авто Вокзал</option>
-                          <option value="">Авто Вокзал</option>
-                      </select>
-                      <select name="value5" class="header__info-selectValue5">
-                          <option value="" disabled selected></option>
-                          <option value="Кунцево">Кунцево</option>
-                      </select>
-                      <select name="value6" class="header__info-selectValue6">
-                          <option value="">Станция метро</option>
-                          <option value="">Станция метро</option>
-                          <option value="">Станция метро</option>
-                          <option value="">Станция метро</option>
-                          <option value="">Станция метро</option>
-                          <option value="">Станция метро</option>
-                          <option value="">Станция метро</option>
-                          <option value="">Станция метро</option>
-                          <option value="">Станция метро</option>
-                          <option value="">Станция метро</option>
-                          <option value="">Станция метро</option>
-                          <option value="">Станция метро</option>
-                          <option value="">Станция метро</option>
-                          <option value="">Станция метро</option>
-                          <option value="">Станция метро</option>
-                          <option value="">Станция метро</option>
-                          <option value="">Станция метро</option>
-                          <option value="">Станция метро</option>
-                          <option value="">Станция метро</option>
-                          <option value="">Станция метро</option>
-                      </select>
+                      <div id="message" style="color: #888; font-style: italic; display: none;">Выберите дату возврата, чтобы рассчитать стоимость аренды.</div>
+                      <label for="" class="span">Место получение</label>
                       <select name="" id="" class="header__info-selectValue7">
                         <option value="ofis" class="getcars">Офис(0 azn)</option>
                         <option value="otel" class="getcars">Любой отель в Баку (10 azn) </option>
                         <option value="airport2" class="getcars">Международный аэропорт имени Гейдара Алиева (GYD) (25 azn)</option>
                       </select>
-                      <!-- <div class="more__select2">
-                          <div class="checkbox2">
-                              <input type="checkbox" class="check2">
-                              <label for="check" class="button2"></label>
-                          </div>
-                          <p>Возврат авто в другом месте</p>
-                      </div> -->
+                      <label for="" class="span">Место возврата</label>
+                      <select name="" id="" class="header__info-selectValue8">
+                        <option value="ofis" class="getcars2">Офис(0 azn)</option>
+                        <option value="otel" class="getcars2">Любой отель в Баку (10 azn) </option>
+                        <option value="airaport2" class="getcars2">Международный аэропорт имени Гейдара Алиева (GYD) (25 azn)</option>
+                      </select>
                   </div>
                   <div class="more__things">
                     <h3 class="more__title">Дополнительное оборудование</h3>
@@ -384,38 +337,19 @@
                           <p>Аренда десткого кресла</p>
                       </div>
                       <span></span>
-                      <p data-src="1000" class="more__info-price" >1 000 AZN</p>
-                    </div>
-                    <!-- <div class="more__info animals">
-                      <div class="more__select">
-                          <div class="checkbox">
-                              <input type="checkbox" class="check">
-                              <label for="check" class="button"></label>
-                          </div>
-                          <p data-src="1500" class="more__info-price">Гамак для перевозки животных</p>
+                      <div class="more__info-all">
+                          <p data-src="50" class="more__info-price">50 </p>
+                          AZN
                       </div>
-                      <span></span>
-                      <p>1 500 AZN</p>
                     </div>
-                    <div class="more__info drive">
-                      <div class="more__select">
-                          <div class="checkbox">
-                              <input type="checkbox" class="check">
-                              <label for="check" class="button"></label>
-                          </div>
-                          <p>Доп.водитель</p>
-                      </div>
-                      <span></span>
-                      <p data-src="2000" class="more__info-price">2 000 AZN</p>
-                    </div> -->
                     <div class="more__prices">
                       <h3 class="more__title">Депозит </h3>
-                      <p>57 000 AZN</p>
+                      <p>150 AZN</p>
                     </div>
                     <div class="more__prices">
                       <h3 class="more__title">Итого </h3>
                       <div class="price__helper">
-                          <p class="more__price">50000 </p>
+                          <p class="more__price">150 </p>
                           AZN
                       </div>
                     </div>

@@ -88,6 +88,11 @@
     cursor: pointer;
 }
 
+.form label {
+    font-size: 12px;
+    color: rgb(255, 12, 12);
+}
+
 @media (max-width: 576px) {
     .modal__box {
         width: 325px;

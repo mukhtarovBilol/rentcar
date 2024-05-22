@@ -245,7 +245,7 @@
 }
 
 .cardMiniven {
-    padding: 50px 21px 20px 21px;
+    padding: 50px 21px 25px 21px;
 }
 
 .card__desc {
@@ -441,6 +441,14 @@
 .price__info span {
     width: 50%;
     border: 1px solid #ccc;
+}
+
+.price__all-helper {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    text-transform: uppercase;
 }
 
 @media (max-width: 423px) {
@@ -763,14 +771,11 @@
     border: 1px solid #959595;
 }
 
-.more__info:nth-child(3) span {
-    width: 15%;
-    border: 1px solid #959595;
-}
-
-.more__info:nth-child(4) span {
-    width: 40%;
-    border: 1px solid #959595;
+.more__info-all {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
 }
 
 .checkbox,
