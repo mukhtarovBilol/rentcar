@@ -60,7 +60,6 @@
 }
 
 .for__burger {
-    display: none;
     width: 30px;
     height: 30px;
     background: #fff;
@@ -68,6 +67,7 @@
 }
 
 .nav__list-helper {
+    display: none;  
     position: sticky;
     top: 10px;
     left: 10px;
@@ -79,7 +79,6 @@
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-    gap: 40px;
     padding: 20px 0;
     font-size: clamp(16px, 3vw, 18px);
 }
@@ -174,7 +173,7 @@
       padding: 10px;
     }
 
-    .for__burger {
+    .nav__list-helper {
         display: flex;
     }
 

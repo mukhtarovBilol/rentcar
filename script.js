@@ -5,6 +5,7 @@ const tabsContentItem = document.querySelectorAll(".tabsContentItem");
 const navBurger = document.querySelector(".nav__burger");
 const navList = document.querySelector(".nav__list")
 const navListHelper = document.querySelector(".nav__list-helper")
+const navItem = document.querySelectorAll(".nav__item")
 
 
 navBurger.addEventListener("click", function () {
@@ -16,6 +17,13 @@ navListHelper.addEventListener("click", function (){
     navList.classList.remove("active")
     navBurger.classList.remove("active")
 })
+
+for (let i = 0; i < navItem.length; i++) {
+    navItem[i].addEventListener("click", function () {
+        navList.classList.remove("active")
+        navBurger.classList.remove("active")
+    })
+}
 
 for (let i = 0; i < icon.length; i++) {
     icon[i].addEventListener("click", function () {
