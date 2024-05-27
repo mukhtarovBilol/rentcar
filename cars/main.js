@@ -229,6 +229,27 @@ checkbox?.addEventListener("click", function () {
 
 // check
 
+ // Функция для автоматического добавления знаков "-" в номере телефона
+ const formNumber = document.querySelector(".form__number")
+ var phoneNumber = 0
+ formNumber.addEventListener("input", function() {
+    phoneNumber = this.value;
+    // Удаляем все символы, кроме цифр
+    phoneNumber = phoneNumber.replace(/\D/g, '');
+    // Ограничиваем длину номера до 10 символов (XXXXXXXXXX)
+    phoneNumber = phoneNumber.substring(0, 9);
+    // Форматируем номер в требуемый вид (XX) XXX-XX-XX
+    if (phoneNumber.length > 2) {
+        phoneNumber = '(' + phoneNumber.substring(0, 2) + ') ' + phoneNumber.substring(2);
+    }
+    if (phoneNumber.length > 8) {
+        phoneNumber = phoneNumber.substring(0, 8) + '-' + phoneNumber.substring(8);
+    }
+    if (phoneNumber.length > 11) {
+        phoneNumber = phoneNumber.substring(0, 11) + '-' + phoneNumber.substring(11);
+    }
+    this.value = phoneNumber;
+});
 // date
 
 const headerInfoInput = document.querySelector(".header__info-input");
@@ -237,19 +258,18 @@ const headerInfoDataSelect = document.querySelector(".header__info-date-select")
 const select2 = document.querySelector(".select2");
 const select3 = document.querySelector(".select3");
 const select4 = document.querySelector(".select4");
-const headerInfoSelect = document.querySelector(".header__info-select");
-const headerInfoCount = document.querySelector(".header__info-count")
+const headerInfoSelect = document.querySelector(".header__info-selectValue9");
 
 // count passanger
-var countPassanger = ''
-headerInfoCount?.addEventListener("input", function () {
-    // console.log(headerInfoCount.value);
-    countPassanger = headerInfoCount.value
+var countPassanger = '0'
+headerInfoSelect?.addEventListener("input", function () {
+    // console.log(headerInfoSelect.value);
+    countPassanger = headerInfoSelect.value
 })
 // count passanger
 
 // дата получения
-var getcar = ''
+var getcar = ""
 headerInfoInput.addEventListener("change", function () {
     // console.log(headerInfoInput.value);
     getcar = headerInfoInput.value
@@ -258,7 +278,7 @@ headerInfoInput.addEventListener("change", function () {
 // дата получения
 
 // дата возврата
-var comeback = ''
+var comeback = '00'
 headerInfoInput2.addEventListener("change", function () {
     // console.log(headerInfoInput2.value);
     comeback = headerInfoInput2.value
@@ -267,7 +287,7 @@ headerInfoInput2.addEventListener("change", function () {
 // дата возврата
 
 // время получение
-var time = ''
+var time = '00'
 headerInfoDataSelect.addEventListener("change", function () {
     // console.log(headerInfoDataSelect.value);
     time = headerInfoDataSelect.value
@@ -330,7 +350,7 @@ document.getElementById("my-modal").addEventListener('click', event => {
 function sendMail() {
     if (document.querySelector("#name").value !== '' && document.querySelector("#message").value !== '') {
         (function () {
-            emailjs.init("gaVbQy_bCrOGZXTtf")
+            emailjs.init("ycbnej7QH72zg6TGT")
         })();
 
         if (sit?.classList == 'more__info sit active') {
@@ -339,22 +359,23 @@ function sendMail() {
             childrenSitting = "Нет"
         }
 
-        var params = {
-            senderName: document.querySelector("#name").value,
-            name: document.querySelector("#name").value + ", Дата и время получение машины: " + getcar + ' ' + time + ':' + minute + ', Дата и время возврата: ' + comeback + ' ' + backtime + ' : ' + backminute,
-            message: document.querySelector("#message").value + ', Нужен ли кресла: ' + childrenSitting + ', Место получение машины: ' + getsCars + ', Место возврата авто: ' + backCars + ", Итого: " + morePrice.innerHTML
-        };
+        if (phoneNumber.length == 14) {
+            var params = {
+                name: document.querySelector("#name").value + ", Дата и время получение машины: " + getcar + ' ' + time + ': ' + minute + ', Дата и время возврата: ' + comeback + ' ' + backtime + ': ' + backminute,
+                message: "+994 " + phoneNumber + ', Нужен ли кресла: ' + childrenSitting + ', Место получение машины: ' + getsCars + ', Место возврата авто: ' + backCars + ', Количество пассажиров: ' + countPassanger + ", Итого: " + morePrice.innerHTML
+            };
+        }else {
+            formNumber.style.border = "2px solid red"
+        }
 
-
-        var serviceID = "service_1xyqmdu";
-        var templateID = "template_tgol57n";
+        var serviceID = "service_ajn9ixc";
+        var templateID = "template_bge6w0q";
 
         emailjs.send(serviceID, templateID, params)
             .then(res => {
                 alert("Доставлено, скоро с вами свяжутся")
                 document.querySelector("#name").value = ''
-                document.querySelector("#message").value = ''
-                document.querySelector("#date").value = ''
+                params.message = '' 
             })
         .catch();
     }

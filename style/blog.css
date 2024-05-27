@@ -54,6 +54,14 @@
     margin-bottom: 40px;
 }
 
+.description__blog .container {
+
+}
+
+.description__desc {
+    margin: 0 auto;
+}
+
 .description__blog .container p {
     line-height: 150%;
 }

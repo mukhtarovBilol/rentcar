@@ -95,6 +95,14 @@
 
 @media (max-width: 576px) {
     .modal__box {
-        width: 325px;
+        max-width: 325px;
+        width: 100%;
+    }
+}
+
+@media (max-width:360px) {
+    .modal__box {
+        max-width: 295px;
+        width: 100%;
     }
 }
