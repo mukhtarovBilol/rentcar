@@ -85,12 +85,18 @@
     font-size: clamp(16px, 3vw, 18px);
 }
 
-.avto {
+.avto ,
+.nav__item{
     position: relative;
     float: left;
 }
 
 .avto:hover .nav__list-avto {
+    opacity: 1;
+    visibility: visible;
+}
+
+.nav__item:hover .nav__list-avto {
     opacity: 1;
     visibility: visible;
 }
@@ -993,13 +999,6 @@ iframe {
     flex-wrap: wrap;
     font-weight: 700;
 }
-
-/* .footer__facebook,
-.footer__instagram {
-    background: #000;
-    max-width: 255px;
-    width: 100%;
-} */
 
 .footer .container {
     display: flex;

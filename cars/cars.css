@@ -83,12 +83,12 @@
     font-size: clamp(16px, 3vw, 18px);
 }
 
-.nav__item {
+.avto {
     position: relative;
     float: left;
 }
 
-.nav__item:hover .nav__list-avto {
+.avto:hover .nav__list-avto {
     opacity: 1;
     visibility: visible;
 }
