@@ -76,7 +76,7 @@ var innerNumber4 = Number(number4?.innerHTML)
 var innerNumber5 = Number(number5?.innerHTML) 
 
 function calculateRentalCost(days) {
-    if (days >= 1 && days <= 2) {
+    if (days >= 2 && days <= 7) {
         // console.log(days);
         prices = innerNumber1 * days
         CommonPrice += s
@@ -85,7 +85,7 @@ function calculateRentalCost(days) {
         }
         CommonPrice -= s
         CommonPrice -= prices
-    } else if (days >= 3 && days <= 5) {
+    } else if (days >= 8 && days <= 20) {
         // console.log(days);
         CommonPrice += s
         prices = innerNumber2 * days
@@ -95,24 +95,6 @@ function calculateRentalCost(days) {
         CommonPrice -= s
         CommonPrice -= prices
         prices = 0
-    } else if (days >= 6 && days <= 13) {
-        // console.log(days);
-        CommonPrice += s
-        prices = innerNumber3 * days
-        if (morePrice) {
-            morePrice.innerHTML = CommonPrice += prices;
-        }
-        CommonPrice -= s
-        CommonPrice -= prices
-    } else if (days >= 14 && days <= 29) {
-        // console.log(days);
-        CommonPrice += s
-        prices = innerNumber4 * days
-        if (morePrice) {
-            morePrice.innerHTML = CommonPrice += prices;
-        }
-        CommonPrice -= s
-        CommonPrice -= prices
     } else {
         // console.log(days);
         CommonPrice += s
@@ -144,7 +126,7 @@ document.getElementById("end_date").addEventListener("change", calculate);
 // date
 
 var getsCars = "Офис"
-headerSelectValue7.addEventListener("change", function () {
+headerSelectValue7?.addEventListener("change", function () {
     getsCars = headerSelectValue7.value
     if (headerSelectValue7.value == 'otel') {
         s = 10
@@ -174,7 +156,7 @@ headerSelectValue7.addEventListener("change", function () {
 
 
 var backCars = 'Офис'
-headerSelectValue8.addEventListener("change", function () {
+headerSelectValue8?.addEventListener("change", function () {
     backCars = headerSelectValue8.value
     if (headerSelectValue8.value == 'otel') {
         s2 = 10
@@ -317,8 +299,11 @@ select4.addEventListener("change", function () {
     // console.log(select4.value);
     backminute = select4.value
 })
-// минута 
+// минута
 
+document.getElementById("date-input").addEventListener("click", function() {
+    this.focus();
+});
 
 const headerLink = document.querySelector(".header__info-link")
 
