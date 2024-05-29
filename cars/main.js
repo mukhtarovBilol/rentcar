@@ -33,8 +33,6 @@ const getcars2 = document.querySelectorAll(".getcars2");
 const number1 = document.querySelector(".number1")
 const number2 = document.querySelector(".number2")
 const number3 = document.querySelector(".number3")
-const number4 = document.querySelector(".number4")
-const number5 = document.querySelector(".number5")
 
 let CommonPrice = Number(morePrice?.innerHTML)
 let allPrice = Number(morePrice?.innerHTML)
@@ -77,8 +75,7 @@ function calculate() {
     }
     
     var rentalCost = calculateRentalCost(differenceInDays);
-    
-    document.getElementById("result").innerText = "Стоимость аренды: $" + rentalCost.toFixed(2);
+
 }
 
 // При изменении даты получения автоматически обновляем минимальную дату возврата и активируем элемент выбора даты возврата
@@ -98,9 +95,7 @@ document.getElementById("end_date").addEventListener("change", calculate);
 var prices = 0;
 var innerNumber1 = Number(number1?.innerHTML) 
 var innerNumber2 = Number(number2?.innerHTML) 
-var innerNumber3 = Number(number3?.innerHTML) 
-var innerNumber4 = Number(number4?.innerHTML) 
-var innerNumber5 = Number(number5?.innerHTML) 
+var innerNumber3 = Number(number3?.innerHTML)
 
 function calculateRentalCost(days) {
     if (days >= 2 && days <= 7) {
@@ -121,11 +116,10 @@ function calculateRentalCost(days) {
         }
         CommonPrice -= s
         CommonPrice -= prices
-        prices = 0
     } else {
         // console.log(days);
         CommonPrice += s
-        prices = innerNumber5 * days
+        prices = innerNumber3 * days
         if (morePrice) {
             morePrice.innerHTML = CommonPrice += prices;
         }
