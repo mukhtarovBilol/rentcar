@@ -43,29 +43,56 @@ var s2 = 0 // это место получение офис и т.д(2)
 
 // date
 
+// Устанавливаем сегодняшнюю дату как минимальную для получения и возврата
+var today = new Date().toISOString().split('T')[0];
+document.getElementById("start_date").min = today;
+document.getElementById("end_date").min = today;
+
+// При изменении даты получения автоматически обновляем минимальную дату возврата и активируем элемент выбора даты возврата
+document.getElementById("start_date").addEventListener("change", function() {
+    var startDate = new Date(document.getElementById("start_date").value);
+    var nextDay = new Date(startDate);
+    nextDay.setDate(startDate.getDate() + 1);
+    var minReturnDate = nextDay.toISOString().split('T')[0];
+    document.getElementById("end_date").min = minReturnDate;
+    document.getElementById("end_date").disabled = false; // Активируем элемент выбора даты возврата
+});
+
 function calculate() {
     var startDate = new Date(document.getElementById("start_date").value);
     var endDate = new Date(document.getElementById("end_date").value);
-
-    // Проверяем, если дата возврата не выбрана, прерываем функцию
-    if (!endDate) return;
-
-    // Проверяем, если дата получения позже даты возврата, выводим сообщение об ошибке
-    if (startDate >= endDate) {
+    
+    // Проверяем, если дата возврата не выбрана или если дата возврата раньше даты получения, прерываем функцию
+    if (!endDate || endDate <= startDate) {
         alert("Пожалуйста, выберите корректные даты для получения и возврата.");
         return;
     }
-
+    
     var differenceInTime = endDate.getTime() - startDate.getTime();
     var differenceInDays = Math.ceil(differenceInTime / (1000 * 3600 * 24)); // округляем вверх, чтобы учитывать день возврата
-
+    
     if (differenceInDays < 1) {
         alert("Минимальный срок аренды составляет 1 день.");
         return;
     }
-
+    
     var rentalCost = calculateRentalCost(differenceInDays);
+    
+    document.getElementById("result").innerText = "Стоимость аренды: $" + rentalCost.toFixed(2);
 }
+
+// При изменении даты получения автоматически обновляем минимальную дату возврата и активируем элемент выбора даты возврата
+document.getElementById("start_date").addEventListener("change", function() {
+    var startDate = new Date(document.getElementById("start_date").value);
+    var nextDay = new Date(startDate);
+    nextDay.setDate(startDate.getDate() + 2);
+    var minReturnDate = nextDay.toISOString().split('T')[0];
+    document.getElementById("end_date").min = minReturnDate;
+    document.getElementById("end_date").disabled = false; // Активируем элемент выбора даты возврата
+});
+
+// При изменении даты возврата автоматически пересчитываем стоимость аренды
+document.getElementById("end_date").addEventListener("change", calculate);
 
 
 var prices = 0;
@@ -106,22 +133,6 @@ function calculateRentalCost(days) {
         CommonPrice -= prices
     }
 }
-
-
-// Устанавливаем сегодняшнюю дату как минимальную для получения
-document.getElementById("start_date").min = new Date().toISOString().split('T')[0];
-
-// При изменении даты получения автоматически обновляем минимальную дату возврата
-document.getElementById("start_date").addEventListener("change", function () {
-    var startDate = new Date(document.getElementById("start_date").value);
-    var nextDay = new Date(startDate);
-    nextDay.setDate(startDate.getDate() + 1);
-    var minReturnDate = nextDay.toISOString().split('T')[0];
-    document.getElementById("end_date").min = minReturnDate;
-});
-
-// При изменении даты возврата автоматически пересчитываем стоимость аренды
-document.getElementById("end_date").addEventListener("change", calculate);
 
 // date
 
@@ -300,10 +311,6 @@ select4.addEventListener("change", function () {
     backminute = select4.value
 })
 // минута
-
-document.getElementById("date-input").addEventListener("click", function() {
-    this.focus();
-});
 
 const headerLink = document.querySelector(".header__info-link")
 
