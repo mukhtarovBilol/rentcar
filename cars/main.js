@@ -102,28 +102,34 @@ function calculateRentalCost(days) {
         // console.log(days);
         prices = innerNumber1 * days
         CommonPrice += s
+        CommonPrice += s2
         if (morePrice) {
             morePrice.innerHTML = CommonPrice += prices;
         }
         CommonPrice -= s
+        CommonPrice -= s2
         CommonPrice -= prices
     } else if (days >= 8 && days <= 20) {
         // console.log(days);
+        CommonPrice += s2
         CommonPrice += s
         prices = innerNumber2 * days
         if (morePrice) {
             morePrice.innerHTML = CommonPrice += prices;
         }
+        CommonPrice -= s2
         CommonPrice -= s
         CommonPrice -= prices
     } else {
         // console.log(days);
+        CommonPrice += s2
         CommonPrice += s
         prices = innerNumber3 * days
         if (morePrice) {
             morePrice.innerHTML = CommonPrice += prices;
         }
         CommonPrice -= s
+        CommonPrice -= s2
         CommonPrice -= prices
     }
 }
@@ -167,16 +173,16 @@ headerSelectValue8?.addEventListener("change", function () {
         s2 = 10
         CommonPrice += prices
         CommonPrice += s
-        morePrice.innerHTML = CommonPrice += 10
-        CommonPrice -= 10
+        morePrice.innerHTML = CommonPrice += s2
+        CommonPrice -= s2
         CommonPrice -= s
         CommonPrice -= prices
     } else if (headerSelectValue8.value == 'airaport2') {
         s2 = 25
         CommonPrice += prices
         CommonPrice += s
-        morePrice.innerHTML = CommonPrice += 25
-        CommonPrice -= 25
+        morePrice.innerHTML = CommonPrice += s2
+        CommonPrice -= s2
         CommonPrice -= s
         CommonPrice -= prices
     } else {

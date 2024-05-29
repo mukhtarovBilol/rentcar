@@ -978,18 +978,14 @@
 .footer__socials {
     max-width: 300px;
     width: 100%;
+    display: flex;
     gap: 35px;
-    display: grid;
 }
 
 .footer__email,
-.footer__facebook,
-.footer__whatsapp {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
+.footer__facebook {
     gap: 20px;
+    display: grid;
 }
 
 .footer__email,
