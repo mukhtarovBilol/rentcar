@@ -16,7 +16,6 @@ var swiper2 = new Swiper(".mySwiper2", {
 });
 
 // check
-
 const checkbox = document.querySelector(".checkbox");
 const checkbox2 = document.querySelector(".checkbox2")
 const morePrice = document.querySelector(".more__price");
@@ -33,49 +32,112 @@ const getcars2 = document.querySelectorAll(".getcars2");
 const number1 = document.querySelector(".number1")
 const number2 = document.querySelector(".number2")
 const number3 = document.querySelector(".number3")
-
 let CommonPrice = Number(morePrice?.innerHTML)
 let allPrice = Number(morePrice?.innerHTML)
 var s = 0 //это место получение офис и т.д(1)
 var s2 = 0 // это место получение офис и т.д(2)
+const headerInfoInput = document.querySelector(".header__info-input");
+const headerInfoInput2 = document.querySelector(".header__info-input2")
+const headerInfoDataSelect = document.querySelector(".header__info-date-select");
+const select2 = document.querySelector(".select2");
+const select3 = document.querySelector(".select3");
+const select4 = document.querySelector(".select4");
+const headerInfoSelect = document.querySelector(".header__info-selectValue9");
+
+// count passanger
+var countPassanger = '0'
+headerInfoSelect?.addEventListener("input", function () {
+    // console.log(headerInfoSelect.value);
+    countPassanger = headerInfoSelect.value
+})
+// count passanger
+
+// дата получения
+var getcar = ""
+headerInfoInput.addEventListener("change", function () {
+    // console.log(headerInfoInput.value);
+    getcar = headerInfoInput.value
+})
+
+// дата получения
+
+// дата возврата
+var comeback = '00'
+headerInfoInput2.addEventListener("change", function () {
+    // console.log(headerInfoInput2.value);
+    comeback = headerInfoInput2.value
+})
+
+// дата возврата
+
+// время получение
+// var time = '00'
+// headerInfoDataSelect.addEventListener("change", function () {
+//     // console.log(headerInfoDataSelect.value);
+//     time = headerInfoDataSelect.value
+// })
+
+// время получение
+
+// минута получение
+// var minute = '00'
+// select2.addEventListener("change", function () {
+//     minute = select2.value
+//     // console.log(select2.value);
+// })
+// минута получение
+
+// время 
+// var backtime = ''
+// select3.addEventListener("change", function () {
+//     // console.log(select3.value);
+//     backtime = select3.value
+// })
+// время 
+
+// минута 
+// var backminute = '00'
+// select4.addEventListener("change", function () {
+//     // console.log(select4.value);
+//     backminute = select4.value
+// })
+// минута
 
 // date
+
+var startInputHours = 0
+var endInputHours = 0
+
+document.getElementById("start").addEventListener("change", function () {
+    var startInput = document.getElementById("start").value.split(":")
+    startInputHours = Number(startInput[0]) + 3
+})
+
+document.getElementById("end").addEventListener("change", function () {
+    var endInput = document.getElementById("end").value.split(":")
+    endInputHours = Number(endInput[0])
+    calculate()
+})
 
 // Устанавливаем сегодняшнюю дату как минимальную для получения и возврата
 var today = new Date().toISOString().split('T')[0];
 document.getElementById("start_date").min = today;
 document.getElementById("end_date").min = today;
 
-// При изменении даты получения автоматически обновляем минимальную дату возврата и активируем элемент выбора даты возврата
-document.getElementById("start_date").addEventListener("change", function() {
-    var startDate = new Date(document.getElementById("start_date").value);
-    var nextDay = new Date(startDate);
-    nextDay.setDate(startDate.getDate() + 1);
-    var minReturnDate = nextDay.toISOString().split('T')[0];
-    document.getElementById("end_date").min = minReturnDate;
-    document.getElementById("end_date").disabled = false; // Активируем элемент выбора даты возврата
-});
-
 function calculate() {
     var startDate = new Date(document.getElementById("start_date").value);
     var endDate = new Date(document.getElementById("end_date").value);
-    
-    // Проверяем, если дата возврата не выбрана или если дата возврата раньше даты получения, прерываем функцию
-    if (!endDate || endDate <= startDate) {
-        alert("Пожалуйста, выберите корректные даты для получения и возврата.");
-        return;
-    }
-    
+
+    // Количество дней аренды
     var differenceInTime = endDate.getTime() - startDate.getTime();
     var differenceInDays = Math.ceil(differenceInTime / (1000 * 3600 * 24)); // округляем вверх, чтобы учитывать день возврата
     
-    if (differenceInDays < 1) {
-        alert("Минимальный срок аренды составляет 1 день.");
-        return;
-    }
-    
-    var rentalCost = calculateRentalCost(differenceInDays);
-
+    if (startInputHours <= endInputHours) {
+        differenceInDays++
+       calculateRentalCost(differenceInDays)
+    }else {
+        calculateRentalCost(differenceInDays)
+    } 
 }
 
 // При изменении даты получения автоматически обновляем минимальную дату возврата и активируем элемент выбора даты возврата
@@ -89,8 +151,9 @@ document.getElementById("start_date").addEventListener("change", function() {
 });
 
 // При изменении даты возврата автоматически пересчитываем стоимость аренды
-document.getElementById("end_date").addEventListener("change", calculate);
-
+document.getElementById("end_date").addEventListener("change", function () {
+    document.getElementById("end").disabled = false; // Активируем элемент выбора времени возврата
+});
 
 var prices = 0;
 var innerNumber1 = Number(number1?.innerHTML) 
@@ -244,73 +307,6 @@ checkbox?.addEventListener("click", function () {
     this.value = phoneNumber;
 });
 // date
-
-const headerInfoInput = document.querySelector(".header__info-input");
-const headerInfoInput2 = document.querySelector(".header__info-input2")
-const headerInfoDataSelect = document.querySelector(".header__info-date-select");
-const select2 = document.querySelector(".select2");
-const select3 = document.querySelector(".select3");
-const select4 = document.querySelector(".select4");
-const headerInfoSelect = document.querySelector(".header__info-selectValue9");
-
-// count passanger
-var countPassanger = '0'
-headerInfoSelect?.addEventListener("input", function () {
-    // console.log(headerInfoSelect.value);
-    countPassanger = headerInfoSelect.value
-})
-// count passanger
-
-// дата получения
-var getcar = ""
-headerInfoInput.addEventListener("change", function () {
-    // console.log(headerInfoInput.value);
-    getcar = headerInfoInput.value
-})
-
-// дата получения
-
-// дата возврата
-var comeback = '00'
-headerInfoInput2.addEventListener("change", function () {
-    // console.log(headerInfoInput2.value);
-    comeback = headerInfoInput2.value
-})
-
-// дата возврата
-
-// время получение
-var time = '00'
-headerInfoDataSelect.addEventListener("change", function () {
-    // console.log(headerInfoDataSelect.value);
-    time = headerInfoDataSelect.value
-})
-
-// время получение
-
-// минута получение
-var minute = '00'
-select2.addEventListener("change", function () {
-    minute = select2.value
-    // console.log(select2.value);
-})
-// минута получение
-
-// время 
-var backtime = ''
-select3.addEventListener("change", function () {
-    // console.log(select3.value);
-    backtime = select3.value
-})
-// время 
-
-// минута 
-var backminute = '00'
-select4.addEventListener("change", function () {
-    // console.log(select4.value);
-    backminute = select4.value
-})
-// минута
 
 const headerLink = document.querySelector(".header__info-link")
 
