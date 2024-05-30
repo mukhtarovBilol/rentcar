@@ -131,7 +131,7 @@ function calculate() {
     // Количество дней аренды
     var differenceInTime = endDate.getTime() - startDate.getTime();
     var differenceInDays = Math.ceil(differenceInTime / (1000 * 3600 * 24)); // округляем вверх, чтобы учитывать день возврата
-    
+
     if (startInputHours <= endInputHours) {
         differenceInDays++
        calculateRentalCost(differenceInDays)
@@ -147,8 +147,11 @@ document.getElementById("start_date").addEventListener("change", function() {
     nextDay.setDate(startDate.getDate() + 2);
     var minReturnDate = nextDay.toISOString().split('T')[0];
     document.getElementById("end_date").min = minReturnDate;
-    document.getElementById("end_date").disabled = false; // Активируем элемент выбора даты возврата
 });
+
+document.getElementById("start").addEventListener("change", function () {
+    document.getElementById("end_date").disabled = false; // Активируем элемент выбора даты возврата
+})
 
 // При изменении даты возврата автоматически пересчитываем стоимость аренды
 document.getElementById("end_date").addEventListener("change", function () {
