@@ -265,9 +265,9 @@
 .header .container {
     display: flex;
     justify-content: space-between;
-    align-items: end;
+    align-items: center;
     flex-wrap: wrap;
-    gap: 5px;
+    gap: 10px;
 }
 
 .header__info {
@@ -278,31 +278,10 @@
     width: 100%;
 }
 
-.header__info-select, 
-.header__info-selectAirport,
-.header__info-selectValue3,
-.header__info-selectValue4,
-.header__info-selectValue5,
-.header__info-selectValue6 {
+.header__info-select {
     max-width: 686px;
     width: 100%;
     padding: 16px;
-}
-
-.header__info-selectAirport,
-.header__info-selectValue3,
-.header__info-selectValue4,
-.header__info-selectValue5,
-.header__info-selectValue6 {
-    display: none;
-}
-
-.header__info-selectAirport.active,
-.header__info-selectValue3.active,
-.header__info-selectValue4.active,
-.header__info-selectValue5.active,
-.header__info-selectValue6.active {
-    display: flex;
 }
 
 .header__info-date {
@@ -314,19 +293,67 @@
 .header__info-dateHelper {
     gap: 42px;
     display: flex;
+    justify-content: space-between;
     max-width: 686px;
     width: 100%;
 }
 
-.select__helped {
+
+.custom-date-input {
+    position: relative;
+    max-width: 330px;
+    width: 100%;
+}
+
+.custom-date-input input[type="date"]::-webkit-calendar-picker-indicator {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 999;
+}
+
+.custom-time-input {
+    position: relative;
     display: flex;
     align-items: center;
-    gap: 10px;
+}
+
+input[type="time"]::-webkit-calendar-picker-indicator {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+    right: 0;    
+    opacity: 0;
+    cursor: pointer;
+}
+
+.bxs-watch {
+    position: absolute;
+    right: 0;
+    color: #000;
+    transform: translateY(-50%);
+    top: 50%;
+}
+
+.bxs-calendar {
+    position: absolute;
+    right: 1%;
+    color: #000;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
 }
 
 .header__info-date-select {
     padding: 16px 31px;
-    width: 131px;
+    width: 100%;
 }
 
 .span {
@@ -335,8 +362,11 @@
     text-align: left;
 }
 
-.header__info-input,
-.header__info-input2 {
+.header__span {
+    margin: 0;
+}
+
+.header__info-input {
     max-width: 364px;
     width: 100%;
     padding: 16px 20px;
@@ -346,7 +376,7 @@
 .header__image {
     max-width: 780px;
     width: 100%;
-    height: 430px;
+    height: 480px;
     object-fit: cover;
     border-radius: 15px;
     background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../image/nav/banner.jpg) center center / cover no-repeat;
@@ -362,18 +392,6 @@
     border-radius: 10px;
 }
 
-.header__info-name,
-.header__info-number {
-    padding: 10px;
-}
-
-.header__info-contact {
-    margin-bottom: 15px;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-}
-
 @media (max-width: 1250px) {
     .header__info {
         width: 100%;
@@ -386,18 +404,7 @@
         width: 100%;
     }
 
-    .header__info-select, 
-    .header__info-selectAirport,
-    .header__info-selectValue3,
-    .header__info-selectValue4,
-    .header__info-selectValue5,
-    .header__info-selectValue6 {
-        max-width: 550px;
-        width: 100%;
-    }
-
-    .header__info-input,
-    .header__info-input2 {
+    .header__info-input {
         max-width: 380px;
         width: 100%;
         flex-shrink: 0;
@@ -913,7 +920,6 @@ iframe {
 }
 
 /* contact */
-
 .footer {
     padding: 50px 0;
 }
@@ -951,7 +957,6 @@ iframe {
 .footer__link {
     color: #777;
     transition: 0.5s;
-    font-weight: 400;
 }
 
 .footer__link:hover {
@@ -969,37 +974,39 @@ iframe {
 }
 
 .footer__contact-txt {
-    width: 284px;;
+    width: 284px;
 }
 
 .footer__socials {
-    max-width: 375px;
+    max-width: 300px;
     width: 100%;
+    display: flex;
     gap: 35px;
+}
+
+.footer__email,
+.footer__facebook {
+    gap: 20px;
     display: grid;
 }
 
 .footer__email,
-.footer__facebook {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 20px;
-}
-
-.footer__email,
-.footer__facebook {
+.footer__facebook,
+.footer__whatsapp p {
     font-weight: 700;
 }
 
-.footer__instagram{
+.footer__instagram {
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 15px;
     flex-wrap: wrap;
-    font-weight: 700;
+}
+
+.footer__instagram {
+    max-width: 335px;
+    width: 100%;
 }
 
 .footer .container {

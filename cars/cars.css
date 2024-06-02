@@ -498,6 +498,7 @@
     display: flex;
     align-items: center;
     gap: 5px;
+    margin-bottom: 10px;
 }
 
 .required__info span {
@@ -650,9 +651,6 @@
 
 .card__txt {
     margin-top: 30px;
-}
-
-.header__info {
 }
 
 .header__info-helps {
@@ -1030,8 +1028,7 @@ input[type="time"]::-webkit-calendar-picker-indicator {
     font-weight: 700;
 }
 
-.footer__instagram,
-.footer__web {
+.footer__instagram {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -1041,16 +1038,6 @@ input[type="time"]::-webkit-calendar-picker-indicator {
 
 .footer__instagram {
     max-width: 335px;
-    width: 100%;
-}
-
-.footer__socilas2 {
-    display: grid;
-    gap: 35px;
-}
-
-.footer__web {
-    max-width: 394px;
     width: 100%;
 }
 

@@ -80,149 +80,50 @@
 
     <header class="header">
         <div class="container">
-            <div class="header__info">
-                <select name="select" class="header__info-select">
-                    <option value="value1" class="option" disabled >Выберите место получения</option>
-                    <option value="value2" class="option">Аэрапорт</option>
-                    <option value="value3" class="option">Ж/Д Вокзал</option>
-                    <option value="value4" class="option">Авто Вокзал</option>
-                    <option value="value5" class="option">Пункт проката</option>
-                    <option value="value6" class="option">Станция метро</option>
-                </select>
-                <select name="airport" id="" class="header__info-selectAirport active">
-                    <option value="airport">Домодедово (DME)</option>
-                    <option value="airport">Внуково (VKO)</option>
-                    <option value="airport">Шереметьево (SVO)</option>
-                    <option value="airport">Жуковский (ZIA)</option>
-                </select>
-                <select name="value3" class="header__info-selectValue3">
-                    <option value="">Добавьте свои</option>
-                    <option value="">Добавьте свои</option>
-                    <option value="">Добавьте свои</option>
-                    <option value="">Добавьте свои</option>
-                    <option value="">Добавьте свои</option>
-                    <option value="">Добавьте свои</option>
-                    <option value="">Добавьте свои</option>
-                    <option value="">Добавьте свои</option>
-                    <option value="">Добавьте свои</option>
-                </select>
-                <select name="value4" class="header__info-selectValue4">
-                    <option value="">Авто Вокзал</option>
-                    <option value="">Авто Вокзал</option>
-                    <option value="">Авто Вокзал</option>
-                    <option value="">Авто Вокзал</option>
-                    <option value="">Авто Вокзал</option>
-                    <option value="">Авто Вокзал</option>
-                    <option value="">Авто Вокзал</option>
-                    <option value="">Авто Вокзал</option>
-                    <option value="">Авто Вокзал</option>
-                </select>
-                <select name="value5" class="header__info-selectValue5">
-                    <option value="">Кунцево</option>
-                </select>
-                <select name="value6" class="header__info-selectValue6">
-                    <option value="">Станция метро</option>
-                    <option value="">Станция метро</option>
-                    <option value="">Станция метро</option>
-                    <option value="">Станция метро</option>
-                    <option value="">Станция метро</option>
-                    <option value="">Станция метро</option>
-                    <option value="">Станция метро</option>
-                    <option value="">Станция метро</option>
-                    <option value="">Станция метро</option>
-                    <option value="">Станция метро</option>
-                    <option value="">Станция метро</option>
-                    <option value="">Станция метро</option>
-                    <option value="">Станция метро</option>
-                    <option value="">Станция метро</option>
-                    <option value="">Станция метро</option>
-                    <option value="">Станция метро</option>
-                    <option value="">Станция метро</option>
-                    <option value="">Станция метро</option>
-                    <option value="">Станция метро</option>
-                    <option value="">Станция метро</option>
-                </select>
+            <div class="header__info index__html">
                 <div class="header__info-date">
-                    <span class="span">Дата и время выдачи</span>
+                    <label for="" class="span header__span">Место получение</label>
+                    <select name="" id="" class="header__info-select">
+                      <option value="ofis" class="getcars">Офис(0 azn)</option>
+                      <option value="otel" class="getcars">Любой отель в Баку (10 azn) </option>
+                      <option value="airport2" class="getcars">Международный аэропорт имени Гейдара Алиева (GYD) (25 azn)</option>
+                    </select>
+                </div>
+                <div class="header__info-date">
+                    <label for="" class="span">Место возврата</label>
+                    <select name="" id="" class="header__info-select">
+                      <option value="ofis" class="getcars2">Офис(0 azn)</option>
+                      <option value="otel" class="getcars2">Любой отель в Баку (10 azn) </option>
+                      <option value="airaport2" class="getcars2">Международный аэропорт имени Гейдара Алиева (GYD) (25 azn)</option>
+                    </select>
+                </div>
+                <div class="header__info-date">
+                    <label for="start_date" class="span">Дата и время выдачи</label>
                     <div class="header__info-dateHelper">
-                        <input type="date" id="date" class="header__info-input">
-                        <div class="select__helped">
-                            <select class="header__info-date-select">
-                                <option value="0">00</option>
-                                <option value="01">01</option>
-                                <option value="02">02</option>
-                                <option value="03">03</option>
-                                <option value="04">04</option>
-                                <option value="05">05</option>
-                                <option value="06">06</option>
-                                <option value="07">07</option>
-                                <option value="08">08</option>
-                                <option value="09">09</option>
-                                <option value="10">10</option>
-                                <option value="11">11</option>
-                                <option value="12">12</option>
-                                <option value="13">13</option>
-                                <option value="14">14</option>
-                                <option value="15">15</option>
-                                <option value="16">16</option>
-                                <option value="17">17</option>
-                                <option value="18">18</option>
-                                <option value="19">19</option>
-                                <option value="20">20</option>
-                                <option value="21">21</option>
-                                <option value="22">22</option>
-                                <option value="23">23</option>
-                            </select>
-                            <select class="header__info-date-select" name="" id="">
-                                <option value="00">00</option>
-                                <option value="15">15</option>
-                                <option value="30">30</option>
-                                <option value="45">45</option>
-                            </select>
+                        <div class="custom-date-input">
+                            <input type="date" class="header__info-input" id="start_date" >
+                            <i class='bx bxs-calendar'></i>
+                        </div>
+                        <div class="custom-time-input">
+                            <input type="time" id="start" class="header__info-date-select" name="start">
+                            <i class='bx bxs-watch'></i>
                         </div>
                     </div>
                 </div>
                 <div class="header__info-date">
-                    <span class="span">Дата и время возврата</span>
+                    <label for="end_date" class="span">Дата и время возврата</label>
                     <div class="header__info-dateHelper">
-                        <input type="date" class="header__info-input2">
-                        <div class="select__helped">
-                            <select class="header__info-date-select">
-                                <option value="0">00</option>
-                                <option value="01">01</option>
-                                <option value="02">02</option>
-                                <option value="03">03</option>
-                                <option value="04">04</option>
-                                <option value="05">05</option>
-                                <option value="06">06</option>
-                                <option value="07">07</option>
-                                <option value="08">08</option>
-                                <option value="09">09</option>
-                                <option value="10">10</option>
-                                <option value="11">11</option>
-                                <option value="12">12</option>
-                                <option value="13">13</option>
-                                <option value="14">14</option>
-                                <option value="15">15</option>
-                                <option value="16">16</option>
-                                <option value="17">17</option>
-                                <option value="18">18</option>
-                                <option value="19">19</option>
-                                <option value="20">20</option>
-                                <option value="21">21</option>
-                                <option value="22">22</option>
-                                <option value="23">23</option>
-                            </select>
-                            <select class="header__info-date-select" name="" id="">
-                                <option value="00">00</option>
-                                <option value="15">15</option>
-                                <option value="30">30</option>
-                                <option value="45">45</option>
-                            </select>
+                        <div class="custom-date-input">
+                            <input type="date" id="end_date" class="header__info-input" disabled>
+                            <i class='bx bxs-calendar'></i>
+                        </div>
+                        <div class="custom-time-input">
+                            <input type="time" id="end" class="header__info-date-select" name="end" disabled>
+                            <i class='bx bxs-watch'></i>
                         </div>
                     </div>
                 </div>
-                <a href="#cars" onclick="sendMail()" class="header__info-link">Подобрать автомобиль</a>
+                <a href="#cars" class="header__info-link">Подобрать автомобиль</a>
             </div>
             <div class="header__image"></div>
             <!-- <img src="image/nav/banner.jpg" alt="" class="header__image"> -->
@@ -1316,14 +1217,12 @@
             <div class="footer__socials">
                 <div class="footer__email">
                     <p>Email:</p>
-                    <a href="mailto:bookinggetrentacar@gmail.com " class="footer__link">bookinggetrentacar@gmail.com</a>
+                    <p>FACEBOOK:</p>
+                    <p>INSTAGRAM:</p>
                 </div>
                 <div class="footer__facebook">
-                    <p>FACEBOOK:</p>
+                    <a href="mailto:bookinggetrentacar@gmail.com " class="footer__link">Gmail</a>
                     <a href="https://www.facebook.com/people/Getrentacaraz/100093672717716/" class="footer__link">@Getrentacaraz </a>
-                </div>
-                <div class="footer__instagram">
-                    <p>INSTAGRAM:</p>
                     <a href="" class="footer__link">@getrentacar</a>
                 </div>
             </div>
