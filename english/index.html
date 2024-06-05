@@ -1,0 +1,1244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RentCar</title>
+    <link rel="stylesheet" href="style/style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <nav class="nav">
+        <div class="container">
+            <div class="nav__contact">
+                <a href="index.html" class="nav__contact-logo">
+                    <img src="image/nav/logo.png" alt="" class="nav__contact-logoImage">
+                </a>
+                <!-- <div class="nav__contact-common"> -->
+                    <div class="nav__contact-socials">
+                        <a href="https://t.me/getrentacar_az" class="nav__contact-social"><i class='bx bxl-telegram'></i> Telegram</a>
+                        <a href="https://api.whatsapp.com/send/?phone=994505501811&text&type=phone_number&app_absent=0" class="nav__contact-social"> <img src="image/nav/whatsapp.png" alt=""> Whatsapp</a>
+                        <a href="https://www.facebook.com/profile.php?id=100093672717716" class="nav__contact-social"> <i class='bx bxl-facebook-circle' ></i> Facebook</a>
+                        <a href="https://www.instagram.com/getrentacar.az?igsh=MmdtMzdhMDVjcnA4" class="nav__contact-social"> <img src="image/nav/instagram.png" alt=""> Instagram</a>
+                        <a href="mailto:bookinggetrentacar@gmail.com" class="nav__contact-social"> <img src="image/nav/email.png" alt=""> Email</a>
+                        <a href="#contact" class="nav__contact-social"> <img src="image/nav/adress.png" alt=""> Address</a>
+                    </div>
+                    <div class="nav__contact-numbers">
+                        <a href="tel:+994556501811" class="nav__contact-number">+994 55 650 18 11</a>
+                        <a href="tel:+994505501811" class="nav__contact-number">+994 50 550 18 11</a>
+                        <div class="nav__language">
+                            <a href="index.html" class="nav__language-russia">
+                                <img src="image/nav/usa.png" alt="" class="nav__language-russia-image">
+                                <p>English</p>
+                                <i class='bx bx-chevron-down'></i>
+                            </a>
+                            <a href="../index.html" class="nav__language-usa">
+                                <img src="image/nav/russia.png" alt="" class="nav__language-russia-image">
+                                <p>Русский</p>
+                            </a>
+                        </div>
+                    </div>
+                <!-- </div> -->
+            </div>
+            <div class="nav__burger">
+                <span class="nav__burger-line"></span>
+            </div>
+            <ul class="nav__list">
+                <div class="nav__list-helper">
+                    <span class="for__burger"></span>
+                </div>
+                <li class="avto">
+                    <a href="#!" class="nav__link">Fleet <i class='bx bx-chevron-down'></i></a>
+                    <ul class="nav__list-avto">
+                        <li class="nav__item-avto">
+                            <a href="avtopark/standart.html" class="nav__link-avto">STANDARD </a>
+                        </li>
+                        <li class="nav__item-avto">
+                            <a href="avtopark/premium.html" class="nav__link-avto">PREMIUM</a>
+                        </li>
+                        <li class="nav__item-avto">
+                            <a href="avtopark/biznes.html" class="nav__link-avto">BUSINESS </a>
+                        </li>
+                        <li class="nav__item-avto">
+                            <a href="cars/miniven.html" class="nav__link-avto">MINIVAN</a>
+                        </li>
+                        <li class="nav__item-avto">
+                            <a href="" class="nav__link-avto">CROSSOVER</a>
+                        </li>
+                        <li class="nav__item-avto">
+                            <a href="" class="nav__link-avto">SUV</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav__item">
+                    <a href="condition.html" class="nav__link">Condition </a>
+                </li>
+                <li class="nav__item">
+                    <a href="price.html" class="nav__link">Transfers</a>
+                </li>
+                <li class="nav__item">
+                    <a href="#about" class="nav__link">About Us</a>
+                </li>
+                <li class="nav__item">
+                    <a href="reviews.html" class="nav__link">Reviews</a>
+                </li>
+                <li class="nav__item">
+                    <a href="#contact" class="nav__link">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="header">
+        <div class="container">
+            <div class="header__info index__html">
+                <div class="header__info-date">
+                    <label for="" class="span header__span">Pick-up Location</label>
+                    <select name="" id="" class="header__info-select">
+                        <option value="ofis" class="getcars">Office (0 azn)</option>
+                        <option value="otel" class="getcars">Any hotel in Baku (10 azn)</option>
+                        <option value="airport2" class="getcars">Heydar Aliyev International Airport (GYD) (25 azn)</option>
+                    </select>
+                </div>
+                <div class="header__info-date">
+                    <label for="" class="span">Return Location</label>
+                    <select name="" id="" class="header__info-select">
+                        <option value="ofis" class="getcars2">Office (0 azn)</option>
+                        <option value="otel" class="getcars2">Any hotel in Baku (10 azn)</option>
+                        <option value="airaport2" class="getcars2">Heydar Aliyev International Airport (GYD) (25 azn)</option>
+                    </select>
+                </div>
+                <div class="header__info-date">
+                    <label for="start_date" class="span">Pick-up Date and Time</label>
+                    <div class="header__info-dateHelper">
+                        <div class="custom-date-input">
+                            <input type="date" class="header__info-input" id="start_date">
+                            <i class='bx bxs-calendar'></i>
+                        </div>
+                        <div class="custom-time-input">
+                            <input type="time" id="start" class="header__info-date-select" name="start">
+                            <i class='bx bxs-watch'></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="header__info-date">
+                    <label for="end_date" class="span">Return Date and Time</label>
+                    <div class="header__info-dateHelper">
+                        <div class="custom-date-input">
+                            <input type="date" id="end_date" class="header__info-input" disabled>
+                            <i class='bx bxs-calendar'></i>
+                        </div>
+                        <div class="custom-time-input">
+                            <input type="time" id="end" class="header__info-date-select" name="end" disabled>
+                            <i class='bx bxs-watch'></i>
+                        </div>
+                    </div>
+                </div>
+                <a href="#cars" class="header__info-link">Find a Car</a>
+            </div>
+            <div class="header__image"></div>
+            <!-- <img src="image/nav/banner.jpg" alt="" class="header__image"> -->
+        </div>
+    </header>
+
+    <main>
+        <section class="cars" id="cars">
+            <div class="container">
+                <div class="cars__menu">
+                    <p class="cars__menu-txt">Class</p>
+                    <ul class="cars__list">
+                        <li class="cars__item active">
+                            <a href="#!" class="cars__link">Standard</a>
+                        </li>
+                        <li class="cars__item">
+                            <a href="#!" class="cars__link">Business</a>
+                        </li>
+                        <li class="cars__item">
+                            <a href="#!" class="cars__link">Premium</a>
+                        </li>
+                        <li class="cars__item">
+                            <a href="#!" class="cars__link">Crossover</a>
+                        </li>
+                        <li class="cars__item">
+                            <a href="#!" class="cars__link">Off-road vehicle</a>
+                        </li>
+                        <li class="cars__itemm">
+                            <a href="cars/miniven.html" class="cars__linkk">Transfer</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="cars__content">
+                    <div class="tabsContentItem active">
+                        <div class="cars__cards ">
+                            <div class="cars__card">
+                                <a href="cars/kiaCerato.html" class="">
+                                    <h3 class="cars__card-title">Kia Cerato 2016</h3>
+                                    <span class="cars__card-span">Standard</span>
+                                    <img src="image/cars/1.jpg" alt="" class="cars__card-image">
+                                    <div class="cars__card-icon">
+                                        <div class="cars__card-helper">
+                                            <svg xmlns="http://www.w3.org/2000/svg" id="Capa_1" height="512" viewBox="0 0 512 512" width="512">
+                                                <path d="m447.583 47c-35.52 0-64.417 28.826-64.417 64.259 0 30.283 21.108 55.74 49.417 62.5v29.543c0 23.544-19.238 42.698-42.884 42.698h-117.587v-72.241c28.31-6.76 49.417-32.217 49.417-62.5 0-35.433-28.897-64.259-64.417-64.259s-64.417 28.826-64.417 64.259c0 30.282 21.108 55.739 49.417 62.5v72.241h-162.695v-72.241c28.31-6.76 49.417-32.217 49.417-62.5 0-35.433-28.897-64.259-64.417-64.259s-64.417 28.826-64.417 64.259c0 30.282 21.108 55.739 49.417 62.5v164.483c-28.309 6.76-49.417 32.217-49.417 62.499 0 35.433 28.897 64.259 64.417 64.259s64.417-28.826 64.417-64.259c0-30.283-21.108-55.74-49.417-62.5v-62.241h162.695v62.241c-28.309 6.76-49.417 32.217-49.417 62.5 0 35.433 28.897 64.259 64.417 64.259s64.417-28.826 64.417-64.259c0-30.283-21.108-55.74-49.417-62.5v-62.241h117.587c40.188 0 72.884-32.612 72.884-72.698v-29.543c28.309-6.76 49.417-32.217 49.417-62.5 0-35.433-28.897-64.259-64.417-64.259z"></path>
+                                            </svg>
+                                            <p class="cars__card-iconTxt">Automatic</p>
+                                        </div>
+                                        <div class="cars__card-helper">
+                                            <img src="image/cars/iconBenzin.png" alt="">
+                                            <p>Gasoline</p>
+                                        </div>
+                                        <div class="cars__card-helper">
+                                            <img src="image/cars/iconPeople.png" alt="">
+                                            <p class="cars__card-iconTxt">5</p>
+                                        </div>
+                                        <div class="cars__card-helper">
+                                            <img src="image/cars/iconMotor.png" alt="">
+                                            <p class="cars__card-iconTxt">1.6 L</p>
+                                        </div>
+                                    </div>
+                                    <div class="cars__card-price">
+                                        <div class="cars__card-standart">
+                                            <span class="cars__card-standartSpan">2-7 days</span>
+                                            50 AZN
+                                        </div>
+                                        <div class="cars__card-standart">
+                                            <span class="cars__card-standartSpan">0-21 days</span>
+                                            44 AZN
+                                        </div>
+                                        <div class="cars__card-standart">
+                                            <span class="cars__card-standartSpan">22 days</span>
+                                            38 AZN
+                                        </div>
+                                    </div>
+                                    <a href="cars/kiaCerato.html" class="cars__card-route">More details</a>
+                                </a>
+                            </div>
+                            <div class="cars__card">
+                                <a href="cars/geely-emgrand.html">
+                                    <h3 class="cars__card-title">Geely Emgrand</h3>
+                                    <span class="cars__card-span">Standard</span>
+                                    <img src="image/cars/2.jpg" alt="" class="cars__card-image">
+                                    <div class="cars__card-icon">
+                                        <div class="cars__card-helper">
+                                            <svg xmlns="http://www.w3.org/2000/svg" id="Capa_1" height="512" viewBox="0 0 512 512" width="512">
+                                                <path d="m447.583 47c-35.52 0-64.417 28.826-64.417 64.259 0 30.283 21.108 55.74 49.417 62.5v29.543c0 23.544-19.238 42.698-42.884 42.698h-117.587v-72.241c28.31-6.76 49.417-32.217 49.417-62.5 0-35.433-28.897-64.259-64.417-64.259s-64.417 28.826-64.417 64.259c0 30.282 21.108 55.739 49.417 62.5v72.241h-162.695v-72.241c28.31-6.76 49.417-32.217 49.417-62.5 0-35.433-28.897-64.259-64.417-64.259s-64.417 28.826-64.417 64.259c0 30.282 21.108 55.739 49.417 62.5v164.483c-28.309 6.76-49.417 32.217-49.417 62.499 0 35.433 28.897 64.259 64.417 64.259s64.417-28.826 64.417-64.259c0-30.283-21.108-55.74-49.417-62.5v-62.241h162.695v62.241c-28.309 6.76-49.417 32.217-49.417 62.5 0 35.433 28.897 64.259 64.417 64.259s64.417-28.826 64.417-64.259c0-30.283-21.108-55.74-49.417-62.5v-62.241h117.587c40.188 0 72.884-32.612 72.884-72.698v-29.543c28.309-6.76 49.417-32.217 49.417-62.5 0-35.433-28.897-64.259-64.417-64.259z"></path>
+                                            </svg>
+                                            <p class="cars__card-iconTxt">Automatic</p>
+                                        </div>
+                                        <div class="cars__card-helper">
+                                            <img src="image/cars/iconBenzin.png" alt="">
+                                            <p>Gasoline</p>
+                                        </div>
+                                        <div class="cars__card-helper">
+                                            <img src="image/cars/iconPeople.png" alt="">
+                                            <p class="cars__card-iconTxt">5</p>
+                                        </div>
+                                        <div class="cars__card-helper">
+                                            <img src="image/cars/iconMotor.png" alt="">
+                                            <p class="cars__card-iconTxt">2.0 L</p>
+                                        </div>
+                                    </div>
+                                    <div class="cars__card-price">
+                                        <div class="cars__card-standart">
+                                            <span class="cars__card-standartSpan">2-7 days</span>
+                                            50 AZN
+                                        </div>
+                                        <div class="cars__card-standart">
+                                            <span class="cars__card-standartSpan">0-21 days</span>
+                                            44 AZN
+                                        </div>
+                                        <div class="cars__card-standart">
+                                            <span class="cars__card-standartSpan">22 days</span>
+                                            38 AZN
+                                        </div>
+                                    </div>
+                                    <a href="cars/geely-emgrand.html" class="cars__card-route">More details</a>
+                                </a>
+                            </div>
+                            <div class="cars__card">
+                                <a href="cars/toyota-corolla.html">
+                                    <h3 class="cars__card-title">Toyota Corolla 2019</h3>
+                                    <span class="cars__card-span">Standard</span>
+                                    <img src="image/cars/3.webp" alt="" class="cars__card-image">
+                                    <div class="cars__card-icon">
+                                        <div class="cars__card-helper">
+                                            <svg xmlns="http://www.w3.org/2000/svg" id="Capa_1" height="512" viewBox="0 0 512 512" width="512">
+                                                <path d="m447.583 47c-35.52 0-64.417 28.826-64.417 64.259 0 30.283 21.108 55.74 49.417 62.5v29.543c0 23.544-19.238 42.698-42.884 42.698h-117.587v-72.241c28.31-6.76 49.417-32.217 49.417-62.5 0-35.433-28.897-64.259-64.417-64.259s-64.417 28.826-64.417 64.259c0 30.282 21.108 55.739 49.417 62.5v72.241h-162.695v-72.241c28.31-6.76 49.417-32.217 49.417-62.5 0-35.433-28.897-64.259-64.417-64.259s-64.417 28.826-64.417 64.259c0 30.282 21.108 55.739 49.417 62.5v164.483c-28.309 6.76-49.417 32.217-49.417 62.499 0 35.433 28.897 64.259 64.417 64.259s64.417-28.826 64.417-64.259c0-30.283-21.108-55.74-49.417-62.5v-62.241h162.695v62.241c-28.309 6.76-49.417 32.217-49.417 62.5 0 35.433 28.897 64.259 64.417 64.259s64.417-28.826 64.417-64.259c0-30.283-21.108-55.74-49.417-62.5v-62.241h117.587c40.188 0 72.884-32.612 72.884-72.698v-29.543c28.309-6.76 49.417-32.217 49.417-62.5 0-35.433-28.897-64.259-64.417-64.259z"></path>
+                                            </svg>
+                                            <p class="cars__card-iconTxt">Automatic </p>
+                                        </div>
+                                        <div class="cars__card-helper">
+                                            <img src="image/cars/iconBenzin.png" alt="">
+                                            <p>Gasoline</p>
+                                        </div>
+                                        <div class="cars__card-helper">
+                                            <img src="image/cars/iconPeople.png" alt="">
+                                            <p class="cars__card-iconTxt">5</p>
+                                        </div>
+                                        <div class="cars__card-helper">
+                                            <img src="image/cars/iconMotor.png" alt="">
+                                            <p class="cars__card-iconTxt">2.0 L</p>
+                                        </div>
+                                    </div>
+                                    <div class="cars__card-price">
+                                        <div class="cars__card-standart">
+                                            <span class="cars__card-standartSpan">2-7 days</span>
+                                            50 AZN
+                                        </div>
+                                        <div class="cars__card-standart">
+                                            <span class="cars__card-standartSpan">0-21 days</span>
+                                            44 AZN
+                                        </div>
+                                        <div class="cars__card-standart">
+                                            <span class="cars__card-standartSpan">22 days</span>
+                                            38 AZN
+                                        </div>
+                                    </div>
+                                    <a href="cars/toyota-corolla.html" class="cars__card-route">More details</a>
+                                </a>
+                            </div>
+                            <div class="cars__card">
+                                <a href="cars/hyundai-elantra.html">
+                                    <h3 class="cars__card-title">Hyundai Elantra 2023</h3>
+                                    <span class="cars__card-span">Standard</span>
+                                    <img src="image/cars/4.jpg" alt="" class="cars__card-image">
+                                    <div class="cars__card-icon">
+                                        <div class="cars__card-helper">
+                                            <svg xmlns="http://www.w3.org/2000/svg" id="Capa_1" height="512" viewBox="0 0 512 512" width="512">
+                                                <path d="m447.583 47c-35.52 0-64.417 28.826-64.417 64.259 0 30.283 21.108 55.74 49.417 62.5v29.543c0 23.544-19.238 42.698-42.884 42.698h-117.587v-72.241c28.31-6.76 49.417-32.217 49.417-62.5 0-35.433-28.897-64.259-64.417-64.259s-64.417 28.826-64.417 64.259c0 30.282 21.108 55.739 49.417 62.5v72.241h-162.695v-72.241c28.31-6.76 49.417-32.217 49.417-62.5 0-35.433-28.897-64.259-64.417-64.259s-64.417 28.826-64.417 64.259c0 30.282 21.108 55.739 49.417 62.5v164.483c-28.309 6.76-49.417 32.217-49.417 62.499 0 35.433 28.897 64.259 64.417 64.259s64.417-28.826 64.417-64.259c0-30.283-21.108-55.74-49.417-62.5v-62.241h162.695v62.241c-28.309 6.76-49.417 32.217-49.417 62.5 0 35.433 28.897 64.259 64.417 64.259s64.417-28.826 64.417-64.259c0-30.283-21.108-55.74-49.417-62.5v-62.241h117.587c40.188 0 72.884-32.612 72.884-72.698v-29.543c28.309-6.76 49.417-32.217 49.417-62.5 0-35.433-28.897-64.259-64.417-64.259z"></path>
+                                            </svg>
+                                            <p class="cars__card-iconTxt">Automatic </p>
+                                        </div>
+                                        <div class="cars__card-helper">
+                                            <img src="image/cars/iconBenzin.png" alt="">
+                                            <p>Gasoline</p>
+                                        </div>
+                                        <div class="cars__card-helper">
+                                            <img src="image/cars/iconPeople.png" alt="">
+                                            <p class="cars__card-iconTxt">5</p>
+                                        </div>
+                                        <div class="cars__card-helper">
+                                            <img src="image/cars/iconMotor.png" alt="">
+                                            <p class="cars__card-iconTxt">2.0 L</p>
+                                        </div>
+                                    </div>
+                                    <div class="cars__card-price">
+                                        <div class="cars__card-standart">
+                                            <span class="cars__card-standartSpan">2-7 days</span>
+                                            50 AZN
+                                        </div>
+                                        <div class="cars__card-standart">
+                                            <span class="cars__card-standartSpan">0-21 days</span>
+                                            44 AZN
+                                        </div>
+                                        <div class="cars__card-standart">
+                                            <span class="cars__card-standartSpan">22 days</span>
+                                            38 AZN
+                                        </div>
+                                    </div>
+                                    <a href="cars/hyundai-elantra.html" class="cars__card-route">More details</a>
+                                </a>
+                            </div>
+                            <div class="cars__card">
+                                <a href="cars/hyundai-elantra2018.html">
+                                    <h3 class="cars__card-title">Hyundai Elantra 2018</h3>
+                                    <span class="cars__card-span">Standard</span>
+                                    <img src="image/cars/5.png" alt="" class="cars__card-image">
+                                    <div class="cars__card-icon">
+                                        <div class="cars__card-helper">
+                                            <svg xmlns="http://www.w3.org/2000/svg" id="Capa_1" height="512" viewBox="0 0 512 512" width="512">
+                                                <path d="m447.583 47c-35.52 0-64.417 28.826-64.417 64.259 0 30.283 21.108 55.74 49.417 62.5v29.543c0 23.544-19.238 42.698-42.884 42.698h-117.587v-72.241c28.31-6.76 49.417-32.217 49.417-62.5 0-35.433-28.897-64.259-64.417-64.259s-64.417 28.826-64.417 64.259c0 30.282 21.108 55.739 49.417 62.5v72.241h-162.695v-72.241c28.31-6.76 49.417-32.217 49.417-62.5 0-35.433-28.897-64.259-64.417-64.259s-64.417 28.826-64.417 64.259c0 30.282 21.108 55.739 49.417 62.5v164.483c-28.309 6.76-49.417 32.217-49.417 62.499 0 35.433 28.897 64.259 64.417 64.259s64.417-28.826 64.417-64.259c0-30.283-21.108-55.74-49.417-62.5v-62.241h162.695v62.241c-28.309 6.76-49.417 32.217-49.417 62.5 0 35.433 28.897 64.259 64.417 64.259s64.417-28.826 64.417-64.259c0-30.283-21.108-55.74-49.417-62.5v-62.241h117.587c40.188 0 72.884-32.612 72.884-72.698v-29.543c28.309-6.76 49.417-32.217 49.417-62.5 0-35.433-28.897-64.259-64.417-64.259z"></path>
+                                            </svg>
+                                            <p class="cars__card-iconTxt">Automatic </p>
+                                        </div>
+                                        <div class="cars__card-helper">
+                                            <img src="image/cars/iconBenzin.png" alt="">
+                                            <p>Gasoline</p>
+                                        </div>
+                                        <div class="cars__card-helper">
+                                            <img src="image/cars/iconPeople.png" alt="">
+                                            <p class="cars__card-iconTxt">5</p>
+                                        </div>
+                                        <div class="cars__card-helper">
+                                            <img src="image/cars/iconMotor.png" alt="">
+                                            <p class="cars__card-iconTxt">2.0 L</p>
+                                        </div>
+                                    </div>
+                                    <div class="cars__card-price">
+                                        <div class="cars__card-standart">
+                                            <span class="cars__card-standartSpan">2-7 days</span>
+                                            50 AZN
+                                        </div>
+                                        <div class="cars__card-standart">
+                                            <span class="cars__card-standartSpan">0-21 days</span>
+                                            44 AZN
+                                        </div>
+                                        <div class="cars__card-standart">
+                                            <span class="cars__card-standartSpan">22 days</span>
+                                            38 AZN
+                                        </div>
+                                    </div>
+                                    <a href="cars/hyundai-elantra2018.html" class="cars__card-route">More details</a>
+                                </a>
+                            </div>
+                            <div class="cars__card">
+                                <a href="cars/kia-forte.html">
+                                    <h3 class="cars__card-title">Kia Forte 2018</h3>
+                                    <span class="cars__card-span">Стандарт</span>
+                                    <img src="image/cars/6.png" alt="" class="cars__card-image">
+                                    <div class="cars__card-icon">
+                                        <div class="cars__card-helper">
+                                            <svg xmlns="http://www.w3.org/2000/svg" id="Capa_1" height="512" viewBox="0 0 512 512" width="512">
+                                                <path d="m447.583 47c-35.52 0-64.417 28.826-64.417 64.259 0 30.283 21.108 55.74 49.417 62.5v29.543c0 23.544-19.238 42.698-42.884 42.698h-117.587v-72.241c28.31-6.76 49.417-32.217 49.417-62.5 0-35.433-28.897-64.259-64.417-64.259s-64.417 28.826-64.417 64.259c0 30.282 21.108 55.739 49.417 62.5v72.241h-162.695v-72.241c28.31-6.76 49.417-32.217 49.417-62.5 0-35.433-28.897-64.259-64.417-64.259s-64.417 28.826-64.417 64.259c0 30.282 21.108 55.739 49.417 62.5v164.483c-28.309 6.76-49.417 32.217-49.417 62.499 0 35.433 28.897 64.259 64.417 64.259s64.417-28.826 64.417-64.259c0-30.283-21.108-55.74-49.417-62.5v-62.241h162.695v62.241c-28.309 6.76-49.417 32.217-49.417 62.5 0 35.433 28.897 64.259 64.417 64.259s64.417-28.826 64.417-64.259c0-30.283-21.108-55.74-49.417-62.5v-62.241h117.587c40.188 0 72.884-32.612 72.884-72.698v-29.543c28.309-6.76 49.417-32.217 49.417-62.5 0-35.433-28.897-64.259-64.417-64.259z"></path>
+                                            </svg>
+                                            <p class="cars__card-iconTxt">Automatic </p>
+                                        </div>
+                                        <div class="cars__card-helper">
+                                            <img src="image/cars/iconBenzin.png" alt="">
+                                            <p>Gasoline</p>
+                                        </div>
+                                        <div class="cars__card-helper">
+                                            <img src="image/cars/iconPeople.png" alt="">
+                                            <p class="cars__card-iconTxt">5</p>
+                                        </div>
+                                        <div class="cars__card-helper">
+                                            <img src="image/cars/iconMotor.png" alt="">
+                                            <p class="cars__card-iconTxt">2.0 L</p>
+                                        </div>
+                                    </div>
+                                    <div class="cars__card-price">
+                                        <div class="cars__card-standart">
+                                            <span class="cars__card-standartSpan">2-7 days</span>
+                                            50 AZN
+                                        </div>
+                                        <div class="cars__card-standart">
+                                            <span class="cars__card-standartSpan">0-21 days</span>
+                                            44 AZN
+                                        </div>
+                                        <div class="cars__card-standart">
+                                            <span class="cars__card-standartSpan">22 days</span>
+                                            38 AZN
+                                        </div>
+                                    </div>
+                                    <a href="cars/kia-forte.html" class="cars__card-route">More details</a>
+                                </a>
+                            </div>
+                            <div class="cars__card">
+                                <a href="cars/hyundai-accent.html">
+                                    <h3 class="cars__card-title">Hyundai Accent 2021</h3>
+                                    <span class="cars__card-span">Стандарт</span>
+                                    <img src="image/cars/1.jpg" alt="" class="cars__card-image">
+                                    <div class="cars__card-icon">
+                                        <div class="cars__card-helper">
+                                            <svg xmlns="http://www.w3.org/2000/svg" id="Capa_1" height="512" viewBox="0 0 512 512" width="512">
+                                                <path d="m447.583 47c-35.52 0-64.417 28.826-64.417 64.259 0 30.283 21.108 55.74 49.417 62.5v29.543c0 23.544-19.238 42.698-42.884 42.698h-117.587v-72.241c28.31-6.76 49.417-32.217 49.417-62.5 0-35.433-28.897-64.259-64.417-64.259s-64.417 28.826-64.417 64.259c0 30.282 21.108 55.739 49.417 62.5v72.241h-162.695v-72.241c28.31-6.76 49.417-32.217 49.417-62.5 0-35.433-28.897-64.259-64.417-64.259s-64.417 28.826-64.417 64.259c0 30.282 21.108 55.739 49.417 62.5v164.483c-28.309 6.76-49.417 32.217-49.417 62.499 0 35.433 28.897 64.259 64.417 64.259s64.417-28.826 64.417-64.259c0-30.283-21.108-55.74-49.417-62.5v-62.241h162.695v62.241c-28.309 6.76-49.417 32.217-49.417 62.5 0 35.433 28.897 64.259 64.417 64.259s64.417-28.826 64.417-64.259c0-30.283-21.108-55.74-49.417-62.5v-62.241h117.587c40.188 0 72.884-32.612 72.884-72.698v-29.543c28.309-6.76 49.417-32.217 49.417-62.5 0-35.433-28.897-64.259-64.417-64.259z"></path>
+                                            </svg>
+                                            <p class="cars__card-iconTxt">Automatic </p>
+                                        </div>
+                                        <div class="cars__card-helper">
+                                            <img src="image/cars/iconBenzin.png" alt="">
+                                            <p>Gasoline</p>
+                                        </div>
+                                        <div class="cars__card-helper">
+                                            <img src="image/cars/iconPeople.png" alt="">
+                                            <p class="cars__card-iconTxt">5</p>
+                                        </div>
+                                        <div class="cars__card-helper">
+                                            <img src="image/cars/iconMotor.png" alt="">
+                                            <p class="cars__card-iconTxt">2.0 L</p>
+                                        </div>
+                                    </div>
+                                    <div class="cars__card-price">
+                                        <div class="cars__card-standart">
+                                            <span class="cars__card-standartSpan">2-7 days</span>
+                                            50 AZN
+                                        </div>
+                                        <div class="cars__card-standart">
+                                            <span class="cars__card-standartSpan">0-21 days</span>
+                                            44 AZN
+                                        </div>
+                                        <div class="cars__card-standart">
+                                            <span class="cars__card-standartSpan">22 days</span>
+                                            38 AZN
+                                        </div>
+                                    </div>
+                                    <a href="cars/hyundai-accent.html" class="cars__card-route">More details</a>
+                                </a>
+                            </div>
+                            <div class="cars__card">
+                                <a href="cars/kia-rio.html">
+                                    <h3 class="cars__card-title">Kia Rio 2022</h3>
+                                    <span class="cars__card-span">Стандарт</span>
+                                    <img src="image/cars/1.jpg" alt="" class="cars__card-image">
+                                    <div class="cars__card-icon">
+                                        <div class="cars__card-helper">
+                                            <svg xmlns="http://www.w3.org/2000/svg" id="Capa_1" height="512" viewBox="0 0 512 512" width="512">
+                                                <path d="m447.583 47c-35.52 0-64.417 28.826-64.417 64.259 0 30.283 21.108 55.74 49.417 62.5v29.543c0 23.544-19.238 42.698-42.884 42.698h-117.587v-72.241c28.31-6.76 49.417-32.217 49.417-62.5 0-35.433-28.897-64.259-64.417-64.259s-64.417 28.826-64.417 64.259c0 30.282 21.108 55.739 49.417 62.5v72.241h-162.695v-72.241c28.31-6.76 49.417-32.217 49.417-62.5 0-35.433-28.897-64.259-64.417-64.259s-64.417 28.826-64.417 64.259c0 30.282 21.108 55.739 49.417 62.5v164.483c-28.309 6.76-49.417 32.217-49.417 62.499 0 35.433 28.897 64.259 64.417 64.259s64.417-28.826 64.417-64.259c0-30.283-21.108-55.74-49.417-62.5v-62.241h162.695v62.241c-28.309 6.76-49.417 32.217-49.417 62.5 0 35.433 28.897 64.259 64.417 64.259s64.417-28.826 64.417-64.259c0-30.283-21.108-55.74-49.417-62.5v-62.241h117.587c40.188 0 72.884-32.612 72.884-72.698v-29.543c28.309-6.76 49.417-32.217 49.417-62.5 0-35.433-28.897-64.259-64.417-64.259z"></path>
+                                            </svg>
+                                            <p class="cars__card-iconTxt">Automatic </p>
+                                        </div>
+                                        <div class="cars__card-helper">
+                                            <img src="image/cars/iconBenzin.png" alt="">
+                                            <p>Gasoline</p>
+                                        </div>
+                                        <div class="cars__card-helper">
+                                            <img src="image/cars/iconPeople.png" alt="">
+                                            <p class="cars__card-iconTxt">5</p>
+                                        </div>
+                                        <div class="cars__card-helper">
+                                            <img src="image/cars/iconMotor.png" alt="">
+                                            <p class="cars__card-iconTxt">2.0 L</p>
+                                        </div>
+                                    </div>
+                                    <div class="cars__card-price">
+                                        <div class="cars__card-standart">
+                                            <span class="cars__card-standartSpan">2-7 days</span>
+                                            50 AZN
+                                        </div>
+                                        <div class="cars__card-standart">
+                                            <span class="cars__card-standartSpan">0-21 days</span>
+                                            44 AZN
+                                        </div>
+                                        <div class="cars__card-standart">
+                                            <span class="cars__card-standartSpan">22 days</span>
+                                            38 AZN
+                                        </div>
+                                    </div>
+                                    <a href="cars/kia-rio.html" class="cars__card-route">More details</a>
+                                </a>
+                            </div>
+                            <div class="cars__card">
+                                <a href="cars/hyundai-elantra2015.html">
+                                    <h3 class="cars__card-title">Hyundai Elantra 2015</h3>
+                                    <span class="cars__card-span">Стандарт</span>
+                                    <img src="image/cars/1.jpg" alt="" class="cars__card-image">
+                                    <div class="cars__card-icon">
+                                        <div class="cars__card-helper">
+                                            <svg xmlns="http://www.w3.org/2000/svg" id="Capa_1" height="512" viewBox="0 0 512 512" width="512">
+                                                <path d="m447.583 47c-35.52 0-64.417 28.826-64.417 64.259 0 30.283 21.108 55.74 49.417 62.5v29.543c0 23.544-19.238 42.698-42.884 42.698h-117.587v-72.241c28.31-6.76 49.417-32.217 49.417-62.5 0-35.433-28.897-64.259-64.417-64.259s-64.417 28.826-64.417 64.259c0 30.282 21.108 55.739 49.417 62.5v72.241h-162.695v-72.241c28.31-6.76 49.417-32.217 49.417-62.5 0-35.433-28.897-64.259-64.417-64.259s-64.417 28.826-64.417 64.259c0 30.282 21.108 55.739 49.417 62.5v164.483c-28.309 6.76-49.417 32.217-49.417 62.499 0 35.433 28.897 64.259 64.417 64.259s64.417-28.826 64.417-64.259c0-30.283-21.108-55.74-49.417-62.5v-62.241h162.695v62.241c-28.309 6.76-49.417 32.217-49.417 62.5 0 35.433 28.897 64.259 64.417 64.259s64.417-28.826 64.417-64.259c0-30.283-21.108-55.74-49.417-62.5v-62.241h117.587c40.188 0 72.884-32.612 72.884-72.698v-29.543c28.309-6.76 49.417-32.217 49.417-62.5 0-35.433-28.897-64.259-64.417-64.259z"></path>
+                                            </svg>
+                                            <p class="cars__card-iconTxt">Automatic </p>
+                                        </div>
+                                        <div class="cars__card-helper">
+                                            <img src="image/cars/iconBenzin.png" alt="">
+                                            <p>Gasoline</p>
+                                        </div>
+                                        <div class="cars__card-helper">
+                                            <img src="image/cars/iconPeople.png" alt="">
+                                            <p class="cars__card-iconTxt">5</p>
+                                        </div>
+                                        <div class="cars__card-helper">
+                                            <img src="image/cars/iconMotor.png" alt="">
+                                            <p class="cars__card-iconTxt">2.0 L</p>
+                                        </div>
+                                    </div>
+                                    <div class="cars__card-price">
+                                        <div class="cars__card-standart">
+                                            <span class="cars__card-standartSpan">2-7 days</span>
+                                            50 AZN
+                                        </div>
+                                        <div class="cars__card-standart">
+                                            <span class="cars__card-standartSpan">0-21 days</span>
+                                            44 AZN
+                                        </div>
+                                        <div class="cars__card-standart">
+                                            <span class="cars__card-standartSpan">22 days</span>
+                                            38 AZN
+                                        </div>
+                                    </div>
+                                    <a href="cars/hyundai-elantra2015.html" class="cars__card-route">More details</a>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tabsContentItem">
+                        <div class="cars__cards ">
+                            <div class="cars__card">
+                                <a href="cars/bmw-g30.html">
+                                    <h3 class="cars__card-title">BMW G30 5 series 2020</h3>
+                                    <span class="cars__card-span">Business</span>
+                                    <img src="image/cars/biznes/1.png" alt="" class="cars__card-image">
+                                    <div class="cars__card-icon">
+                                        <div class="cars__card-helper">
+                                            <svg xmlns="http://www.w3.org/2000/svg" id="Capa_1" height="512" viewBox="0 0 512 512" width="512">
+                                                <path d="m447.583 47c-35.52 0-64.417 28.826-64.417 64.259 0 30.283 21.108 55.74 49.417 62.5v29.543c0 23.544-19.238 42.698-42.884 42.698h-117.587v-72.241c28.31-6.76 49.417-32.217 49.417-62.5 0-35.433-28.897-64.259-64.417-64.259s-64.417 28.826-64.417 64.259c0 30.282 21.108 55.739 49.417 62.5v72.241h-162.695v-72.241c28.31-6.76 49.417-32.217 49.417-62.5 0-35.433-28.897-64.259-64.417-64.259s-64.417 28.826-64.417 64.259c0 30.282 21.108 55.739 49.417 62.5v164.483c-28.309 6.76-49.417 32.217-49.417 62.499 0 35.433 28.897 64.259 64.417 64.259s64.417-28.826 64.417-64.259c0-30.283-21.108-55.74-49.417-62.5v-62.241h162.695v62.241c-28.309 6.76-49.417 32.217-49.417 62.5 0 35.433 28.897 64.259 64.417 64.259s64.417-28.826 64.417-64.259c0-30.283-21.108-55.74-49.417-62.5v-62.241h117.587c40.188 0 72.884-32.612 72.884-72.698v-29.543c28.309-6.76 49.417-32.217 49.417-62.5 0-35.433-28.897-64.259-64.417-64.259z"></path>
+                                            </svg>
+                                            <p class="cars__card-iconTxt">Automatic </p>
+                                        </div>
+                                        <div class="cars__card-helper">
+                                            <img src="image/cars/iconBenzin.png" alt="">
+                                            <p>Gasoline</p>
+                                        </div>
+                                        <div class="cars__card-helper">
+                                            <img src="image/cars/iconPeople.png" alt="">
+                                            <p class="cars__card-iconTxt">5</p>
+                                        </div>
+                                        <div class="cars__card-helper">
+                                            <img src="image/cars/iconMotor.png" alt="">
+                                            <p class="cars__card-iconTxt">2.0 L</p>
+                                        </div>
+                                    </div>
+                                    <div class="cars__card-price">
+                                        <div class="cars__card-standart">
+                                            <span class="cars__card-standartSpan">2-7 days</span>
+                                            50 AZN
+                                        </div>
+                                        <div class="cars__card-standart">
+                                            <span class="cars__card-standartSpan">0-21 days</span>
+                                            44 AZN
+                                        </div>
+                                        <div class="cars__card-standart">
+                                            <span class="cars__card-standartSpan">22 days</span>
+                                            38 AZN
+                                        </div>
+                                    </div>
+                                    <a href="cars/bmw-g30.html" class="cars__card-route">More details</a>
+                                </a>
+                            </div>
+                            <div class="cars__card">
+                                <a href="cars/toyota-camry.html">
+                                    <h3 class="cars__card-title">Toyota Camry 2022</h3>
+                                    <span class="cars__card-span">Business</span>
+                                    <img src="image/cars/biznes/2.png" alt="" class="cars__card-image">
+                                    <div class="cars__card-icon">
+                                        <div class="cars__card-helper">
+                                            <svg xmlns="http://www.w3.org/2000/svg" id="Capa_1" height="512" viewBox="0 0 512 512" width="512">
+                                                <path d="m447.583 47c-35.52 0-64.417 28.826-64.417 64.259 0 30.283 21.108 55.74 49.417 62.5v29.543c0 23.544-19.238 42.698-42.884 42.698h-117.587v-72.241c28.31-6.76 49.417-32.217 49.417-62.5 0-35.433-28.897-64.259-64.417-64.259s-64.417 28.826-64.417 64.259c0 30.282 21.108 55.739 49.417 62.5v72.241h-162.695v-72.241c28.31-6.76 49.417-32.217 49.417-62.5 0-35.433-28.897-64.259-64.417-64.259s-64.417 28.826-64.417 64.259c0 30.282 21.108 55.739 49.417 62.5v164.483c-28.309 6.76-49.417 32.217-49.417 62.499 0 35.433 28.897 64.259 64.417 64.259s64.417-28.826 64.417-64.259c0-30.283-21.108-55.74-49.417-62.5v-62.241h162.695v62.241c-28.309 6.76-49.417 32.217-49.417 62.5 0 35.433 28.897 64.259 64.417 64.259s64.417-28.826 64.417-64.259c0-30.283-21.108-55.74-49.417-62.5v-62.241h117.587c40.188 0 72.884-32.612 72.884-72.698v-29.543c28.309-6.76 49.417-32.217 49.417-62.5 0-35.433-28.897-64.259-64.417-64.259z"></path>
+                                            </svg>
+                                            <p class="cars__card-iconTxt">Automatic </p>
+                                        </div>
+                                        <div class="cars__card-helper">
+                                            <img src="image/cars/iconBenzin.png" alt="">
+                                            <p>Gasoline</p>
+                                        </div>
+                                        <div class="cars__card-helper">
+                                            <img src="image/cars/iconPeople.png" alt="">
+                                            <p class="cars__card-iconTxt">5</p>
+                                        </div>
+                                        <div class="cars__card-helper">
+                                            <img src="image/cars/iconMotor.png" alt="">
+                                            <p class="cars__card-iconTxt">2.0 L</p>
+                                        </div>
+                                    </div>
+                                    <div class="cars__card-price">
+                                        <div class="cars__card-standart">
+                                            <span class="cars__card-standartSpan">2-7 days</span>
+                                            50 AZN
+                                        </div>
+                                        <div class="cars__card-standart">
+                                            <span class="cars__card-standartSpan">0-21 days</span>
+                                            44 AZN
+                                        </div>
+                                        <div class="cars__card-standart">
+                                            <span class="cars__card-standartSpan">22 days</span>
+                                            38 AZN
+                                        </div>
+                                    </div>
+                                    <a href="cars/toyota-camry.html" class="cars__card-route">More details</a>
+                                </a>
+                            </div>
+                            <div class="cars__card">
+                                <a href="cars/kia-k5.html">
+                                    <h3 class="cars__card-title">Kia K5 2022</h3>
+                                    <span class="cars__card-span">Business</span>
+                                    <img src="image/cars/biznes/3.webp" alt="" class="cars__card-image">
+                                    <div class="cars__card-icon">
+                                        <div class="cars__card-helper">
+                                            <svg xmlns="http://www.w3.org/2000/svg" id="Capa_1" height="512" viewBox="0 0 512 512" width="512">
+                                                <path d="m447.583 47c-35.52 0-64.417 28.826-64.417 64.259 0 30.283 21.108 55.74 49.417 62.5v29.543c0 23.544-19.238 42.698-42.884 42.698h-117.587v-72.241c28.31-6.76 49.417-32.217 49.417-62.5 0-35.433-28.897-64.259-64.417-64.259s-64.417 28.826-64.417 64.259c0 30.282 21.108 55.739 49.417 62.5v72.241h-162.695v-72.241c28.31-6.76 49.417-32.217 49.417-62.5 0-35.433-28.897-64.259-64.417-64.259s-64.417 28.826-64.417 64.259c0 30.282 21.108 55.739 49.417 62.5v164.483c-28.309 6.76-49.417 32.217-49.417 62.499 0 35.433 28.897 64.259 64.417 64.259s64.417-28.826 64.417-64.259c0-30.283-21.108-55.74-49.417-62.5v-62.241h162.695v62.241c-28.309 6.76-49.417 32.217-49.417 62.5 0 35.433 28.897 64.259 64.417 64.259s64.417-28.826 64.417-64.259c0-30.283-21.108-55.74-49.417-62.5v-62.241h117.587c40.188 0 72.884-32.612 72.884-72.698v-29.543c28.309-6.76 49.417-32.217 49.417-62.5 0-35.433-28.897-64.259-64.417-64.259z"></path>
+                                            </svg>
+                                            <p class="cars__card-iconTxt">Automatic </p>
+                                        </div>
+                                        <div class="cars__card-helper">
+                                            <img src="image/cars/iconBenzin.png" alt="">
+                                            <p>Gasoline</p>
+                                        </div>
+                                        <div class="cars__card-helper">
+                                            <img src="image/cars/iconPeople.png" alt="">
+                                            <p class="cars__card-iconTxt">5</p>
+                                        </div>
+                                        <div class="cars__card-helper">
+                                            <img src="image/cars/iconMotor.png" alt="">
+                                            <p class="cars__card-iconTxt">2.0 L</p>
+                                        </div>
+                                    </div>
+                                    <div class="cars__card-price">
+                                        <div class="cars__card-standart">
+                                            <span class="cars__card-standartSpan">2-7 days</span>
+                                            50 AZN
+                                        </div>
+                                        <div class="cars__card-standart">
+                                            <span class="cars__card-standartSpan">0-21 days</span>
+                                            44 AZN
+                                        </div>
+                                        <div class="cars__card-standart">
+                                            <span class="cars__card-standartSpan">22 days</span>
+                                            38 AZN
+                                        </div>
+                                    </div>
+                                    <a href="cars/kia-k5.html" class="cars__card-route">More details</a>
+                                </a>
+                            </div>
+                            <div class="cars__card">
+                                <a href="cars/kia-optima.html">
+                                    <h3 class="cars__card-title">Kia Optima 2018</h3>
+                                    <span class="cars__card-span">Business</span>
+                                    <img src="image/cars/biznes/4.png" alt="" class="cars__card-image">
+                                    <div class="cars__card-icon">
+                                        <div class="cars__card-helper">
+                                            <svg xmlns="http://www.w3.org/2000/svg" id="Capa_1" height="512" viewBox="0 0 512 512" width="512">
+                                                <path d="m447.583 47c-35.52 0-64.417 28.826-64.417 64.259 0 30.283 21.108 55.74 49.417 62.5v29.543c0 23.544-19.238 42.698-42.884 42.698h-117.587v-72.241c28.31-6.76 49.417-32.217 49.417-62.5 0-35.433-28.897-64.259-64.417-64.259s-64.417 28.826-64.417 64.259c0 30.282 21.108 55.739 49.417 62.5v72.241h-162.695v-72.241c28.31-6.76 49.417-32.217 49.417-62.5 0-35.433-28.897-64.259-64.417-64.259s-64.417 28.826-64.417 64.259c0 30.282 21.108 55.739 49.417 62.5v164.483c-28.309 6.76-49.417 32.217-49.417 62.499 0 35.433 28.897 64.259 64.417 64.259s64.417-28.826 64.417-64.259c0-30.283-21.108-55.74-49.417-62.5v-62.241h162.695v62.241c-28.309 6.76-49.417 32.217-49.417 62.5 0 35.433 28.897 64.259 64.417 64.259s64.417-28.826 64.417-64.259c0-30.283-21.108-55.74-49.417-62.5v-62.241h117.587c40.188 0 72.884-32.612 72.884-72.698v-29.543c28.309-6.76 49.417-32.217 49.417-62.5 0-35.433-28.897-64.259-64.417-64.259z"></path>
+                                            </svg>
+                                            <p class="cars__card-iconTxt">Automatic </p>
+                                        </div>
+                                        <div class="cars__card-helper">
+                                            <img src="image/cars/iconBenzin.png" alt="">
+                                            <p>Gasoline</p>
+                                        </div>
+                                        <div class="cars__card-helper">
+                                            <img src="image/cars/iconPeople.png" alt="">
+                                            <p class="cars__card-iconTxt">5</p>
+                                        </div>
+                                        <div class="cars__card-helper">
+                                            <img src="image/cars/iconMotor.png" alt="">
+                                            <p class="cars__card-iconTxt">2.0 L</p>
+                                        </div>
+                                    </div>
+                                    <div class="cars__card-price">
+                                        <div class="cars__card-standart">
+                                            <span class="cars__card-standartSpan">2-7 days</span>
+                                            50 AZN
+                                        </div>
+                                        <div class="cars__card-standart">
+                                            <span class="cars__card-standartSpan">0-21 days</span>
+                                            44 AZN
+                                        </div>
+                                        <div class="cars__card-standart">
+                                            <span class="cars__card-standartSpan">22 days</span>
+                                            38 AZN
+                                        </div>
+                                    </div>
+                                    <a href="cars/kia-optima.html" class="cars__card-route">More details</a>
+                                </a>
+                            </div>
+                            <div class="cars__card">
+                                <a href="cars/hyundai-sonata.html">
+                                    <h3 class="cars__card-title">Hyundai Sonata 2022</h3>
+                                    <span class="cars__card-span">Business</span>
+                                    <img src="image/cars/biznes/5.png" alt="" class="cars__card-image">
+                                    <div class="cars__card-icon">
+                                        <div class="cars__card-helper">
+                                            <svg xmlns="http://www.w3.org/2000/svg" id="Capa_1" height="512" viewBox="0 0 512 512" width="512">
+                                                <path d="m447.583 47c-35.52 0-64.417 28.826-64.417 64.259 0 30.283 21.108 55.74 49.417 62.5v29.543c0 23.544-19.238 42.698-42.884 42.698h-117.587v-72.241c28.31-6.76 49.417-32.217 49.417-62.5 0-35.433-28.897-64.259-64.417-64.259s-64.417 28.826-64.417 64.259c0 30.282 21.108 55.739 49.417 62.5v72.241h-162.695v-72.241c28.31-6.76 49.417-32.217 49.417-62.5 0-35.433-28.897-64.259-64.417-64.259s-64.417 28.826-64.417 64.259c0 30.282 21.108 55.739 49.417 62.5v164.483c-28.309 6.76-49.417 32.217-49.417 62.499 0 35.433 28.897 64.259 64.417 64.259s64.417-28.826 64.417-64.259c0-30.283-21.108-55.74-49.417-62.5v-62.241h162.695v62.241c-28.309 6.76-49.417 32.217-49.417 62.5 0 35.433 28.897 64.259 64.417 64.259s64.417-28.826 64.417-64.259c0-30.283-21.108-55.74-49.417-62.5v-62.241h117.587c40.188 0 72.884-32.612 72.884-72.698v-29.543c28.309-6.76 49.417-32.217 49.417-62.5 0-35.433-28.897-64.259-64.417-64.259z"></path>
+                                            </svg>
+                                            <p class="cars__card-iconTxt">Automatic </p>
+                                        </div>
+                                        <div class="cars__card-helper">
+                                            <img src="image/cars/iconBenzin.png" alt="">
+                                            <p>Gasoline</p>
+                                        </div>
+                                        <div class="cars__card-helper">
+                                            <img src="image/cars/iconPeople.png" alt="">
+                                            <p class="cars__card-iconTxt">5</p>
+                                        </div>
+                                        <div class="cars__card-helper">
+                                            <img src="image/cars/iconMotor.png" alt="">
+                                            <p class="cars__card-iconTxt">2.0 L</p>
+                                        </div>
+                                    </div>
+                                    <div class="cars__card-price">
+                                        <div class="cars__card-standart">
+                                            <span class="cars__card-standartSpan">2-7 days</span>
+                                            50 AZN
+                                        </div>
+                                        <div class="cars__card-standart">
+                                            <span class="cars__card-standartSpan">0-21 days</span>
+                                            44 AZN
+                                        </div>
+                                        <div class="cars__card-standart">
+                                            <span class="cars__card-standartSpan">22 days</span>
+                                            38 AZN
+                                        </div>
+                                    </div>
+                                    <a href="cars/hyundai-sonata.html" class="cars__card-route">More details</a>
+                                </a>
+                            </div>
+                            <div class="cars__card">
+                                <a href="cars/hyundai-sonata2017.html">
+                                    <h3 class="cars__card-title">Hyundai Sonata 2017</h3>
+                                    <span class="cars__card-span">Business</span>
+                                    <img src="image/cars/biznes/6.png" alt="" class="cars__card-image">
+                                    <div class="cars__card-icon">
+                                        <div class="cars__card-helper">
+                                            <svg xmlns="http://www.w3.org/2000/svg" id="Capa_1" height="512" viewBox="0 0 512 512" width="512">
+                                                <path d="m447.583 47c-35.52 0-64.417 28.826-64.417 64.259 0 30.283 21.108 55.74 49.417 62.5v29.543c0 23.544-19.238 42.698-42.884 42.698h-117.587v-72.241c28.31-6.76 49.417-32.217 49.417-62.5 0-35.433-28.897-64.259-64.417-64.259s-64.417 28.826-64.417 64.259c0 30.282 21.108 55.739 49.417 62.5v72.241h-162.695v-72.241c28.31-6.76 49.417-32.217 49.417-62.5 0-35.433-28.897-64.259-64.417-64.259s-64.417 28.826-64.417 64.259c0 30.282 21.108 55.739 49.417 62.5v164.483c-28.309 6.76-49.417 32.217-49.417 62.499 0 35.433 28.897 64.259 64.417 64.259s64.417-28.826 64.417-64.259c0-30.283-21.108-55.74-49.417-62.5v-62.241h162.695v62.241c-28.309 6.76-49.417 32.217-49.417 62.5 0 35.433 28.897 64.259 64.417 64.259s64.417-28.826 64.417-64.259c0-30.283-21.108-55.74-49.417-62.5v-62.241h117.587c40.188 0 72.884-32.612 72.884-72.698v-29.543c28.309-6.76 49.417-32.217 49.417-62.5 0-35.433-28.897-64.259-64.417-64.259z"></path>
+                                            </svg>
+                                            <p class="cars__card-iconTxt">Automatic </p>
+                                        </div>
+                                        <div class="cars__card-helper">
+                                            <img src="image/cars/iconBenzin.png" alt="">
+                                            <p>Gasoline</p>
+                                        </div>
+                                        <div class="cars__card-helper">
+                                            <img src="image/cars/iconPeople.png" alt="">
+                                            <p class="cars__card-iconTxt">5</p>
+                                        </div>
+                                        <div class="cars__card-helper">
+                                            <img src="image/cars/iconMotor.png" alt="">
+                                            <p class="cars__card-iconTxt">2.0 L</p>
+                                        </div>
+                                    </div>
+                                    <div class="cars__card-price">
+                                        <div class="cars__card-standart">
+                                            <span class="cars__card-standartSpan">2-7 days</span>
+                                            50 AZN
+                                        </div>
+                                        <div class="cars__card-standart">
+                                            <span class="cars__card-standartSpan">0-21 days</span>
+                                            44 AZN
+                                        </div>
+                                        <div class="cars__card-standart">
+                                            <span class="cars__card-standartSpan">22 days</span>
+                                            38 AZN
+                                        </div>
+                                    </div>
+                                    <a href="cars/hyundai-sonata2017.html" class="cars__card-route">More details</a>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tabsContentItem">
+                        <div class="cars__cards ">
+                            <div class="cars__card">
+                                <a href="cars/mercedes-benz.html">
+                                    <h3 class="cars__card-title">Mercedes Benz S-class 2017</h3>
+                                    <span class="cars__card-span">Premium</span>
+                                    <img src="image/cars/premium/1.png" alt="" class="cars__card-image">
+                                    <div class="cars__card-icon">
+                                        <div class="cars__card-helper">
+                                            <svg xmlns="http://www.w3.org/2000/svg" id="Capa_1" height="512" viewBox="0 0 512 512" width="512">
+                                                <path d="m447.583 47c-35.52 0-64.417 28.826-64.417 64.259 0 30.283 21.108 55.74 49.417 62.5v29.543c0 23.544-19.238 42.698-42.884 42.698h-117.587v-72.241c28.31-6.76 49.417-32.217 49.417-62.5 0-35.433-28.897-64.259-64.417-64.259s-64.417 28.826-64.417 64.259c0 30.282 21.108 55.739 49.417 62.5v72.241h-162.695v-72.241c28.31-6.76 49.417-32.217 49.417-62.5 0-35.433-28.897-64.259-64.417-64.259s-64.417 28.826-64.417 64.259c0 30.282 21.108 55.739 49.417 62.5v164.483c-28.309 6.76-49.417 32.217-49.417 62.499 0 35.433 28.897 64.259 64.417 64.259s64.417-28.826 64.417-64.259c0-30.283-21.108-55.74-49.417-62.5v-62.241h162.695v62.241c-28.309 6.76-49.417 32.217-49.417 62.5 0 35.433 28.897 64.259 64.417 64.259s64.417-28.826 64.417-64.259c0-30.283-21.108-55.74-49.417-62.5v-62.241h117.587c40.188 0 72.884-32.612 72.884-72.698v-29.543c28.309-6.76 49.417-32.217 49.417-62.5 0-35.433-28.897-64.259-64.417-64.259z"></path>
+                                            </svg>
+                                            <p class="cars__card-iconTxt">Automatic </p>
+                                        </div>
+                                        <div class="cars__card-helper">
+                                            <img src="image/cars/iconBenzin.png" alt="">
+                                            <p>Gasoline</p>
+                                        </div>
+                                        <div class="cars__card-helper">
+                                            <img src="image/cars/iconPeople.png" alt="">
+                                            <p class="cars__card-iconTxt">5</p>
+                                        </div>
+                                        <div class="cars__card-helper">
+                                            <img src="image/cars/iconMotor.png" alt="">
+                                            <p class="cars__card-iconTxt">2.0 L</p>
+                                        </div>
+                                    </div>
+                                    <div class="cars__card-price">
+                                        <div class="cars__card-standart">
+                                            <span class="cars__card-standartSpan">2-7 days</span>
+                                            50 AZN
+                                        </div>
+                                        <div class="cars__card-standart">
+                                            <span class="cars__card-standartSpan">0-21 days</span>
+                                            44 AZN
+                                        </div>
+                                        <div class="cars__card-standart">
+                                            <span class="cars__card-standartSpan">22 days</span>
+                                            38 AZN
+                                        </div>
+                                    </div>
+                                    <a href="cars/mercedes-benz.html" class="cars__card-route">More details</a>
+                                </a>
+                            </div>
+                            <div class="cars__card">
+                                <a href="cars/ford-mustang.html">
+                                    <h3 class="cars__card-title">Ford Mustang 2020</h3>
+                                    <span class="cars__card-span">Premium</span>
+                                    <img src="image/cars/premium/2.png" alt="" class="cars__card-image">
+                                    <div class="cars__card-icon">
+                                        <div class="cars__card-helper">
+                                            <svg xmlns="http://www.w3.org/2000/svg" id="Capa_1" height="512" viewBox="0 0 512 512" width="512">
+                                                <path d="m447.583 47c-35.52 0-64.417 28.826-64.417 64.259 0 30.283 21.108 55.74 49.417 62.5v29.543c0 23.544-19.238 42.698-42.884 42.698h-117.587v-72.241c28.31-6.76 49.417-32.217 49.417-62.5 0-35.433-28.897-64.259-64.417-64.259s-64.417 28.826-64.417 64.259c0 30.282 21.108 55.739 49.417 62.5v72.241h-162.695v-72.241c28.31-6.76 49.417-32.217 49.417-62.5 0-35.433-28.897-64.259-64.417-64.259s-64.417 28.826-64.417 64.259c0 30.282 21.108 55.739 49.417 62.5v164.483c-28.309 6.76-49.417 32.217-49.417 62.499 0 35.433 28.897 64.259 64.417 64.259s64.417-28.826 64.417-64.259c0-30.283-21.108-55.74-49.417-62.5v-62.241h162.695v62.241c-28.309 6.76-49.417 32.217-49.417 62.5 0 35.433 28.897 64.259 64.417 64.259s64.417-28.826 64.417-64.259c0-30.283-21.108-55.74-49.417-62.5v-62.241h117.587c40.188 0 72.884-32.612 72.884-72.698v-29.543c28.309-6.76 49.417-32.217 49.417-62.5 0-35.433-28.897-64.259-64.417-64.259z"></path>
+                                            </svg>
+                                            <p class="cars__card-iconTxt">Automatic </p>
+                                        </div>
+                                        <div class="cars__card-helper">
+                                            <img src="image/cars/iconBenzin.png" alt="">
+                                            <p>Gasoline</p>
+                                        </div>
+                                        <div class="cars__card-helper">
+                                            <img src="image/cars/iconPeople.png" alt="">
+                                            <p class="cars__card-iconTxt">5</p>
+                                        </div>
+                                        <div class="cars__card-helper">
+                                            <img src="image/cars/iconMotor.png" alt="">
+                                            <p class="cars__card-iconTxt">2.0 L</p>
+                                        </div>
+                                    </div>
+                                    <div class="cars__card-price">
+                                        <div class="cars__card-standart">
+                                            <span class="cars__card-standartSpan">2-7 days</span>
+                                            50 AZN
+                                        </div>
+                                        <div class="cars__card-standart">
+                                            <span class="cars__card-standartSpan">0-21 days</span>
+                                            44 AZN
+                                        </div>
+                                        <div class="cars__card-standart">
+                                            <span class="cars__card-standartSpan">22 days</span>
+                                            38 AZN
+                                        </div>
+                                    </div>
+                                    <a href="cars/ford-mustang.html" class="cars__card-route">More details</a>
+                                </a>
+                            </div>
+                            <div class="cars__card">
+                                <a href="cars/range-rover.html">
+                                    <h3 class="cars__card-title">Range Rover Vogue 2020</h3>
+                                    <span class="cars__card-span">Premium</span>
+                                    <img src="image/cars/premium/3.png" alt="" class="cars__card-image">
+                                    <div class="cars__card-icon">
+                                        <div class="cars__card-helper">
+                                            <svg xmlns="http://www.w3.org/2000/svg" id="Capa_1" height="512" viewBox="0 0 512 512" width="512">
+                                                <path d="m447.583 47c-35.52 0-64.417 28.826-64.417 64.259 0 30.283 21.108 55.74 49.417 62.5v29.543c0 23.544-19.238 42.698-42.884 42.698h-117.587v-72.241c28.31-6.76 49.417-32.217 49.417-62.5 0-35.433-28.897-64.259-64.417-64.259s-64.417 28.826-64.417 64.259c0 30.282 21.108 55.739 49.417 62.5v72.241h-162.695v-72.241c28.31-6.76 49.417-32.217 49.417-62.5 0-35.433-28.897-64.259-64.417-64.259s-64.417 28.826-64.417 64.259c0 30.282 21.108 55.739 49.417 62.5v164.483c-28.309 6.76-49.417 32.217-49.417 62.499 0 35.433 28.897 64.259 64.417 64.259s64.417-28.826 64.417-64.259c0-30.283-21.108-55.74-49.417-62.5v-62.241h162.695v62.241c-28.309 6.76-49.417 32.217-49.417 62.5 0 35.433 28.897 64.259 64.417 64.259s64.417-28.826 64.417-64.259c0-30.283-21.108-55.74-49.417-62.5v-62.241h117.587c40.188 0 72.884-32.612 72.884-72.698v-29.543c28.309-6.76 49.417-32.217 49.417-62.5 0-35.433-28.897-64.259-64.417-64.259z"></path>
+                                            </svg>
+                                            <p class="cars__card-iconTxt">Automatic </p>
+                                        </div>
+                                        <div class="cars__card-helper">
+                                            <img src="image/cars/iconBenzin.png" alt="">
+                                            <p>Gasoline</p>
+                                        </div>
+                                        <div class="cars__card-helper">
+                                            <img src="image/cars/iconPeople.png" alt="">
+                                            <p class="cars__card-iconTxt">5</p>
+                                        </div>
+                                        <div class="cars__card-helper">
+                                            <img src="image/cars/iconMotor.png" alt="">
+                                            <p class="cars__card-iconTxt">2.0 L</p>
+                                        </div>
+                                    </div>
+                                    <div class="cars__card-price">
+                                        <div class="cars__card-standart">
+                                            <span class="cars__card-standartSpan">2-7 days</span>
+                                            50 AZN
+                                        </div>
+                                        <div class="cars__card-standart">
+                                            <span class="cars__card-standartSpan">0-21 days</span>
+                                            44 AZN
+                                        </div>
+                                        <div class="cars__card-standart">
+                                            <span class="cars__card-standartSpan">22 days</span>
+                                            38 AZN
+                                        </div>
+                                    </div>
+                                    <a href="cars/range-rover.html" class="cars__card-route">More details</a>
+                                </a>
+                            </div>
+                            <div class="cars__card">
+                                <a href="cars/range-rover2017.html">
+                                    <h3 class="cars__card-title">Range Rover Vogue 2017</h3>
+                                    <span class="cars__card-span">Premium</span>
+                                    <img src="image/cars/premium/4.png" alt="" class="cars__card-image">
+                                    <div class="cars__card-icon">
+                                        <div class="cars__card-helper">
+                                            <svg xmlns="http://www.w3.org/2000/svg" id="Capa_1" height="512" viewBox="0 0 512 512" width="512">
+                                                <path d="m447.583 47c-35.52 0-64.417 28.826-64.417 64.259 0 30.283 21.108 55.74 49.417 62.5v29.543c0 23.544-19.238 42.698-42.884 42.698h-117.587v-72.241c28.31-6.76 49.417-32.217 49.417-62.5 0-35.433-28.897-64.259-64.417-64.259s-64.417 28.826-64.417 64.259c0 30.282 21.108 55.739 49.417 62.5v72.241h-162.695v-72.241c28.31-6.76 49.417-32.217 49.417-62.5 0-35.433-28.897-64.259-64.417-64.259s-64.417 28.826-64.417 64.259c0 30.282 21.108 55.739 49.417 62.5v164.483c-28.309 6.76-49.417 32.217-49.417 62.499 0 35.433 28.897 64.259 64.417 64.259s64.417-28.826 64.417-64.259c0-30.283-21.108-55.74-49.417-62.5v-62.241h162.695v62.241c-28.309 6.76-49.417 32.217-49.417 62.5 0 35.433 28.897 64.259 64.417 64.259s64.417-28.826 64.417-64.259c0-30.283-21.108-55.74-49.417-62.5v-62.241h117.587c40.188 0 72.884-32.612 72.884-72.698v-29.543c28.309-6.76 49.417-32.217 49.417-62.5 0-35.433-28.897-64.259-64.417-64.259z"></path>
+                                            </svg>
+                                            <p class="cars__card-iconTxt">Automatic </p>
+                                        </div>
+                                        <div class="cars__card-helper">
+                                            <img src="image/cars/iconBenzin.png" alt="">
+                                            <p>Gasoline</p>
+                                        </div>
+                                        <div class="cars__card-helper">
+                                            <img src="image/cars/iconPeople.png" alt="">
+                                            <p class="cars__card-iconTxt">5</p>
+                                        </div>
+                                        <div class="cars__card-helper">
+                                            <img src="image/cars/iconMotor.png" alt="">
+                                            <p class="cars__card-iconTxt">2.0 L</p>
+                                        </div>
+                                    </div>
+                                    <div class="cars__card-price">
+                                        <div class="cars__card-standart">
+                                            <span class="cars__card-standartSpan">2-7 days</span>
+                                            50 AZN
+                                        </div>
+                                        <div class="cars__card-standart">
+                                            <span class="cars__card-standartSpan">0-21 days</span>
+                                            44 AZN
+                                        </div>
+                                        <div class="cars__card-standart">
+                                            <span class="cars__card-standartSpan">22 days</span>
+                                            38 AZN
+                                        </div>
+                                    </div>
+                                    <a href="cars/range-rover2017.html" class="cars__card-route">More details</a>
+                                </a>
+                            </div>
+                            <div class="cars__card">
+                                <a href="cars/BMW-X7.html">
+                                    <h3 class="cars__card-title">BMW X7 2022</h3>
+                                    <span class="cars__card-span">Premium</span>
+                                    <img src="image/cars/premium/4.png" alt="" class="cars__card-image">
+                                    <div class="cars__card-icon">
+                                        <div class="cars__card-helper">
+                                            <svg xmlns="http://www.w3.org/2000/svg" id="Capa_1" height="512" viewBox="0 0 512 512" width="512">
+                                                <path d="m447.583 47c-35.52 0-64.417 28.826-64.417 64.259 0 30.283 21.108 55.74 49.417 62.5v29.543c0 23.544-19.238 42.698-42.884 42.698h-117.587v-72.241c28.31-6.76 49.417-32.217 49.417-62.5 0-35.433-28.897-64.259-64.417-64.259s-64.417 28.826-64.417 64.259c0 30.282 21.108 55.739 49.417 62.5v72.241h-162.695v-72.241c28.31-6.76 49.417-32.217 49.417-62.5 0-35.433-28.897-64.259-64.417-64.259s-64.417 28.826-64.417 64.259c0 30.282 21.108 55.739 49.417 62.5v164.483c-28.309 6.76-49.417 32.217-49.417 62.499 0 35.433 28.897 64.259 64.417 64.259s64.417-28.826 64.417-64.259c0-30.283-21.108-55.74-49.417-62.5v-62.241h162.695v62.241c-28.309 6.76-49.417 32.217-49.417 62.5 0 35.433 28.897 64.259 64.417 64.259s64.417-28.826 64.417-64.259c0-30.283-21.108-55.74-49.417-62.5v-62.241h117.587c40.188 0 72.884-32.612 72.884-72.698v-29.543c28.309-6.76 49.417-32.217 49.417-62.5 0-35.433-28.897-64.259-64.417-64.259z"></path>
+                                            </svg>
+                                            <p class="cars__card-iconTxt">Automatic </p>
+                                        </div>
+                                        <div class="cars__card-helper">
+                                            <img src="image/cars/iconBenzin.png" alt="">
+                                            <p>Gasoline</p>
+                                        </div>
+                                        <div class="cars__card-helper">
+                                            <img src="image/cars/iconPeople.png" alt="">
+                                            <p class="cars__card-iconTxt">5</p>
+                                        </div>
+                                        <div class="cars__card-helper">
+                                            <img src="image/cars/iconMotor.png" alt="">
+                                            <p class="cars__card-iconTxt">2.0 L</p>
+                                        </div>
+                                    </div>
+                                    <div class="cars__card-price">
+                                        <div class="cars__card-standart">
+                                            <span class="cars__card-standartSpan">2-7 days</span>
+                                            50 AZN
+                                        </div>
+                                        <div class="cars__card-standart">
+                                            <span class="cars__card-standartSpan">0-21 days</span>
+                                            44 AZN
+                                        </div>
+                                        <div class="cars__card-standart">
+                                            <span class="cars__card-standartSpan">22 days</span>
+                                            38 AZN
+                                        </div>
+                                    </div>
+                                    <a href="cars/BMW-X7.html" class="cars__card-route">More details</a>
+                                </a>
+                            </div>
+                            <div class="cars__card">
+                                <a href="cars/BMW-X5.html">
+                                    <h3 class="cars__card-title">BMW X5 2022</h3>
+                                    <span class="cars__card-span">Premium</span>
+                                    <img src="image/cars/premium/4.png" alt="" class="cars__card-image">
+                                    <div class="cars__card-icon">
+                                        <div class="cars__card-helper">
+                                            <svg xmlns="http://www.w3.org/2000/svg" id="Capa_1" height="512" viewBox="0 0 512 512" width="512">
+                                                <path d="m447.583 47c-35.52 0-64.417 28.826-64.417 64.259 0 30.283 21.108 55.74 49.417 62.5v29.543c0 23.544-19.238 42.698-42.884 42.698h-117.587v-72.241c28.31-6.76 49.417-32.217 49.417-62.5 0-35.433-28.897-64.259-64.417-64.259s-64.417 28.826-64.417 64.259c0 30.282 21.108 55.739 49.417 62.5v72.241h-162.695v-72.241c28.31-6.76 49.417-32.217 49.417-62.5 0-35.433-28.897-64.259-64.417-64.259s-64.417 28.826-64.417 64.259c0 30.282 21.108 55.739 49.417 62.5v164.483c-28.309 6.76-49.417 32.217-49.417 62.499 0 35.433 28.897 64.259 64.417 64.259s64.417-28.826 64.417-64.259c0-30.283-21.108-55.74-49.417-62.5v-62.241h162.695v62.241c-28.309 6.76-49.417 32.217-49.417 62.5 0 35.433 28.897 64.259 64.417 64.259s64.417-28.826 64.417-64.259c0-30.283-21.108-55.74-49.417-62.5v-62.241h117.587c40.188 0 72.884-32.612 72.884-72.698v-29.543c28.309-6.76 49.417-32.217 49.417-62.5 0-35.433-28.897-64.259-64.417-64.259z"></path>
+                                            </svg>
+                                            <p class="cars__card-iconTxt">Automatic </p>
+                                        </div>
+                                        <div class="cars__card-helper">
+                                            <img src="image/cars/iconBenzin.png" alt="">
+                                            <p>Gasoline</p>
+                                        </div>
+                                        <div class="cars__card-helper">
+                                            <img src="image/cars/iconPeople.png" alt="">
+                                            <p class="cars__card-iconTxt">5</p>
+                                        </div>
+                                        <div class="cars__card-helper">
+                                            <img src="image/cars/iconMotor.png" alt="">
+                                            <p class="cars__card-iconTxt">2.0 L</p>
+                                        </div>
+                                    </div>
+                                    <div class="cars__card-price">
+                                        <div class="cars__card-standart">
+                                            <span class="cars__card-standartSpan">2-7 days</span>
+                                            50 AZN
+                                        </div>
+                                        <div class="cars__card-standart">
+                                            <span class="cars__card-standartSpan">0-21 days</span>
+                                            44 AZN
+                                        </div>
+                                        <div class="cars__card-standart">
+                                            <span class="cars__card-standartSpan">22 days</span>
+                                            38 AZN
+                                        </div>
+                                    </div>
+                                    <a href="cars/BMW-X5.html" class="cars__card-route">More details</a>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tabsContentItem">
+                        <div class="cars__cards ">
+                            
+                        </div>
+                    </div>
+                    <div class="tabsContentItem">
+                        <div class="cars__cards ">
+                            
+                        </div>
+                    </div>
+                    <div class="tabsContentItem">
+                        <div class="cars__cards ">
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="question">
+            <div class="container">
+                <h3 class="question__title">Frequently Asked Questions</h3>
+                <div class="question__helper">
+                    <div class="question__cards">
+                        <div class="question__card">
+                            <div class="question__matter">
+                                <p class="question__card-txt">WHAT CONDITIONS MUST I FOLLOW WHEN RENTING A CAR?</p>
+                                <button class="question__card-icon">+</button>
+                            </div>
+                            <div class="question__answer">
+                                <p class="question__answer-txt">When renting a car, the minimum age requirement is 24 years, and the driving experience with a driver's license must exceed 2 years.</p>
+                            </div>
+                        </div>
+                        <div class="question__card">
+                            <div class="question__matter">
+                                <p class="question__card-txt">CAN FOREIGN CITIZENS RENT A CAR?</p>
+                                <button class="question__card-icon">+</button>
+                            </div>
+                            <div class="question__answer">
+                                <p class="question__answer-txt">If you are a foreign citizen, when renting a car, you need to have your passport and driver's license with you. Additionally, according to the legislation of the Republic of Azerbaijan, foreign citizens can drive a car with a foreign driver's license for up to 1 month after entering the country. If the entry period exceeds 1 month, this entails a fine for the driver and confiscation of the vehicle. For other rules, the conditions specified in points 1 and 2 apply.</p>
+                            </div>
+                        </div>
+                        <div class="question__card">
+                            <div class="question__matter">
+                                <p class="question__card-txt">IS A DEPOSIT REQUIRED?</p>
+                                <button class="question__card-icon">+</button>
+                            </div>
+                            <div class="question__answer">
+                                <p class="question__answer-txt">Depending on the rental period and the car, it is necessary. The minimum deposit starts from 100 manat.</p>
+                            </div>
+                        </div>
+                        <div class="question__card">
+                            <div class="question__matter">
+                                <p class="question__card-txt">WHAT DOCUMENTS ARE REQUIRED FOR RENTAL?</p>
+                                <button class="question__card-icon">+</button>
+                            </div>
+                            <div class="question__answer">
+                                <p class="question__answer-txt">If you are a citizen of the Republic of Azerbaijan, an identity card and driver's license are sufficient.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <img src="image/question/image-bmw.png" alt="" class="question__image">
+                </div>
+            </div>
+        </section>
+        <section class="review">
+            <div class="container">
+                <h3 class="review__title">Reviews</h3>
+                <div class="review__images">
+                    <a href="reviews.html">
+                        <img src="image/blog/1.png" alt="" class="review__image">
+                    </a>
+                    <a href="reviews.html">
+                        <img src="image/blog/2.png" alt="" class="review__image">
+                    </a>
+                    <a href="reviews.html">
+                        <img src="image/blog/3.png" alt="" class="review__image">
+                    </a>
+                    <a href="reviews.html">
+                        <img src="image/blog/4.png" alt="" class="review__image">
+                    </a>
+                    <a href="reviews.html">
+                        <img src="image/blog/5.png" alt="" class="review__image">
+                    </a>
+                    <a href="reviews.html">
+                        <img src="image/blog/6.png" alt="" class="review__image">
+                    </a>
+                    <a href="reviews.html">
+                        <img src="image/blog/7.png" alt="" class="review__image">
+                    </a>
+                    <a href="reviews.html">
+                        <img src="image/blog/8.png" alt="" class="review__image">
+                    </a>
+                    <a href="reviews.html">
+                        <img src="image/blog/9.png" alt="" class="review__image">
+                    </a>
+                    <a href="reviews.html">
+                        <img src="image/blog/10.png" alt="" class="review__image">
+                    </a>
+                </div>
+                <a href="reviews.html" class="review__link">All Reviews</a>
+            </div>
+        </section>
+        <section class="about" id="about">
+            <div class="container">
+                <h3 class="about__title">About Us</h3>
+                <p class="about__desc-txt">
+                    Nowadays, we cannot imagine ourselves without transportation, and when it comes to traveling abroad, sightseeing, or city and regional transfers, a car becomes an indispensable option. Let us introduce you to KARAVAN Rent A Car in Baku, whose main function is to provide customers with reliable transportation on the most favorable terms.
+                </p>
+                <div class="about__image-bg">
+                    <img src="image/about/image.png" alt="" class="about__image">
+                </div>
+                <p class="about__desc-txt">
+                    We ensure you a comfortable journey without unnecessary questions and obligations. Want to rent a new, reliable, fully insured car on the best terms? KARAVAN Rent a Car Baku is at your service. Hundreds of positive reviews from our esteemed clients from all over the world testify to our high service level - try it for yourself!
+                </p>
+            </div>
+        </section>
+        <section class="blog">
+            <div class="container">
+                <h3 class="blog__title about__title">Our Blog</h3>
+                <div class="blog__images">
+                    <a href="blog.html">
+                        <img src="image/about/2-1.png" alt="" class="blog__image">
+                    </a>
+                    <a href="blog.html">
+                        <img src="image/about/2.png" alt="" class="blog__image">
+                    </a>
+                    <a href="blog.html">
+                        <img src="image/about/3.png" alt="" class="blog__image">
+                    </a>
+                </div>
+                <a href="blog.html" class="blog__link">View Our Blog</a>
+            </div>
+        </section>
+        <section class="contact" id="contact">
+            <div class="container">
+                <h3 class="contact__title">How to Find Us</h3>
+                <p class="contact__txt">Our company office is located in the central part of the city, near the Academy of Sciences metro station, which makes it easy to visit us at any convenient time for you.</p>
+                <div class="contact__more">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d24309.025568630972!2d49.876280132818586!3d40.39493228209522!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x403063b5f756c579%3A0x5156266aaf916af!2sGet%20Rent%20A%20Car!5e0!3m2!1str!2s!4v1715186592406!5m2!1str!2s" width="730" height="500" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <iframe src="https://yandex.uz/map-widget/v1/?ll=49.874215%2C40.398494&mode=whatshere&whatshere%5Bpoint%5D=49.874100%2C40.399102&whatshere%5Bzoom%5D=17&z=18.77" width="700" height="500" frameborder="1" allowfullscreen="true" style="position:relative;"></iframe>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__contact">
+                <div class="footer__contact-first">
+                    <p>Address:</p>
+                    <span class="footer__contact-txt">1141, Baku, Azerbaijan, Shafayat Mextiyev SStr., 559B</span>
+                </div>
+                <div class="footer__contact-second">
+                    <p>Phone Number:</p>
+                    <div class="footer__numbers">
+                        <a href="tel:+994505501811" class="footer__link">+994 50 550 18 11</a>
+                        <a href="tel:+994556501811" class="footer__link">+994 55 650 18 11</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__socials">
+                <div class="footer__email">
+                    <p>Email:</p>
+                    <p>FACEBOOK:</p>
+                    <p>INSTAGRAM:</p>
+                </div>
+                <div class="footer__facebook">
+                    <a href="mailto:bookinggetrentacar@gmail.com" class="footer__link">Gmail</a>
+                    <a href="https://www.facebook.com/people/Getrentacaraz/100093672717716/" class="footer__link">@Getrentacaraz</a>
+                    <a href="" class="footer__link">@getrentacar</a>
+                </div>
+            </div>
+            <a href=""><img src="image/nav/logo.png" alt="" class="footer__logo-image"></a>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

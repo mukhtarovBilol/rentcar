@@ -46,3 +46,12 @@ for (let i = 0; i < carsItem.length; i++) {
         tabsContentItem[i].classList.add("active")
     })
 }
+
+document.getElementById("start").addEventListener("change", function () {
+    document.getElementById("end_date").disabled = false; // Активируем элемент выбора даты возврата
+})
+
+// При изменении даты возврата автоматически пересчитываем стоимость аренды
+document.getElementById("end_date").addEventListener("change", function () {
+    document.getElementById("end").disabled = false; // Активируем элемент выбора времени возврата
+});
