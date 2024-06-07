@@ -476,13 +476,16 @@ input[type="time"]::-webkit-calendar-picker-indicator {
 }
 
 @media only screen and (max-device-width: 480px) {
-    .header__info-input,
-    .header__info-select {
+    .header__info-input {
         padding: 20px; /* Пример значения padding */
     }
 
+    .header__info-select {
+        padding: 20px;
+    }
+
     .header__info-date-select {
-        padding: 30px;
+        padding: 20px 30px;
     }
 }
 
