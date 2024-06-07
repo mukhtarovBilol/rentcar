@@ -405,6 +405,9 @@ input[type="time"]::-webkit-calendar-picker-indicator {
     width: 100%;
     padding: 16px 20px;
     font-size: clamp(13px, 3vw, 15px);
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
 }
 
 .header__image {

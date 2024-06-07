@@ -689,6 +689,9 @@
     display: grid;
     width: 100%;
     margin-top: 15px;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
 }
 
 .header__info-dateHelper {
@@ -709,6 +712,9 @@
     padding: 10px;
     width: 70px;
     font-size: 14px;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
 }
 
 .span {
