@@ -738,6 +738,9 @@
     position: relative;
     max-width: 330px;
     width: 100%;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
 }
 
 .custom-date-input input[type="date"]::-webkit-calendar-picker-indicator {
