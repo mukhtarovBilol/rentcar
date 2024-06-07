@@ -313,6 +313,9 @@
     max-width: 686px;
     width: 100%;
     padding: 16px;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
 }
 
 .header__info-date {
