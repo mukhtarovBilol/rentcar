@@ -720,6 +720,9 @@
     padding: 10px 5px;
     font-size: clamp(13px, 3vw, 15px);
     position: relative;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
 }
 
 .custom-date-input {
@@ -746,6 +749,9 @@
     padding: 10px;
     width: 100%;
     position: relative;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
 }
 
 .custom-time-input {
