@@ -475,6 +475,17 @@ input[type="time"]::-webkit-calendar-picker-indicator {
     }
 }
 
+@media only screen and (max-device-width: 480px) {
+    .header__info-input,
+    .header__info-date-select {
+        padding: 20px; /* Пример значения padding */
+    }
+
+    .header__info-select {
+        padding: 30px;
+    } 
+}
+
 /* header */
 
 /* cars */

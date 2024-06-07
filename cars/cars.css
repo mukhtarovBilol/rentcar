@@ -854,6 +854,19 @@ input[type="time"]::-webkit-calendar-picker-indicator {
     }
 }
 
+@media only screen and (max-device-width: 480px) {
+    .header__info-input,
+    .input[type="time"] {
+        padding: 20px; /* Пример значения padding */
+    }
+
+    .header__info-selectValue7,
+    .header__info-selectValue8,
+    .header__info-selectValue9 {
+        padding: 20px;
+    } 
+}
+
 .more__things {
     border: 2px solid #ED1A3B;
     padding: 10px;
