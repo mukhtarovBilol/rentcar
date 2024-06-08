@@ -485,7 +485,7 @@ input[type="time"]::-webkit-calendar-picker-indicator {
     }
 
     .header__info-date-select {
-        padding: 20px;
+        padding: 30px;
         width: 130px;
     }
 }
