@@ -856,12 +856,12 @@ input[type="time"]::-webkit-calendar-picker-indicator {
 
 @media only screen and (max-device-width: 480px) {
     .header__info-input {
-        padding: 15px; /* Пример значения padding */
+        padding: 18px; /* Пример значения padding */
     }
 
     #start,
     #end {
-        padding: 15px;
+        padding: 20px;
         width: 130px;
     }
 
