@@ -856,7 +856,7 @@ input[type="time"]::-webkit-calendar-picker-indicator {
 
 @media only screen and (max-device-width: 480px) {
     .header__info-input,
-    .end_date {
+    .header__info-input2 {
         padding: 18px; /* Пример значения padding */
     }
 
